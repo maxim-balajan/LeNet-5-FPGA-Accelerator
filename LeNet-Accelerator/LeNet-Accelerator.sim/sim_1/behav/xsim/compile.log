@@ -1,0 +1,4 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/maxim/Documents/Uni/RADL/fpga_group_1/sources_1/mac_unit.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'mac_unit'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/maxim/Documents/Uni/RADL/fpga_group_1/sim_1/mac_unit_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'mac_unit_tb'
