@@ -1,0 +1,8 @@
+# compile vhdl design source files
+vhdl2008 work  \
+"../../../../../sources_1/libmatrix.vhd" \
+"../../../../../sources_1/sys_array_result_buffer.vhd" \
+"../../../../../sim_1/sys_array_result_buffer_tb.vhd" \
+
+# Do not sort compile order
+nosort
