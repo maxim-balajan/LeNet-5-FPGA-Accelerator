@@ -1,4 +1,2 @@
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/maxim/Documents/Uni/RADL/fpga_group_1/sources_1/sys_array_result_buffer.vhd" into library work
-INFO: [VRFC 10-3107] analyzing entity 'sys_array_result_buffer'
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/maxim/Documents/Uni/RADL/fpga_group_1/sim_1/sys_array_result_buffer_tb.vhd" into library work
-INFO: [VRFC 10-3107] analyzing entity 'sys_array_result_buffer_tb'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/maxim/Documents/Uni/RADL/fpga_group_1/sim_1/sys_array_control_unit_tb.vhd" into library work
+INFO: [VRFC 10-3107] analyzing entity 'sys_array_control_unit_tb'

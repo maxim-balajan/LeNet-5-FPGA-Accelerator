@@ -3,7 +3,9 @@
 May 22 2024
 18:54:44
 /home/maxim/Documents/Uni/RADL/fpga_group_1/sim_1/sys_array_activation_tb.vhd,1731157463,vhdl2008,,,,sys_array_activation_buffer_tb,,,,,,,,
+/home/maxim/Documents/Uni/RADL/fpga_group_1/sim_1/sys_array_control_unit_tb.vhd,1731191766,vhdl2008,,,,sys_array_control_unit_tb,,,,,,,,
 /home/maxim/Documents/Uni/RADL/fpga_group_1/sim_1/sys_array_result_buffer_tb.vhd,1731158417,vhdl2008,,,,sys_array_result_buffer_tb,,,,,,,,
 /home/maxim/Documents/Uni/RADL/fpga_group_1/sources_1/libmatrix.vhd,1731011233,vhdl2008,/home/maxim/Documents/Uni/RADL/fpga_group_1/sim_1/sys_array_result_buffer_tb.vhd;/home/maxim/Documents/Uni/RADL/fpga_group_1/sources_1/sys_array_result_buffer.vhd,,,libmatrix,,,,,,,,
 /home/maxim/Documents/Uni/RADL/fpga_group_1/sources_1/sys_array_activation_buffer.vhd,1731157717,vhdl2008,/home/maxim/Documents/Uni/RADL/fpga_group_1/sim_1/sys_array_activation_tb.vhd,,,sys_array_activation_buffer,,,,,,,,
+/home/maxim/Documents/Uni/RADL/fpga_group_1/sources_1/sys_array_control_unit.vhd,1731191610,vhdl2008,/home/maxim/Documents/Uni/RADL/fpga_group_1/sim_1/sys_array_control_unit_tb.vhd,,,sys_array_control_unit,,,,,,,,
 /home/maxim/Documents/Uni/RADL/fpga_group_1/sources_1/sys_array_result_buffer.vhd,1731159316,vhdl2008,/home/maxim/Documents/Uni/RADL/fpga_group_1/sim_1/sys_array_result_buffer_tb.vhd,,,sys_array_result_buffer,,,,,,,,
