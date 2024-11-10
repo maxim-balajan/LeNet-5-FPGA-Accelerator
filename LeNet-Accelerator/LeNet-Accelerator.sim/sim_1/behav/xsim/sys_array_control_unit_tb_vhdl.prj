@@ -1,7 +1,0 @@
-# compile vhdl design source files
-vhdl2008 work  \
-"../../../../../sources_1/sys_array_control_unit.vhd" \
-"../../../../../sim_1/sys_array_control_unit_tb.vhd" \
-
-# Do not sort compile order
-nosort

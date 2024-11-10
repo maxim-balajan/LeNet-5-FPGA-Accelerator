@@ -1,2 +1,2 @@
 Time resolution is 1 ps
-$finish called at time : 65 ns : File "/home/maxim/Documents/Uni/RADL/fpga_group_1/sim_1/sys_array_control_unit_tb.vhd" Line 43
+$finish called at time : 75 ns : File "/home/maxim/Documents/Uni/RADL/fpga_group_1/sim_1/sys_array_tb.vhd" Line 55
