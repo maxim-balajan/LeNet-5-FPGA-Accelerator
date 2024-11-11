@@ -1,1 +1,0 @@
---incr --debug "typical" --relax --mt "8" -L "work" -L "secureip" --snapshot "sys_array_control_unit_tb_behav" "work.sys_array_control_unit_tb" -log "elaborate.log" 
