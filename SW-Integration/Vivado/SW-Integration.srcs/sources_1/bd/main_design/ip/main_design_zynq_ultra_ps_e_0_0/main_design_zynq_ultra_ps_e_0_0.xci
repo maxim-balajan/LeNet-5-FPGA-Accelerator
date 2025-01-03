@@ -4,7 +4,7 @@
     "xci_name": "main_design_zynq_ultra_ps_e_0_0",
     "cell_name": "zynq_ultra_ps_e_0",
     "component_reference": "xilinx.com:ip:zynq_ultra_ps_e:3.5",
-    "ip_revision": "3",
+    "ip_revision": "4",
     "gen_directory": "../../../../../../SW-Integration.gen/sources_1/bd/main_design/ip/main_design_zynq_ultra_ps_e_0_0",
     "parameters": {
       "component_parameters": {
@@ -1754,7 +1754,7 @@
         "DEVICE": [ { "value": "xczu3eg" } ],
         "NEXTGEN_VERSAL": [ { "value": "0" } ],
         "PACKAGE": [ { "value": "sbva484" } ],
-        "PREFHDL": [ { "value": "VERILOG" } ],
+        "PREFHDL": [ { "value": "VHDL" } ],
         "SILICON_REVISION": [ { "value": "" } ],
         "SIMULATOR_LANGUAGE": [ { "value": "MIXED" } ],
         "SPEEDGRADE": [ { "value": "-1" } ],
@@ -1763,12 +1763,12 @@
       },
       "runtime_parameters": {
         "IPCONTEXT": [ { "value": "IP_Integrator" } ],
-        "IPREVISION": [ { "value": "3" } ],
+        "IPREVISION": [ { "value": "4" } ],
         "MANAGED": [ { "value": "TRUE" } ],
         "OUTPUTDIR": [ { "value": "../../../../../../SW-Integration.gen/sources_1/bd/main_design/ip/main_design_zynq_ultra_ps_e_0_0" } ],
         "SELECTEDSIMMODEL": [ { "value": "" } ],
         "SHAREDDIR": [ { "value": "../../ipshared" } ],
-        "SWVERSION": [ { "value": "2024.1" } ],
+        "SWVERSION": [ { "value": "2024.1.2" } ],
         "SYNTHESISFLOW": [ { "value": "OUT_OF_CONTEXT" } ]
       }
     },
