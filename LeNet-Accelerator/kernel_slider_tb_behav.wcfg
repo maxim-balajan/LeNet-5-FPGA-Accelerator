@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="conv_weight_memory_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="conv_weight_memory_tb" />
+            <top_module name="libmatrix" />
+            <top_module name="libmemory" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="360.533 ns"></ZoomEndTime>
+      <Cursor1Time time="265.000 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="250"></NameColumnWidth>
+      <ValueColumnWidth column_width="96"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="6" />
+   <wvobject type="array" fp_name="/conv_weight_memory_tb/\FIRST_CONV_MEMORYS(1)\/conv_weight_memory_inst/weight_matrix">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">weight_matrix[0:4][0:4][7:0]</obj_property>
+      <obj_property name="ObjectShortName">weight_matrix[0:4][0:4][7:0]</obj_property>
+      <obj_property name="label">Conv_1_1</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/conv_weight_memory_tb/\FIRST_CONV_MEMORYS(1)\/conv_weight_memory_inst/s_mem_valid">
+      <obj_property name="ElementShortName">s_mem_valid</obj_property>
+      <obj_property name="ObjectShortName">s_mem_valid</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/conv_weight_memory_tb/\FIRST_CONV_MEMORYS(2)\/conv_weight_memory_inst/weight_matrix">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">weight_matrix[0:4][0:4][7:0]</obj_property>
+      <obj_property name="ObjectShortName">weight_matrix[0:4][0:4][7:0]</obj_property>
+      <obj_property name="label">Conv_1_2</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/conv_weight_memory_tb/\FIRST_CONV_MEMORYS(2)\/conv_weight_memory_inst/s_mem_valid">
+      <obj_property name="ElementShortName">s_mem_valid</obj_property>
+      <obj_property name="ObjectShortName">s_mem_valid</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/conv_weight_memory_tb/\FIRST_CONV_MEMORYS(6)\/conv_weight_memory_inst/weight_matrix">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">weight_matrix[0:4][0:4][7:0]</obj_property>
+      <obj_property name="ObjectShortName">weight_matrix[0:4][0:4][7:0]</obj_property>
+      <obj_property name="label">Conv_1_6</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/conv_weight_memory_tb/\FIRST_CONV_MEMORYS(6)\/conv_weight_memory_inst/s_mem_valid">
+      <obj_property name="ElementShortName">s_mem_valid</obj_property>
+      <obj_property name="ObjectShortName">s_mem_valid</obj_property>
+   </wvobject>
+</wave_config>
