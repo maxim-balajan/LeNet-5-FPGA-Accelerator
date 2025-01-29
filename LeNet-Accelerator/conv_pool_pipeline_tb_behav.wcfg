@@ -13,12 +13,12 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0.000 ns"></ZoomStartTime>
-      <ZoomEndTime time="1,530.001 ns"></ZoomEndTime>
+      <ZoomEndTime time="1,931.313 ns"></ZoomEndTime>
       <Cursor1Time time="1,240.000 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="159"></NameColumnWidth>
-      <ValueColumnWidth column_width="100"></ValueColumnWidth>
+      <ValueColumnWidth column_width="96"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="16" />
    <wvobject type="logic" fp_name="/conv_pool_pipeline_tb/conv_pool_pipeline_inst/clk">
@@ -42,100 +42,10 @@
    <wvobject type="array" fp_name="/conv_pool_pipeline_tb/conv_pool_pipeline_inst/activation_matrix">
       <obj_property name="ElementShortName">activation_matrix[0:4][0:4][7:0]</obj_property>
       <obj_property name="ObjectShortName">activation_matrix[0:4][0:4][7:0]</obj_property>
-      <wvobject type="array" fp_name="/conv_pool_pipeline_tb/conv_pool_pipeline_inst/activation_matrix[0]">
-         <obj_property name="ElementShortName">[0][0:4][7:0]</obj_property>
-         <obj_property name="ObjectShortName">[0][0:4][7:0]</obj_property>
-         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/conv_pool_pipeline_tb/conv_pool_pipeline_inst/activation_matrix[1]">
-         <obj_property name="ElementShortName">[1][0:4][7:0]</obj_property>
-         <obj_property name="ObjectShortName">[1][0:4][7:0]</obj_property>
-         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/conv_pool_pipeline_tb/conv_pool_pipeline_inst/activation_matrix[2]">
-         <obj_property name="ElementShortName">[2][0:4][7:0]</obj_property>
-         <obj_property name="ObjectShortName">[2][0:4][7:0]</obj_property>
-         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/conv_pool_pipeline_tb/conv_pool_pipeline_inst/activation_matrix[3]">
-         <obj_property name="ElementShortName">[3][0:4][7:0]</obj_property>
-         <obj_property name="ObjectShortName">[3][0:4][7:0]</obj_property>
-         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/conv_pool_pipeline_tb/conv_pool_pipeline_inst/activation_matrix[4]">
-         <obj_property name="ElementShortName">[4][0:4][7:0]</obj_property>
-         <obj_property name="ObjectShortName">[4][0:4][7:0]</obj_property>
-         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/conv_pool_pipeline_tb/conv_pool_pipeline_inst/activation_matrix[0]">
-         <obj_property name="ElementShortName">[0][0:4][7:0]</obj_property>
-         <obj_property name="ObjectShortName">[0][0:4][7:0]</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/conv_pool_pipeline_tb/conv_pool_pipeline_inst/activation_matrix[1]">
-         <obj_property name="ElementShortName">[1][0:4][7:0]</obj_property>
-         <obj_property name="ObjectShortName">[1][0:4][7:0]</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/conv_pool_pipeline_tb/conv_pool_pipeline_inst/activation_matrix[2]">
-         <obj_property name="ElementShortName">[2][0:4][7:0]</obj_property>
-         <obj_property name="ObjectShortName">[2][0:4][7:0]</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/conv_pool_pipeline_tb/conv_pool_pipeline_inst/activation_matrix[3]">
-         <obj_property name="ElementShortName">[3][0:4][7:0]</obj_property>
-         <obj_property name="ObjectShortName">[3][0:4][7:0]</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/conv_pool_pipeline_tb/conv_pool_pipeline_inst/activation_matrix[4]">
-         <obj_property name="ElementShortName">[4][0:4][7:0]</obj_property>
-         <obj_property name="ObjectShortName">[4][0:4][7:0]</obj_property>
-      </wvobject>
    </wvobject>
    <wvobject type="array" fp_name="/conv_pool_pipeline_tb/conv_pool_pipeline_inst/s_weight_matrix">
       <obj_property name="ElementShortName">s_weight_matrix[0:4][0:4][7:0]</obj_property>
       <obj_property name="ObjectShortName">s_weight_matrix[0:4][0:4][7:0]</obj_property>
-      <wvobject type="array" fp_name="/conv_pool_pipeline_tb/conv_pool_pipeline_inst/s_weight_matrix[0]">
-         <obj_property name="ElementShortName">[0][0:4][7:0]</obj_property>
-         <obj_property name="ObjectShortName">[0][0:4][7:0]</obj_property>
-         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/conv_pool_pipeline_tb/conv_pool_pipeline_inst/s_weight_matrix[1]">
-         <obj_property name="ElementShortName">[1][0:4][7:0]</obj_property>
-         <obj_property name="ObjectShortName">[1][0:4][7:0]</obj_property>
-         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/conv_pool_pipeline_tb/conv_pool_pipeline_inst/s_weight_matrix[2]">
-         <obj_property name="ElementShortName">[2][0:4][7:0]</obj_property>
-         <obj_property name="ObjectShortName">[2][0:4][7:0]</obj_property>
-         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/conv_pool_pipeline_tb/conv_pool_pipeline_inst/s_weight_matrix[3]">
-         <obj_property name="ElementShortName">[3][0:4][7:0]</obj_property>
-         <obj_property name="ObjectShortName">[3][0:4][7:0]</obj_property>
-         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/conv_pool_pipeline_tb/conv_pool_pipeline_inst/s_weight_matrix[4]">
-         <obj_property name="ElementShortName">[4][0:4][7:0]</obj_property>
-         <obj_property name="ObjectShortName">[4][0:4][7:0]</obj_property>
-         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/conv_pool_pipeline_tb/conv_pool_pipeline_inst/s_weight_matrix[0]">
-         <obj_property name="ElementShortName">[0][0:4][7:0]</obj_property>
-         <obj_property name="ObjectShortName">[0][0:4][7:0]</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/conv_pool_pipeline_tb/conv_pool_pipeline_inst/s_weight_matrix[1]">
-         <obj_property name="ElementShortName">[1][0:4][7:0]</obj_property>
-         <obj_property name="ObjectShortName">[1][0:4][7:0]</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/conv_pool_pipeline_tb/conv_pool_pipeline_inst/s_weight_matrix[2]">
-         <obj_property name="ElementShortName">[2][0:4][7:0]</obj_property>
-         <obj_property name="ObjectShortName">[2][0:4][7:0]</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/conv_pool_pipeline_tb/conv_pool_pipeline_inst/s_weight_matrix[3]">
-         <obj_property name="ElementShortName">[3][0:4][7:0]</obj_property>
-         <obj_property name="ObjectShortName">[3][0:4][7:0]</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/conv_pool_pipeline_tb/conv_pool_pipeline_inst/s_weight_matrix[4]">
-         <obj_property name="ElementShortName">[4][0:4][7:0]</obj_property>
-         <obj_property name="ObjectShortName">[4][0:4][7:0]</obj_property>
-      </wvobject>
    </wvobject>
    <wvobject type="logic" fp_name="/conv_pool_pipeline_tb/conv_pool_pipeline_inst/CONV_COMP_UNIT/kernel_en">
       <obj_property name="DisplayName">label</obj_property>

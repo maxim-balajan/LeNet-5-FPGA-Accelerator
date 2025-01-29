@@ -60,7 +60,7 @@
     <Option Name="IPStaticSourceDir" Val="$PIPUSERFILESDIR/ipstatic"/>
     <Option Name="EnableBDX" Val="FALSE"/>
     <Option Name="DSABoardId" Val="ultra96v2"/>
-    <Option Name="WTXSimLaunchSim" Val="192"/>
+    <Option Name="WTXSimLaunchSim" Val="195"/>
     <Option Name="WTModelSimLaunchSim" Val="0"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
     <Option Name="WTIesLaunchSim" Val="0"/>
@@ -100,6 +100,13 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PPRDIR/../sources_1/bram_fifo.vhd">
+        <FileInfo SFType="VHDL2008">
+          <Attr Name="Library" Val="work"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PPRDIR/../sources_1/libmemory.vhd">
         <FileInfo SFType="VHDL2008">
           <Attr Name="Library" Val="work"/>
@@ -114,17 +121,9 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../sources_1/conv_weight_memory.vhd">
+      <File Path="$PPRDIR/../sources_1/clip_adder.vhd">
         <FileInfo SFType="VHDL2008">
           <Attr Name="Library" Val="work"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../sources_1/bram_fifo.vhd">
-        <FileInfo SFType="VHDL2008">
-          <Attr Name="Library" Val="work"/>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
@@ -132,7 +131,6 @@
       <File Path="$PPRDIR/../sources_1/line_buffer.vhd">
         <FileInfo SFType="VHDL2008">
           <Attr Name="Library" Val="work"/>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
@@ -140,15 +138,13 @@
       <File Path="$PPRDIR/../sources_1/kernel_slider.vhd">
         <FileInfo SFType="VHDL2008">
           <Attr Name="Library" Val="work"/>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../sources_1/convolution_slider.vhd">
+      <File Path="$PPRDIR/../sources_1/conv_weight_memory.vhd">
         <FileInfo SFType="VHDL2008">
           <Attr Name="Library" Val="work"/>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
@@ -156,12 +152,32 @@
       <File Path="$PPRDIR/../sources_1/kernel_computation_step.vhd">
         <FileInfo SFType="VHDL2008">
           <Attr Name="Library" Val="work"/>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
       <File Path="$PPRDIR/../sources_1/kernel_computation_unit.vhd">
+        <FileInfo SFType="VHDL2008">
+          <Attr Name="Library" Val="work"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../sources_1/pooling_slider.vhd">
+        <FileInfo SFType="VHDL2008">
+          <Attr Name="Library" Val="work"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../sources_1/conv_pool_pipeline.vhd">
+        <FileInfo SFType="VHDL2008">
+          <Attr Name="Library" Val="work"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../sources_1/convolution_slider.vhd">
         <FileInfo SFType="VHDL2008">
           <Attr Name="Library" Val="work"/>
           <Attr Name="AutoDisabled" Val="1"/>
@@ -178,14 +194,6 @@
         </FileInfo>
       </File>
       <File Path="$PPRDIR/../sources_1/matrix_vector_unit.vhd">
-        <FileInfo SFType="VHDL2008">
-          <Attr Name="Library" Val="work"/>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../sources_1/pooling_slider.vhd">
         <FileInfo SFType="VHDL2008">
           <Attr Name="Library" Val="work"/>
           <Attr Name="AutoDisabled" Val="1"/>
@@ -211,14 +219,6 @@
         <FileInfo SFType="VHDL2008">
           <Attr Name="Library" Val="work"/>
           <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../sources_1/conv_pool_pipeline.vhd">
-        <FileInfo SFType="VHDL2008">
-          <Attr Name="Library" Val="work"/>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
@@ -250,9 +250,49 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PPRDIR/../sim_1/clip_adder_tb.vhd">
+        <FileInfo SFType="VHDL2008">
+          <Attr Name="Library" Val="work"/>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../sim_1/conv_pool_pipeline_tb.vhd">
+        <FileInfo SFType="VHDL2008">
+          <Attr Name="Library" Val="work"/>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../sources_1/old_sources/max_pooling_max_unit.vhd">
+        <FileInfo SFType="VHDL2008">
+          <Attr Name="Library" Val="work"/>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../sources_1/conv_par.vhd">
+        <FileInfo SFType="VHDL2008">
+          <Attr Name="Library" Val="work"/>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../sources_1/old_sources/max_pooling_kernel.vhd">
+        <FileInfo SFType="VHDL2008">
+          <Attr Name="Library" Val="work"/>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
-        <Option Name="TopModule" Val="conv_weight_memory"/>
+        <Option Name="TopModule" Val="conv_pool_pipeline"/>
       </Config>
     </FileSet>
     <FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
@@ -273,9 +313,34 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PPRDIR/convolution_slider_tb_behav.wcfg">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/clip_adder_tb_behav.wcfg">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/kernel_computation_unit_tb_behav.wcfg">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/conv_pool_pipeline_tb_behav.wcfg">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/pooling_slider_tb_behav.wcfg">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
-        <Option Name="TopModule" Val="conv_weight_memory_tb"/>
+        <Option Name="TopModule" Val="clip_adder_tb"/>
         <Option Name="TransportPathDelay" Val="0"/>
         <Option Name="TransportIntDelay" Val="0"/>
         <Option Name="SelectedSimModel" Val="rtl"/>
@@ -284,9 +349,7 @@
         <Option Name="PamSignalDriverFile" Val="xil_bypass_driver"/>
         <Option Name="PamPseudoTop" Val="pseudo_tb"/>
         <Option Name="SrcSet" Val="sources_1"/>
-        <Option Name="XSimWcfgFile" Val="$PSIMDIR/matrix_vector_unit_tb_behav.wcfg"/>
-        <Option Name="XSimWcfgFile" Val="$PPRDIR/kernel_slider_tb_behav.wcfg"/>
-        <Option Name="XSimWcfgFile" Val="$PPRDIR/conv_weight_memory_tb.wcfg"/>
+        <Option Name="XSimWcfgFile" Val="$PSIMDIR/*.wcfg"/>
       </Config>
     </FileSet>
     <FileSet Name="utils_1" Type="Utils" RelSrcDir="$PSRCDIR/utils_1" RelGenDir="$PGENDIR/utils_1">
