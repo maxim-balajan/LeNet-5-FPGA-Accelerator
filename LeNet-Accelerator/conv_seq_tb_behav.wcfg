@@ -13,14 +13,14 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0.000 ns"></ZoomStartTime>
-      <ZoomEndTime time="1,954.039 ns"></ZoomEndTime>
-      <Cursor1Time time="705.461 ns"></Cursor1Time>
+      <ZoomEndTime time="3,330.001 ns"></ZoomEndTime>
+      <Cursor1Time time="2,225.000 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="230"></NameColumnWidth>
-      <ValueColumnWidth column_width="107"></ValueColumnWidth>
+      <NameColumnWidth column_width="261"></NameColumnWidth>
+      <ValueColumnWidth column_width="133"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="80" />
+   <WVObjectSize size="61" />
    <wvobject type="logic" fp_name="/conv_seq_tb/clk">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
@@ -75,6 +75,7 @@
    <wvobject type="array" fp_name="/conv_seq_tb/s_pixel_output_channel">
       <obj_property name="ElementShortName">s_pixel_output_channel[3:0]</obj_property>
       <obj_property name="ObjectShortName">s_pixel_output_channel[3:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/conv_seq_tb/expected_output">
       <obj_property name="ElementShortName">expected_output[0:399][7:0]</obj_property>
@@ -146,10 +147,6 @@
       <obj_property name="ElementShortName">s_streaming_fifo_rd_en</obj_property>
       <obj_property name="ObjectShortName">s_streaming_fifo_rd_en</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/conv_seq_tb/conv_seq_inst/s_streaming_fifo_wrap">
-      <obj_property name="ElementShortName">s_streaming_fifo_wrap[0:5]</obj_property>
-      <obj_property name="ObjectShortName">s_streaming_fifo_wrap[0:5]</obj_property>
-   </wvobject>
    <wvobject type="array" fp_name="/conv_seq_tb/conv_seq_inst/s_fifo_conv_pixel_stream">
       <obj_property name="ElementShortName">s_fifo_conv_pixel_stream[0:5][7:0]</obj_property>
       <obj_property name="ObjectShortName">s_fifo_conv_pixel_stream[0:5][7:0]</obj_property>
@@ -157,6 +154,7 @@
    <wvobject type="array" fp_name="/conv_seq_tb/conv_seq_inst/s_fifo_conv_pixel_valid">
       <obj_property name="ElementShortName">s_fifo_conv_pixel_valid[0:5]</obj_property>
       <obj_property name="ObjectShortName">s_fifo_conv_pixel_valid[0:5]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/conv_seq_tb/conv_seq_inst/s_conv_slider_conv_pipeline_kernel_complete">
       <obj_property name="ElementShortName">s_conv_slider_conv_pipeline_kernel_complete[0:5]</obj_property>
@@ -189,6 +187,7 @@
    <wvobject type="group" fp_name="group13790">
       <obj_property name="label">Conv Pipeline Instance 1</obj_property>
       <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
       <wvobject type="logic" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(0)\/CONV_PIPELINE_INST/clk">
          <obj_property name="ElementShortName">clk</obj_property>
          <obj_property name="ObjectShortName">clk</obj_property>
@@ -200,14 +199,20 @@
       <wvobject type="array" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(0)\/CONV_PIPELINE_INST/activation_matrix">
          <obj_property name="ElementShortName">activation_matrix[0:24][7:0]</obj_property>
          <obj_property name="ObjectShortName">activation_matrix[0:24][7:0]</obj_property>
+         <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
       </wvobject>
       <wvobject type="logic" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(0)\/CONV_PIPELINE_INST/kernel_en">
          <obj_property name="ElementShortName">kernel_en</obj_property>
          <obj_property name="ObjectShortName">kernel_en</obj_property>
+         <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
       </wvobject>
       <wvobject type="logic" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(0)\/CONV_PIPELINE_INST/kernel_complete">
          <obj_property name="ElementShortName">kernel_complete</obj_property>
          <obj_property name="ObjectShortName">kernel_complete</obj_property>
+         <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
       </wvobject>
       <wvobject type="array" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(0)\/CONV_PIPELINE_INST/base_addr">
          <obj_property name="ElementShortName">base_addr[399:0]</obj_property>
@@ -220,122 +225,24 @@
       <wvobject type="array" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(0)\/CONV_PIPELINE_INST/new_pixel">
          <obj_property name="ElementShortName">new_pixel[23:0]</obj_property>
          <obj_property name="ObjectShortName">new_pixel[23:0]</obj_property>
+         <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
       </wvobject>
       <wvobject type="logic" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(0)\/CONV_PIPELINE_INST/valid_pixel">
          <obj_property name="ElementShortName">valid_pixel</obj_property>
          <obj_property name="ObjectShortName">valid_pixel</obj_property>
+         <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
       </wvobject>
       <wvobject type="logic" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(0)\/CONV_PIPELINE_INST/comp_complete">
          <obj_property name="ElementShortName">comp_complete</obj_property>
          <obj_property name="ObjectShortName">comp_complete</obj_property>
+         <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
       </wvobject>
       <wvobject type="array" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(0)\/CONV_PIPELINE_INST/s_weight_matrix">
          <obj_property name="ElementShortName">s_weight_matrix[0:24][7:0]</obj_property>
          <obj_property name="ObjectShortName">s_weight_matrix[0:24][7:0]</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(0)\/CONV_PIPELINE_INST/s_conv_pixel">
-         <obj_property name="ElementShortName">s_conv_pixel[23:0]</obj_property>
-         <obj_property name="ObjectShortName">s_conv_pixel[23:0]</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(0)\/CONV_PIPELINE_INST/s_conv_en">
-         <obj_property name="ElementShortName">s_conv_en</obj_property>
-         <obj_property name="ObjectShortName">s_conv_en</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(0)\/CONV_PIPELINE_INST/s_conv_complete">
-         <obj_property name="ElementShortName">s_conv_complete</obj_property>
-         <obj_property name="ObjectShortName">s_conv_complete</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(0)\/CONV_PIPELINE_INST/s_pool_en">
-         <obj_property name="ElementShortName">s_pool_en</obj_property>
-         <obj_property name="ObjectShortName">s_pool_en</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(0)\/CONV_PIPELINE_INST/s_pool_complete">
-         <obj_property name="ElementShortName">s_pool_complete</obj_property>
-         <obj_property name="ObjectShortName">s_pool_complete</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(0)\/CONV_PIPELINE_INST/s_pool_matrix">
-         <obj_property name="ElementShortName">s_pool_matrix[0:3][23:0]</obj_property>
-         <obj_property name="ObjectShortName">s_pool_matrix[0:3][23:0]</obj_property>
-      </wvobject>
-      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(0)\/CONV_PIPELINE_INST/input_length">
-         <obj_property name="ElementShortName">input_length</obj_property>
-         <obj_property name="ObjectShortName">input_length</obj_property>
-      </wvobject>
-      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(0)\/CONV_PIPELINE_INST/input_width">
-         <obj_property name="ElementShortName">input_width</obj_property>
-         <obj_property name="ObjectShortName">input_width</obj_property>
-      </wvobject>
-      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(0)\/CONV_PIPELINE_INST/input_height">
-         <obj_property name="ElementShortName">input_height</obj_property>
-         <obj_property name="ObjectShortName">input_height</obj_property>
-      </wvobject>
-      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(0)\/CONV_PIPELINE_INST/kernel_size">
-         <obj_property name="ElementShortName">kernel_size</obj_property>
-         <obj_property name="ObjectShortName">kernel_size</obj_property>
-      </wvobject>
-      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(0)\/CONV_PIPELINE_INST/pooling_size">
-         <obj_property name="ElementShortName">pooling_size</obj_property>
-         <obj_property name="ObjectShortName">pooling_size</obj_property>
-      </wvobject>
-      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(0)\/CONV_PIPELINE_INST/input_amount">
-         <obj_property name="ElementShortName">input_amount</obj_property>
-         <obj_property name="ObjectShortName">input_amount</obj_property>
-      </wvobject>
-      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(0)\/CONV_PIPELINE_INST/enable_weights">
-         <obj_property name="ElementShortName">enable_weights</obj_property>
-         <obj_property name="ObjectShortName">enable_weights</obj_property>
-      </wvobject>
-      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(0)\/CONV_PIPELINE_INST/total_input_channel">
-         <obj_property name="ElementShortName">total_input_channel</obj_property>
-         <obj_property name="ObjectShortName">total_input_channel</obj_property>
-      </wvobject>
-      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(0)\/CONV_PIPELINE_INST/total_output_channel">
-         <obj_property name="ElementShortName">total_output_channel</obj_property>
-         <obj_property name="ObjectShortName">total_output_channel</obj_property>
-      </wvobject>
-      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(0)\/CONV_PIPELINE_INST/current_channel">
-         <obj_property name="ElementShortName">current_channel</obj_property>
-         <obj_property name="ObjectShortName">current_channel</obj_property>
-      </wvobject>
-      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(0)\/CONV_PIPELINE_INST/init_type">
-         <obj_property name="ElementShortName">init_type</obj_property>
-         <obj_property name="ObjectShortName">init_type</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(0)\/CONV_PIPELINE_INST/weight_path">
-         <obj_property name="ElementShortName">weight_path[1:27]</obj_property>
-         <obj_property name="ObjectShortName">weight_path[1:27]</obj_property>
-      </wvobject>
-      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(0)\/CONV_PIPELINE_INST/current_scale">
-         <obj_property name="ElementShortName">current_scale</obj_property>
-         <obj_property name="ObjectShortName">current_scale</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(0)\/CONV_PIPELINE_INST/scale_path">
-         <obj_property name="ElementShortName">scale_path[1:25]</obj_property>
-         <obj_property name="ObjectShortName">scale_path[1:25]</obj_property>
-      </wvobject>
-      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(0)\/CONV_PIPELINE_INST/enable_clip_adder">
-         <obj_property name="ElementShortName">enable_clip_adder</obj_property>
-         <obj_property name="ObjectShortName">enable_clip_adder</obj_property>
-      </wvobject>
-      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(0)\/CONV_PIPELINE_INST/enable_multiplication_line">
-         <obj_property name="ElementShortName">enable_multiplication_line</obj_property>
-         <obj_property name="ObjectShortName">enable_multiplication_line</obj_property>
-      </wvobject>
-      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(0)\/CONV_PIPELINE_INST/enable_shift">
-         <obj_property name="ElementShortName">enable_shift</obj_property>
-         <obj_property name="ObjectShortName">enable_shift</obj_property>
-      </wvobject>
-      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(0)\/CONV_PIPELINE_INST/enable_relu">
-         <obj_property name="ElementShortName">enable_relu</obj_property>
-         <obj_property name="ObjectShortName">enable_relu</obj_property>
-      </wvobject>
-      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(0)\/CONV_PIPELINE_INST/output_length">
-         <obj_property name="ElementShortName">output_length</obj_property>
-         <obj_property name="ObjectShortName">output_length</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(0)\/CONV_PIPELINE_INST/c_scale_value">
-         <obj_property name="ElementShortName">c_scale_value[7:0]</obj_property>
-         <obj_property name="ObjectShortName">c_scale_value[7:0]</obj_property>
       </wvobject>
    </wvobject>
    <wvobject type="group" fp_name="group13790">
@@ -345,149 +252,49 @@
          <obj_property name="ElementShortName">clk</obj_property>
          <obj_property name="ObjectShortName">clk</obj_property>
       </wvobject>
-      <wvobject type="logic" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(1)\/CONV_PIPELINE_INST/reset">
-         <obj_property name="ElementShortName">reset</obj_property>
-         <obj_property name="ObjectShortName">reset</obj_property>
-      </wvobject>
       <wvobject type="array" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(1)\/CONV_PIPELINE_INST/activation_matrix">
          <obj_property name="ElementShortName">activation_matrix[0:24][7:0]</obj_property>
          <obj_property name="ObjectShortName">activation_matrix[0:24][7:0]</obj_property>
+         <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
       </wvobject>
       <wvobject type="logic" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(1)\/CONV_PIPELINE_INST/kernel_en">
          <obj_property name="ElementShortName">kernel_en</obj_property>
          <obj_property name="ObjectShortName">kernel_en</obj_property>
+         <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
       </wvobject>
       <wvobject type="logic" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(1)\/CONV_PIPELINE_INST/kernel_complete">
          <obj_property name="ElementShortName">kernel_complete</obj_property>
          <obj_property name="ObjectShortName">kernel_complete</obj_property>
+         <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
       </wvobject>
       <wvobject type="array" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(1)\/CONV_PIPELINE_INST/base_addr">
          <obj_property name="ElementShortName">base_addr[399:0]</obj_property>
          <obj_property name="ObjectShortName">base_addr[399:0]</obj_property>
       </wvobject>
-      <wvobject type="logic" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(1)\/CONV_PIPELINE_INST/weights_valid">
-         <obj_property name="ElementShortName">weights_valid</obj_property>
-         <obj_property name="ObjectShortName">weights_valid</obj_property>
-      </wvobject>
       <wvobject type="array" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(1)\/CONV_PIPELINE_INST/new_pixel">
          <obj_property name="ElementShortName">new_pixel[23:0]</obj_property>
          <obj_property name="ObjectShortName">new_pixel[23:0]</obj_property>
+         <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
       </wvobject>
       <wvobject type="logic" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(1)\/CONV_PIPELINE_INST/valid_pixel">
          <obj_property name="ElementShortName">valid_pixel</obj_property>
          <obj_property name="ObjectShortName">valid_pixel</obj_property>
+         <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
       </wvobject>
       <wvobject type="logic" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(1)\/CONV_PIPELINE_INST/comp_complete">
          <obj_property name="ElementShortName">comp_complete</obj_property>
          <obj_property name="ObjectShortName">comp_complete</obj_property>
+         <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
       </wvobject>
       <wvobject type="array" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(1)\/CONV_PIPELINE_INST/s_weight_matrix">
          <obj_property name="ElementShortName">s_weight_matrix[0:24][7:0]</obj_property>
          <obj_property name="ObjectShortName">s_weight_matrix[0:24][7:0]</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(1)\/CONV_PIPELINE_INST/s_conv_pixel">
-         <obj_property name="ElementShortName">s_conv_pixel[23:0]</obj_property>
-         <obj_property name="ObjectShortName">s_conv_pixel[23:0]</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(1)\/CONV_PIPELINE_INST/s_conv_en">
-         <obj_property name="ElementShortName">s_conv_en</obj_property>
-         <obj_property name="ObjectShortName">s_conv_en</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(1)\/CONV_PIPELINE_INST/s_conv_complete">
-         <obj_property name="ElementShortName">s_conv_complete</obj_property>
-         <obj_property name="ObjectShortName">s_conv_complete</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(1)\/CONV_PIPELINE_INST/s_pool_en">
-         <obj_property name="ElementShortName">s_pool_en</obj_property>
-         <obj_property name="ObjectShortName">s_pool_en</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(1)\/CONV_PIPELINE_INST/s_pool_complete">
-         <obj_property name="ElementShortName">s_pool_complete</obj_property>
-         <obj_property name="ObjectShortName">s_pool_complete</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(1)\/CONV_PIPELINE_INST/s_pool_matrix">
-         <obj_property name="ElementShortName">s_pool_matrix[0:3][23:0]</obj_property>
-         <obj_property name="ObjectShortName">s_pool_matrix[0:3][23:0]</obj_property>
-      </wvobject>
-      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(1)\/CONV_PIPELINE_INST/input_length">
-         <obj_property name="ElementShortName">input_length</obj_property>
-         <obj_property name="ObjectShortName">input_length</obj_property>
-      </wvobject>
-      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(1)\/CONV_PIPELINE_INST/input_width">
-         <obj_property name="ElementShortName">input_width</obj_property>
-         <obj_property name="ObjectShortName">input_width</obj_property>
-      </wvobject>
-      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(1)\/CONV_PIPELINE_INST/input_height">
-         <obj_property name="ElementShortName">input_height</obj_property>
-         <obj_property name="ObjectShortName">input_height</obj_property>
-      </wvobject>
-      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(1)\/CONV_PIPELINE_INST/kernel_size">
-         <obj_property name="ElementShortName">kernel_size</obj_property>
-         <obj_property name="ObjectShortName">kernel_size</obj_property>
-      </wvobject>
-      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(1)\/CONV_PIPELINE_INST/pooling_size">
-         <obj_property name="ElementShortName">pooling_size</obj_property>
-         <obj_property name="ObjectShortName">pooling_size</obj_property>
-      </wvobject>
-      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(1)\/CONV_PIPELINE_INST/input_amount">
-         <obj_property name="ElementShortName">input_amount</obj_property>
-         <obj_property name="ObjectShortName">input_amount</obj_property>
-      </wvobject>
-      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(1)\/CONV_PIPELINE_INST/enable_weights">
-         <obj_property name="ElementShortName">enable_weights</obj_property>
-         <obj_property name="ObjectShortName">enable_weights</obj_property>
-      </wvobject>
-      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(1)\/CONV_PIPELINE_INST/total_input_channel">
-         <obj_property name="ElementShortName">total_input_channel</obj_property>
-         <obj_property name="ObjectShortName">total_input_channel</obj_property>
-      </wvobject>
-      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(1)\/CONV_PIPELINE_INST/total_output_channel">
-         <obj_property name="ElementShortName">total_output_channel</obj_property>
-         <obj_property name="ObjectShortName">total_output_channel</obj_property>
-      </wvobject>
-      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(1)\/CONV_PIPELINE_INST/current_channel">
-         <obj_property name="ElementShortName">current_channel</obj_property>
-         <obj_property name="ObjectShortName">current_channel</obj_property>
-      </wvobject>
-      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(1)\/CONV_PIPELINE_INST/init_type">
-         <obj_property name="ElementShortName">init_type</obj_property>
-         <obj_property name="ObjectShortName">init_type</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(1)\/CONV_PIPELINE_INST/weight_path">
-         <obj_property name="ElementShortName">weight_path[1:27]</obj_property>
-         <obj_property name="ObjectShortName">weight_path[1:27]</obj_property>
-      </wvobject>
-      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(1)\/CONV_PIPELINE_INST/current_scale">
-         <obj_property name="ElementShortName">current_scale</obj_property>
-         <obj_property name="ObjectShortName">current_scale</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(1)\/CONV_PIPELINE_INST/scale_path">
-         <obj_property name="ElementShortName">scale_path[1:25]</obj_property>
-         <obj_property name="ObjectShortName">scale_path[1:25]</obj_property>
-      </wvobject>
-      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(1)\/CONV_PIPELINE_INST/enable_clip_adder">
-         <obj_property name="ElementShortName">enable_clip_adder</obj_property>
-         <obj_property name="ObjectShortName">enable_clip_adder</obj_property>
-      </wvobject>
-      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(1)\/CONV_PIPELINE_INST/enable_multiplication_line">
-         <obj_property name="ElementShortName">enable_multiplication_line</obj_property>
-         <obj_property name="ObjectShortName">enable_multiplication_line</obj_property>
-      </wvobject>
-      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(1)\/CONV_PIPELINE_INST/enable_shift">
-         <obj_property name="ElementShortName">enable_shift</obj_property>
-         <obj_property name="ObjectShortName">enable_shift</obj_property>
-      </wvobject>
-      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(1)\/CONV_PIPELINE_INST/enable_relu">
-         <obj_property name="ElementShortName">enable_relu</obj_property>
-         <obj_property name="ObjectShortName">enable_relu</obj_property>
-      </wvobject>
-      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(1)\/CONV_PIPELINE_INST/output_length">
-         <obj_property name="ElementShortName">output_length</obj_property>
-         <obj_property name="ObjectShortName">output_length</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(1)\/CONV_PIPELINE_INST/c_scale_value">
-         <obj_property name="ElementShortName">c_scale_value[7:0]</obj_property>
-         <obj_property name="ObjectShortName">c_scale_value[7:0]</obj_property>
       </wvobject>
    </wvobject>
    <wvobject type="group" fp_name="group13790">
@@ -497,149 +304,49 @@
          <obj_property name="ElementShortName">clk</obj_property>
          <obj_property name="ObjectShortName">clk</obj_property>
       </wvobject>
-      <wvobject type="logic" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(2)\/CONV_PIPELINE_INST/reset">
-         <obj_property name="ElementShortName">reset</obj_property>
-         <obj_property name="ObjectShortName">reset</obj_property>
-      </wvobject>
       <wvobject type="array" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(2)\/CONV_PIPELINE_INST/activation_matrix">
          <obj_property name="ElementShortName">activation_matrix[0:24][7:0]</obj_property>
          <obj_property name="ObjectShortName">activation_matrix[0:24][7:0]</obj_property>
+         <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
       </wvobject>
       <wvobject type="logic" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(2)\/CONV_PIPELINE_INST/kernel_en">
          <obj_property name="ElementShortName">kernel_en</obj_property>
          <obj_property name="ObjectShortName">kernel_en</obj_property>
+         <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
       </wvobject>
       <wvobject type="logic" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(2)\/CONV_PIPELINE_INST/kernel_complete">
          <obj_property name="ElementShortName">kernel_complete</obj_property>
          <obj_property name="ObjectShortName">kernel_complete</obj_property>
+         <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
       </wvobject>
       <wvobject type="array" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(2)\/CONV_PIPELINE_INST/base_addr">
          <obj_property name="ElementShortName">base_addr[399:0]</obj_property>
          <obj_property name="ObjectShortName">base_addr[399:0]</obj_property>
       </wvobject>
-      <wvobject type="logic" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(2)\/CONV_PIPELINE_INST/weights_valid">
-         <obj_property name="ElementShortName">weights_valid</obj_property>
-         <obj_property name="ObjectShortName">weights_valid</obj_property>
-      </wvobject>
       <wvobject type="array" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(2)\/CONV_PIPELINE_INST/new_pixel">
          <obj_property name="ElementShortName">new_pixel[23:0]</obj_property>
          <obj_property name="ObjectShortName">new_pixel[23:0]</obj_property>
+         <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
       </wvobject>
       <wvobject type="logic" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(2)\/CONV_PIPELINE_INST/valid_pixel">
          <obj_property name="ElementShortName">valid_pixel</obj_property>
          <obj_property name="ObjectShortName">valid_pixel</obj_property>
+         <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
       </wvobject>
       <wvobject type="logic" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(2)\/CONV_PIPELINE_INST/comp_complete">
          <obj_property name="ElementShortName">comp_complete</obj_property>
          <obj_property name="ObjectShortName">comp_complete</obj_property>
+         <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
       </wvobject>
       <wvobject type="array" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(2)\/CONV_PIPELINE_INST/s_weight_matrix">
          <obj_property name="ElementShortName">s_weight_matrix[0:24][7:0]</obj_property>
          <obj_property name="ObjectShortName">s_weight_matrix[0:24][7:0]</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(2)\/CONV_PIPELINE_INST/s_conv_pixel">
-         <obj_property name="ElementShortName">s_conv_pixel[23:0]</obj_property>
-         <obj_property name="ObjectShortName">s_conv_pixel[23:0]</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(2)\/CONV_PIPELINE_INST/s_conv_en">
-         <obj_property name="ElementShortName">s_conv_en</obj_property>
-         <obj_property name="ObjectShortName">s_conv_en</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(2)\/CONV_PIPELINE_INST/s_conv_complete">
-         <obj_property name="ElementShortName">s_conv_complete</obj_property>
-         <obj_property name="ObjectShortName">s_conv_complete</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(2)\/CONV_PIPELINE_INST/s_pool_en">
-         <obj_property name="ElementShortName">s_pool_en</obj_property>
-         <obj_property name="ObjectShortName">s_pool_en</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(2)\/CONV_PIPELINE_INST/s_pool_complete">
-         <obj_property name="ElementShortName">s_pool_complete</obj_property>
-         <obj_property name="ObjectShortName">s_pool_complete</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(2)\/CONV_PIPELINE_INST/s_pool_matrix">
-         <obj_property name="ElementShortName">s_pool_matrix[0:3][23:0]</obj_property>
-         <obj_property name="ObjectShortName">s_pool_matrix[0:3][23:0]</obj_property>
-      </wvobject>
-      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(2)\/CONV_PIPELINE_INST/input_length">
-         <obj_property name="ElementShortName">input_length</obj_property>
-         <obj_property name="ObjectShortName">input_length</obj_property>
-      </wvobject>
-      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(2)\/CONV_PIPELINE_INST/input_width">
-         <obj_property name="ElementShortName">input_width</obj_property>
-         <obj_property name="ObjectShortName">input_width</obj_property>
-      </wvobject>
-      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(2)\/CONV_PIPELINE_INST/input_height">
-         <obj_property name="ElementShortName">input_height</obj_property>
-         <obj_property name="ObjectShortName">input_height</obj_property>
-      </wvobject>
-      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(2)\/CONV_PIPELINE_INST/kernel_size">
-         <obj_property name="ElementShortName">kernel_size</obj_property>
-         <obj_property name="ObjectShortName">kernel_size</obj_property>
-      </wvobject>
-      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(2)\/CONV_PIPELINE_INST/pooling_size">
-         <obj_property name="ElementShortName">pooling_size</obj_property>
-         <obj_property name="ObjectShortName">pooling_size</obj_property>
-      </wvobject>
-      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(2)\/CONV_PIPELINE_INST/input_amount">
-         <obj_property name="ElementShortName">input_amount</obj_property>
-         <obj_property name="ObjectShortName">input_amount</obj_property>
-      </wvobject>
-      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(2)\/CONV_PIPELINE_INST/enable_weights">
-         <obj_property name="ElementShortName">enable_weights</obj_property>
-         <obj_property name="ObjectShortName">enable_weights</obj_property>
-      </wvobject>
-      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(2)\/CONV_PIPELINE_INST/total_input_channel">
-         <obj_property name="ElementShortName">total_input_channel</obj_property>
-         <obj_property name="ObjectShortName">total_input_channel</obj_property>
-      </wvobject>
-      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(2)\/CONV_PIPELINE_INST/total_output_channel">
-         <obj_property name="ElementShortName">total_output_channel</obj_property>
-         <obj_property name="ObjectShortName">total_output_channel</obj_property>
-      </wvobject>
-      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(2)\/CONV_PIPELINE_INST/current_channel">
-         <obj_property name="ElementShortName">current_channel</obj_property>
-         <obj_property name="ObjectShortName">current_channel</obj_property>
-      </wvobject>
-      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(2)\/CONV_PIPELINE_INST/init_type">
-         <obj_property name="ElementShortName">init_type</obj_property>
-         <obj_property name="ObjectShortName">init_type</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(2)\/CONV_PIPELINE_INST/weight_path">
-         <obj_property name="ElementShortName">weight_path[1:27]</obj_property>
-         <obj_property name="ObjectShortName">weight_path[1:27]</obj_property>
-      </wvobject>
-      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(2)\/CONV_PIPELINE_INST/current_scale">
-         <obj_property name="ElementShortName">current_scale</obj_property>
-         <obj_property name="ObjectShortName">current_scale</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(2)\/CONV_PIPELINE_INST/scale_path">
-         <obj_property name="ElementShortName">scale_path[1:25]</obj_property>
-         <obj_property name="ObjectShortName">scale_path[1:25]</obj_property>
-      </wvobject>
-      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(2)\/CONV_PIPELINE_INST/enable_clip_adder">
-         <obj_property name="ElementShortName">enable_clip_adder</obj_property>
-         <obj_property name="ObjectShortName">enable_clip_adder</obj_property>
-      </wvobject>
-      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(2)\/CONV_PIPELINE_INST/enable_multiplication_line">
-         <obj_property name="ElementShortName">enable_multiplication_line</obj_property>
-         <obj_property name="ObjectShortName">enable_multiplication_line</obj_property>
-      </wvobject>
-      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(2)\/CONV_PIPELINE_INST/enable_shift">
-         <obj_property name="ElementShortName">enable_shift</obj_property>
-         <obj_property name="ObjectShortName">enable_shift</obj_property>
-      </wvobject>
-      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(2)\/CONV_PIPELINE_INST/enable_relu">
-         <obj_property name="ElementShortName">enable_relu</obj_property>
-         <obj_property name="ObjectShortName">enable_relu</obj_property>
-      </wvobject>
-      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(2)\/CONV_PIPELINE_INST/output_length">
-         <obj_property name="ElementShortName">output_length</obj_property>
-         <obj_property name="ObjectShortName">output_length</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(2)\/CONV_PIPELINE_INST/c_scale_value">
-         <obj_property name="ElementShortName">c_scale_value[7:0]</obj_property>
-         <obj_property name="ObjectShortName">c_scale_value[7:0]</obj_property>
       </wvobject>
    </wvobject>
    <wvobject type="group" fp_name="group13790">
@@ -649,149 +356,49 @@
          <obj_property name="ElementShortName">clk</obj_property>
          <obj_property name="ObjectShortName">clk</obj_property>
       </wvobject>
-      <wvobject type="logic" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(3)\/CONV_PIPELINE_INST/reset">
-         <obj_property name="ElementShortName">reset</obj_property>
-         <obj_property name="ObjectShortName">reset</obj_property>
-      </wvobject>
       <wvobject type="array" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(3)\/CONV_PIPELINE_INST/activation_matrix">
          <obj_property name="ElementShortName">activation_matrix[0:24][7:0]</obj_property>
          <obj_property name="ObjectShortName">activation_matrix[0:24][7:0]</obj_property>
+         <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
       </wvobject>
       <wvobject type="logic" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(3)\/CONV_PIPELINE_INST/kernel_en">
          <obj_property name="ElementShortName">kernel_en</obj_property>
          <obj_property name="ObjectShortName">kernel_en</obj_property>
+         <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
       </wvobject>
       <wvobject type="logic" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(3)\/CONV_PIPELINE_INST/kernel_complete">
          <obj_property name="ElementShortName">kernel_complete</obj_property>
          <obj_property name="ObjectShortName">kernel_complete</obj_property>
+         <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
       </wvobject>
       <wvobject type="array" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(3)\/CONV_PIPELINE_INST/base_addr">
          <obj_property name="ElementShortName">base_addr[399:0]</obj_property>
          <obj_property name="ObjectShortName">base_addr[399:0]</obj_property>
       </wvobject>
-      <wvobject type="logic" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(3)\/CONV_PIPELINE_INST/weights_valid">
-         <obj_property name="ElementShortName">weights_valid</obj_property>
-         <obj_property name="ObjectShortName">weights_valid</obj_property>
-      </wvobject>
       <wvobject type="array" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(3)\/CONV_PIPELINE_INST/new_pixel">
          <obj_property name="ElementShortName">new_pixel[23:0]</obj_property>
          <obj_property name="ObjectShortName">new_pixel[23:0]</obj_property>
+         <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
       </wvobject>
       <wvobject type="logic" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(3)\/CONV_PIPELINE_INST/valid_pixel">
          <obj_property name="ElementShortName">valid_pixel</obj_property>
          <obj_property name="ObjectShortName">valid_pixel</obj_property>
+         <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
       </wvobject>
       <wvobject type="logic" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(3)\/CONV_PIPELINE_INST/comp_complete">
          <obj_property name="ElementShortName">comp_complete</obj_property>
          <obj_property name="ObjectShortName">comp_complete</obj_property>
+         <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
       </wvobject>
       <wvobject type="array" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(3)\/CONV_PIPELINE_INST/s_weight_matrix">
          <obj_property name="ElementShortName">s_weight_matrix[0:24][7:0]</obj_property>
          <obj_property name="ObjectShortName">s_weight_matrix[0:24][7:0]</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(3)\/CONV_PIPELINE_INST/s_conv_pixel">
-         <obj_property name="ElementShortName">s_conv_pixel[23:0]</obj_property>
-         <obj_property name="ObjectShortName">s_conv_pixel[23:0]</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(3)\/CONV_PIPELINE_INST/s_conv_en">
-         <obj_property name="ElementShortName">s_conv_en</obj_property>
-         <obj_property name="ObjectShortName">s_conv_en</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(3)\/CONV_PIPELINE_INST/s_conv_complete">
-         <obj_property name="ElementShortName">s_conv_complete</obj_property>
-         <obj_property name="ObjectShortName">s_conv_complete</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(3)\/CONV_PIPELINE_INST/s_pool_en">
-         <obj_property name="ElementShortName">s_pool_en</obj_property>
-         <obj_property name="ObjectShortName">s_pool_en</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(3)\/CONV_PIPELINE_INST/s_pool_complete">
-         <obj_property name="ElementShortName">s_pool_complete</obj_property>
-         <obj_property name="ObjectShortName">s_pool_complete</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(3)\/CONV_PIPELINE_INST/s_pool_matrix">
-         <obj_property name="ElementShortName">s_pool_matrix[0:3][23:0]</obj_property>
-         <obj_property name="ObjectShortName">s_pool_matrix[0:3][23:0]</obj_property>
-      </wvobject>
-      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(3)\/CONV_PIPELINE_INST/input_length">
-         <obj_property name="ElementShortName">input_length</obj_property>
-         <obj_property name="ObjectShortName">input_length</obj_property>
-      </wvobject>
-      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(3)\/CONV_PIPELINE_INST/input_width">
-         <obj_property name="ElementShortName">input_width</obj_property>
-         <obj_property name="ObjectShortName">input_width</obj_property>
-      </wvobject>
-      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(3)\/CONV_PIPELINE_INST/input_height">
-         <obj_property name="ElementShortName">input_height</obj_property>
-         <obj_property name="ObjectShortName">input_height</obj_property>
-      </wvobject>
-      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(3)\/CONV_PIPELINE_INST/kernel_size">
-         <obj_property name="ElementShortName">kernel_size</obj_property>
-         <obj_property name="ObjectShortName">kernel_size</obj_property>
-      </wvobject>
-      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(3)\/CONV_PIPELINE_INST/pooling_size">
-         <obj_property name="ElementShortName">pooling_size</obj_property>
-         <obj_property name="ObjectShortName">pooling_size</obj_property>
-      </wvobject>
-      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(3)\/CONV_PIPELINE_INST/input_amount">
-         <obj_property name="ElementShortName">input_amount</obj_property>
-         <obj_property name="ObjectShortName">input_amount</obj_property>
-      </wvobject>
-      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(3)\/CONV_PIPELINE_INST/enable_weights">
-         <obj_property name="ElementShortName">enable_weights</obj_property>
-         <obj_property name="ObjectShortName">enable_weights</obj_property>
-      </wvobject>
-      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(3)\/CONV_PIPELINE_INST/total_input_channel">
-         <obj_property name="ElementShortName">total_input_channel</obj_property>
-         <obj_property name="ObjectShortName">total_input_channel</obj_property>
-      </wvobject>
-      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(3)\/CONV_PIPELINE_INST/total_output_channel">
-         <obj_property name="ElementShortName">total_output_channel</obj_property>
-         <obj_property name="ObjectShortName">total_output_channel</obj_property>
-      </wvobject>
-      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(3)\/CONV_PIPELINE_INST/current_channel">
-         <obj_property name="ElementShortName">current_channel</obj_property>
-         <obj_property name="ObjectShortName">current_channel</obj_property>
-      </wvobject>
-      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(3)\/CONV_PIPELINE_INST/init_type">
-         <obj_property name="ElementShortName">init_type</obj_property>
-         <obj_property name="ObjectShortName">init_type</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(3)\/CONV_PIPELINE_INST/weight_path">
-         <obj_property name="ElementShortName">weight_path[1:27]</obj_property>
-         <obj_property name="ObjectShortName">weight_path[1:27]</obj_property>
-      </wvobject>
-      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(3)\/CONV_PIPELINE_INST/current_scale">
-         <obj_property name="ElementShortName">current_scale</obj_property>
-         <obj_property name="ObjectShortName">current_scale</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(3)\/CONV_PIPELINE_INST/scale_path">
-         <obj_property name="ElementShortName">scale_path[1:25]</obj_property>
-         <obj_property name="ObjectShortName">scale_path[1:25]</obj_property>
-      </wvobject>
-      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(3)\/CONV_PIPELINE_INST/enable_clip_adder">
-         <obj_property name="ElementShortName">enable_clip_adder</obj_property>
-         <obj_property name="ObjectShortName">enable_clip_adder</obj_property>
-      </wvobject>
-      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(3)\/CONV_PIPELINE_INST/enable_multiplication_line">
-         <obj_property name="ElementShortName">enable_multiplication_line</obj_property>
-         <obj_property name="ObjectShortName">enable_multiplication_line</obj_property>
-      </wvobject>
-      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(3)\/CONV_PIPELINE_INST/enable_shift">
-         <obj_property name="ElementShortName">enable_shift</obj_property>
-         <obj_property name="ObjectShortName">enable_shift</obj_property>
-      </wvobject>
-      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(3)\/CONV_PIPELINE_INST/enable_relu">
-         <obj_property name="ElementShortName">enable_relu</obj_property>
-         <obj_property name="ObjectShortName">enable_relu</obj_property>
-      </wvobject>
-      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(3)\/CONV_PIPELINE_INST/output_length">
-         <obj_property name="ElementShortName">output_length</obj_property>
-         <obj_property name="ObjectShortName">output_length</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(3)\/CONV_PIPELINE_INST/c_scale_value">
-         <obj_property name="ElementShortName">c_scale_value[7:0]</obj_property>
-         <obj_property name="ObjectShortName">c_scale_value[7:0]</obj_property>
       </wvobject>
    </wvobject>
    <wvobject type="group" fp_name="group13790">
@@ -801,174 +408,76 @@
          <obj_property name="ElementShortName">clk</obj_property>
          <obj_property name="ObjectShortName">clk</obj_property>
       </wvobject>
-      <wvobject type="logic" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(4)\/CONV_PIPELINE_INST/reset">
-         <obj_property name="ElementShortName">reset</obj_property>
-         <obj_property name="ObjectShortName">reset</obj_property>
-      </wvobject>
       <wvobject type="array" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(4)\/CONV_PIPELINE_INST/activation_matrix">
          <obj_property name="ElementShortName">activation_matrix[0:24][7:0]</obj_property>
          <obj_property name="ObjectShortName">activation_matrix[0:24][7:0]</obj_property>
+         <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="isExpanded"></obj_property>
       </wvobject>
       <wvobject type="logic" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(4)\/CONV_PIPELINE_INST/kernel_en">
          <obj_property name="ElementShortName">kernel_en</obj_property>
          <obj_property name="ObjectShortName">kernel_en</obj_property>
+         <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
       </wvobject>
       <wvobject type="logic" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(4)\/CONV_PIPELINE_INST/kernel_complete">
          <obj_property name="ElementShortName">kernel_complete</obj_property>
          <obj_property name="ObjectShortName">kernel_complete</obj_property>
+         <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
       </wvobject>
       <wvobject type="array" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(4)\/CONV_PIPELINE_INST/base_addr">
          <obj_property name="ElementShortName">base_addr[399:0]</obj_property>
          <obj_property name="ObjectShortName">base_addr[399:0]</obj_property>
       </wvobject>
-      <wvobject type="logic" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(4)\/CONV_PIPELINE_INST/weights_valid">
-         <obj_property name="ElementShortName">weights_valid</obj_property>
-         <obj_property name="ObjectShortName">weights_valid</obj_property>
-      </wvobject>
       <wvobject type="array" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(4)\/CONV_PIPELINE_INST/new_pixel">
          <obj_property name="ElementShortName">new_pixel[23:0]</obj_property>
          <obj_property name="ObjectShortName">new_pixel[23:0]</obj_property>
+         <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
       </wvobject>
       <wvobject type="logic" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(4)\/CONV_PIPELINE_INST/valid_pixel">
          <obj_property name="ElementShortName">valid_pixel</obj_property>
          <obj_property name="ObjectShortName">valid_pixel</obj_property>
+         <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
       </wvobject>
       <wvobject type="logic" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(4)\/CONV_PIPELINE_INST/comp_complete">
          <obj_property name="ElementShortName">comp_complete</obj_property>
          <obj_property name="ObjectShortName">comp_complete</obj_property>
+         <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
       </wvobject>
       <wvobject type="array" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(4)\/CONV_PIPELINE_INST/s_weight_matrix">
          <obj_property name="ElementShortName">s_weight_matrix[0:24][7:0]</obj_property>
          <obj_property name="ObjectShortName">s_weight_matrix[0:24][7:0]</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(4)\/CONV_PIPELINE_INST/s_conv_pixel">
-         <obj_property name="ElementShortName">s_conv_pixel[23:0]</obj_property>
-         <obj_property name="ObjectShortName">s_conv_pixel[23:0]</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(4)\/CONV_PIPELINE_INST/s_conv_en">
-         <obj_property name="ElementShortName">s_conv_en</obj_property>
-         <obj_property name="ObjectShortName">s_conv_en</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(4)\/CONV_PIPELINE_INST/s_conv_complete">
-         <obj_property name="ElementShortName">s_conv_complete</obj_property>
-         <obj_property name="ObjectShortName">s_conv_complete</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(4)\/CONV_PIPELINE_INST/s_pool_en">
-         <obj_property name="ElementShortName">s_pool_en</obj_property>
-         <obj_property name="ObjectShortName">s_pool_en</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(4)\/CONV_PIPELINE_INST/s_pool_complete">
-         <obj_property name="ElementShortName">s_pool_complete</obj_property>
-         <obj_property name="ObjectShortName">s_pool_complete</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(4)\/CONV_PIPELINE_INST/s_pool_matrix">
-         <obj_property name="ElementShortName">s_pool_matrix[0:3][23:0]</obj_property>
-         <obj_property name="ObjectShortName">s_pool_matrix[0:3][23:0]</obj_property>
-      </wvobject>
-      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(4)\/CONV_PIPELINE_INST/input_length">
-         <obj_property name="ElementShortName">input_length</obj_property>
-         <obj_property name="ObjectShortName">input_length</obj_property>
-      </wvobject>
-      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(4)\/CONV_PIPELINE_INST/input_width">
-         <obj_property name="ElementShortName">input_width</obj_property>
-         <obj_property name="ObjectShortName">input_width</obj_property>
-      </wvobject>
-      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(4)\/CONV_PIPELINE_INST/input_height">
-         <obj_property name="ElementShortName">input_height</obj_property>
-         <obj_property name="ObjectShortName">input_height</obj_property>
-      </wvobject>
-      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(4)\/CONV_PIPELINE_INST/kernel_size">
-         <obj_property name="ElementShortName">kernel_size</obj_property>
-         <obj_property name="ObjectShortName">kernel_size</obj_property>
-      </wvobject>
-      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(4)\/CONV_PIPELINE_INST/pooling_size">
-         <obj_property name="ElementShortName">pooling_size</obj_property>
-         <obj_property name="ObjectShortName">pooling_size</obj_property>
-      </wvobject>
-      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(4)\/CONV_PIPELINE_INST/input_amount">
-         <obj_property name="ElementShortName">input_amount</obj_property>
-         <obj_property name="ObjectShortName">input_amount</obj_property>
-      </wvobject>
-      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(4)\/CONV_PIPELINE_INST/enable_weights">
-         <obj_property name="ElementShortName">enable_weights</obj_property>
-         <obj_property name="ObjectShortName">enable_weights</obj_property>
-      </wvobject>
-      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(4)\/CONV_PIPELINE_INST/total_input_channel">
-         <obj_property name="ElementShortName">total_input_channel</obj_property>
-         <obj_property name="ObjectShortName">total_input_channel</obj_property>
-      </wvobject>
-      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(4)\/CONV_PIPELINE_INST/total_output_channel">
-         <obj_property name="ElementShortName">total_output_channel</obj_property>
-         <obj_property name="ObjectShortName">total_output_channel</obj_property>
-      </wvobject>
-      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(4)\/CONV_PIPELINE_INST/current_channel">
-         <obj_property name="ElementShortName">current_channel</obj_property>
-         <obj_property name="ObjectShortName">current_channel</obj_property>
-      </wvobject>
-      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(4)\/CONV_PIPELINE_INST/init_type">
-         <obj_property name="ElementShortName">init_type</obj_property>
-         <obj_property name="ObjectShortName">init_type</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(4)\/CONV_PIPELINE_INST/weight_path">
-         <obj_property name="ElementShortName">weight_path[1:27]</obj_property>
-         <obj_property name="ObjectShortName">weight_path[1:27]</obj_property>
-      </wvobject>
-      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(4)\/CONV_PIPELINE_INST/current_scale">
-         <obj_property name="ElementShortName">current_scale</obj_property>
-         <obj_property name="ObjectShortName">current_scale</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(4)\/CONV_PIPELINE_INST/scale_path">
-         <obj_property name="ElementShortName">scale_path[1:25]</obj_property>
-         <obj_property name="ObjectShortName">scale_path[1:25]</obj_property>
-      </wvobject>
-      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(4)\/CONV_PIPELINE_INST/enable_clip_adder">
-         <obj_property name="ElementShortName">enable_clip_adder</obj_property>
-         <obj_property name="ObjectShortName">enable_clip_adder</obj_property>
-      </wvobject>
-      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(4)\/CONV_PIPELINE_INST/enable_multiplication_line">
-         <obj_property name="ElementShortName">enable_multiplication_line</obj_property>
-         <obj_property name="ObjectShortName">enable_multiplication_line</obj_property>
-      </wvobject>
-      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(4)\/CONV_PIPELINE_INST/enable_shift">
-         <obj_property name="ElementShortName">enable_shift</obj_property>
-         <obj_property name="ObjectShortName">enable_shift</obj_property>
-      </wvobject>
-      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(4)\/CONV_PIPELINE_INST/enable_relu">
-         <obj_property name="ElementShortName">enable_relu</obj_property>
-         <obj_property name="ObjectShortName">enable_relu</obj_property>
-      </wvobject>
-      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(4)\/CONV_PIPELINE_INST/output_length">
-         <obj_property name="ElementShortName">output_length</obj_property>
-         <obj_property name="ObjectShortName">output_length</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(4)\/CONV_PIPELINE_INST/c_scale_value">
-         <obj_property name="ElementShortName">c_scale_value[7:0]</obj_property>
-         <obj_property name="ObjectShortName">c_scale_value[7:0]</obj_property>
-      </wvobject>
    </wvobject>
    <wvobject type="group" fp_name="group13790">
       <obj_property name="label">Conv Pipeline Instance 6</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="isExpanded"></obj_property>
       <wvobject type="logic" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(5)\/CONV_PIPELINE_INST/clk">
          <obj_property name="ElementShortName">clk</obj_property>
          <obj_property name="ObjectShortName">clk</obj_property>
       </wvobject>
-      <wvobject type="logic" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(5)\/CONV_PIPELINE_INST/reset">
-         <obj_property name="ElementShortName">reset</obj_property>
-         <obj_property name="ObjectShortName">reset</obj_property>
-      </wvobject>
       <wvobject type="array" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(5)\/CONV_PIPELINE_INST/activation_matrix">
          <obj_property name="ElementShortName">activation_matrix[0:24][7:0]</obj_property>
          <obj_property name="ObjectShortName">activation_matrix[0:24][7:0]</obj_property>
+         <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
       </wvobject>
       <wvobject type="logic" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(5)\/CONV_PIPELINE_INST/kernel_en">
          <obj_property name="ElementShortName">kernel_en</obj_property>
          <obj_property name="ObjectShortName">kernel_en</obj_property>
+         <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
       </wvobject>
       <wvobject type="logic" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(5)\/CONV_PIPELINE_INST/kernel_complete">
          <obj_property name="ElementShortName">kernel_complete</obj_property>
          <obj_property name="ObjectShortName">kernel_complete</obj_property>
+         <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
       </wvobject>
       <wvobject type="array" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(5)\/CONV_PIPELINE_INST/base_addr">
          <obj_property name="ElementShortName">base_addr[399:0]</obj_property>
@@ -981,123 +490,24 @@
       <wvobject type="array" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(5)\/CONV_PIPELINE_INST/new_pixel">
          <obj_property name="ElementShortName">new_pixel[23:0]</obj_property>
          <obj_property name="ObjectShortName">new_pixel[23:0]</obj_property>
+         <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
       </wvobject>
       <wvobject type="logic" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(5)\/CONV_PIPELINE_INST/valid_pixel">
          <obj_property name="ElementShortName">valid_pixel</obj_property>
          <obj_property name="ObjectShortName">valid_pixel</obj_property>
+         <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
       </wvobject>
       <wvobject type="logic" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(5)\/CONV_PIPELINE_INST/comp_complete">
          <obj_property name="ElementShortName">comp_complete</obj_property>
          <obj_property name="ObjectShortName">comp_complete</obj_property>
+         <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
       </wvobject>
       <wvobject type="array" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(5)\/CONV_PIPELINE_INST/s_weight_matrix">
          <obj_property name="ElementShortName">s_weight_matrix[0:24][7:0]</obj_property>
          <obj_property name="ObjectShortName">s_weight_matrix[0:24][7:0]</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(5)\/CONV_PIPELINE_INST/s_conv_pixel">
-         <obj_property name="ElementShortName">s_conv_pixel[23:0]</obj_property>
-         <obj_property name="ObjectShortName">s_conv_pixel[23:0]</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(5)\/CONV_PIPELINE_INST/s_conv_en">
-         <obj_property name="ElementShortName">s_conv_en</obj_property>
-         <obj_property name="ObjectShortName">s_conv_en</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(5)\/CONV_PIPELINE_INST/s_conv_complete">
-         <obj_property name="ElementShortName">s_conv_complete</obj_property>
-         <obj_property name="ObjectShortName">s_conv_complete</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(5)\/CONV_PIPELINE_INST/s_pool_en">
-         <obj_property name="ElementShortName">s_pool_en</obj_property>
-         <obj_property name="ObjectShortName">s_pool_en</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(5)\/CONV_PIPELINE_INST/s_pool_complete">
-         <obj_property name="ElementShortName">s_pool_complete</obj_property>
-         <obj_property name="ObjectShortName">s_pool_complete</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(5)\/CONV_PIPELINE_INST/s_pool_matrix">
-         <obj_property name="ElementShortName">s_pool_matrix[0:3][23:0]</obj_property>
-         <obj_property name="ObjectShortName">s_pool_matrix[0:3][23:0]</obj_property>
-      </wvobject>
-      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(5)\/CONV_PIPELINE_INST/input_length">
-         <obj_property name="ElementShortName">input_length</obj_property>
-         <obj_property name="ObjectShortName">input_length</obj_property>
-      </wvobject>
-      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(5)\/CONV_PIPELINE_INST/input_width">
-         <obj_property name="ElementShortName">input_width</obj_property>
-         <obj_property name="ObjectShortName">input_width</obj_property>
-      </wvobject>
-      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(5)\/CONV_PIPELINE_INST/input_height">
-         <obj_property name="ElementShortName">input_height</obj_property>
-         <obj_property name="ObjectShortName">input_height</obj_property>
-      </wvobject>
-      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(5)\/CONV_PIPELINE_INST/kernel_size">
-         <obj_property name="ElementShortName">kernel_size</obj_property>
-         <obj_property name="ObjectShortName">kernel_size</obj_property>
-      </wvobject>
-      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(5)\/CONV_PIPELINE_INST/pooling_size">
-         <obj_property name="ElementShortName">pooling_size</obj_property>
-         <obj_property name="ObjectShortName">pooling_size</obj_property>
-      </wvobject>
-      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(5)\/CONV_PIPELINE_INST/input_amount">
-         <obj_property name="ElementShortName">input_amount</obj_property>
-         <obj_property name="ObjectShortName">input_amount</obj_property>
-      </wvobject>
-      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(5)\/CONV_PIPELINE_INST/enable_weights">
-         <obj_property name="ElementShortName">enable_weights</obj_property>
-         <obj_property name="ObjectShortName">enable_weights</obj_property>
-      </wvobject>
-      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(5)\/CONV_PIPELINE_INST/total_input_channel">
-         <obj_property name="ElementShortName">total_input_channel</obj_property>
-         <obj_property name="ObjectShortName">total_input_channel</obj_property>
-      </wvobject>
-      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(5)\/CONV_PIPELINE_INST/total_output_channel">
-         <obj_property name="ElementShortName">total_output_channel</obj_property>
-         <obj_property name="ObjectShortName">total_output_channel</obj_property>
-      </wvobject>
-      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(5)\/CONV_PIPELINE_INST/current_channel">
-         <obj_property name="ElementShortName">current_channel</obj_property>
-         <obj_property name="ObjectShortName">current_channel</obj_property>
-      </wvobject>
-      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(5)\/CONV_PIPELINE_INST/init_type">
-         <obj_property name="ElementShortName">init_type</obj_property>
-         <obj_property name="ObjectShortName">init_type</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(5)\/CONV_PIPELINE_INST/weight_path">
-         <obj_property name="ElementShortName">weight_path[1:27]</obj_property>
-         <obj_property name="ObjectShortName">weight_path[1:27]</obj_property>
-      </wvobject>
-      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(5)\/CONV_PIPELINE_INST/current_scale">
-         <obj_property name="ElementShortName">current_scale</obj_property>
-         <obj_property name="ObjectShortName">current_scale</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(5)\/CONV_PIPELINE_INST/scale_path">
-         <obj_property name="ElementShortName">scale_path[1:25]</obj_property>
-         <obj_property name="ObjectShortName">scale_path[1:25]</obj_property>
-      </wvobject>
-      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(5)\/CONV_PIPELINE_INST/enable_clip_adder">
-         <obj_property name="ElementShortName">enable_clip_adder</obj_property>
-         <obj_property name="ObjectShortName">enable_clip_adder</obj_property>
-      </wvobject>
-      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(5)\/CONV_PIPELINE_INST/enable_multiplication_line">
-         <obj_property name="ElementShortName">enable_multiplication_line</obj_property>
-         <obj_property name="ObjectShortName">enable_multiplication_line</obj_property>
-      </wvobject>
-      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(5)\/CONV_PIPELINE_INST/enable_shift">
-         <obj_property name="ElementShortName">enable_shift</obj_property>
-         <obj_property name="ObjectShortName">enable_shift</obj_property>
-      </wvobject>
-      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(5)\/CONV_PIPELINE_INST/enable_relu">
-         <obj_property name="ElementShortName">enable_relu</obj_property>
-         <obj_property name="ObjectShortName">enable_relu</obj_property>
-      </wvobject>
-      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(5)\/CONV_PIPELINE_INST/output_length">
-         <obj_property name="ElementShortName">output_length</obj_property>
-         <obj_property name="ObjectShortName">output_length</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(5)\/CONV_PIPELINE_INST/c_scale_value">
-         <obj_property name="ElementShortName">c_scale_value[7:0]</obj_property>
-         <obj_property name="ObjectShortName">c_scale_value[7:0]</obj_property>
-         <obj_property name="isExpanded"></obj_property>
       </wvobject>
    </wvobject>
    <wvobject fp_name="divider2014" type="divider">
@@ -1115,34 +525,79 @@
    <wvobject type="array" fp_name="/conv_seq_tb/conv_seq_inst/PIPELINE_INST/activation_matrix">
       <obj_property name="ElementShortName">activation_matrix[0:5][23:0]</obj_property>
       <obj_property name="ObjectShortName">activation_matrix[0:5][23:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="array" fp_name="/conv_seq_tb/conv_seq_inst/PIPELINE_INST/activation_matrix[0]">
+         <obj_property name="ElementShortName">[0][23:0]</obj_property>
+         <obj_property name="ObjectShortName">[0][23:0]</obj_property>
+         <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/conv_seq_tb/conv_seq_inst/PIPELINE_INST/activation_matrix[1]">
+         <obj_property name="ElementShortName">[1][23:0]</obj_property>
+         <obj_property name="ObjectShortName">[1][23:0]</obj_property>
+         <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/conv_seq_tb/conv_seq_inst/PIPELINE_INST/activation_matrix[2]">
+         <obj_property name="ElementShortName">[2][23:0]</obj_property>
+         <obj_property name="ObjectShortName">[2][23:0]</obj_property>
+         <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/conv_seq_tb/conv_seq_inst/PIPELINE_INST/activation_matrix[3]">
+         <obj_property name="ElementShortName">[3][23:0]</obj_property>
+         <obj_property name="ObjectShortName">[3][23:0]</obj_property>
+         <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/conv_seq_tb/conv_seq_inst/PIPELINE_INST/activation_matrix[4]">
+         <obj_property name="ElementShortName">[4][23:0]</obj_property>
+         <obj_property name="ObjectShortName">[4][23:0]</obj_property>
+         <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/conv_seq_tb/conv_seq_inst/PIPELINE_INST/activation_matrix[5]">
+         <obj_property name="ElementShortName">[5][23:0]</obj_property>
+         <obj_property name="ObjectShortName">[5][23:0]</obj_property>
+         <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
    </wvobject>
    <wvobject type="logic" fp_name="/conv_seq_tb/conv_seq_inst/PIPELINE_INST/kernel_en">
       <obj_property name="ElementShortName">kernel_en</obj_property>
       <obj_property name="ObjectShortName">kernel_en</obj_property>
+      <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
    <wvobject type="logic" fp_name="/conv_seq_tb/conv_seq_inst/PIPELINE_INST/kernel_complete">
       <obj_property name="ElementShortName">kernel_complete</obj_property>
       <obj_property name="ObjectShortName">kernel_complete</obj_property>
+      <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/conv_seq_tb/conv_seq_inst/PIPELINE_INST/base_addr">
-      <obj_property name="ElementShortName">base_addr[5:0]</obj_property>
-      <obj_property name="ObjectShortName">base_addr[5:0]</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/conv_seq_tb/conv_seq_inst/PIPELINE_INST/weights_valid">
-      <obj_property name="ElementShortName">weights_valid</obj_property>
-      <obj_property name="ObjectShortName">weights_valid</obj_property>
+      <obj_property name="ElementShortName">base_addr[35:0]</obj_property>
+      <obj_property name="ObjectShortName">base_addr[35:0]</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/conv_seq_tb/conv_seq_inst/PIPELINE_INST/new_pixel">
       <obj_property name="ElementShortName">new_pixel[7:0]</obj_property>
       <obj_property name="ObjectShortName">new_pixel[7:0]</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
    <wvobject type="logic" fp_name="/conv_seq_tb/conv_seq_inst/PIPELINE_INST/valid_pixel">
       <obj_property name="ElementShortName">valid_pixel</obj_property>
       <obj_property name="ObjectShortName">valid_pixel</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
    <wvobject type="logic" fp_name="/conv_seq_tb/conv_seq_inst/PIPELINE_INST/comp_complete">
       <obj_property name="ElementShortName">comp_complete</obj_property>
       <obj_property name="ObjectShortName">comp_complete</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/conv_seq_tb/conv_seq_inst/PIPELINE_INST/s_weight_matrix">
       <obj_property name="ElementShortName">s_weight_matrix[0:5][23:0]</obj_property>
@@ -1172,84 +627,341 @@
       <obj_property name="ElementShortName">s_pool_matrix[0:3][7:0]</obj_property>
       <obj_property name="ObjectShortName">s_pool_matrix[0:3][7:0]</obj_property>
    </wvobject>
-   <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/PIPELINE_INST/input_length">
-      <obj_property name="ElementShortName">input_length</obj_property>
-      <obj_property name="ObjectShortName">input_length</obj_property>
-   </wvobject>
-   <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/PIPELINE_INST/input_width">
-      <obj_property name="ElementShortName">input_width</obj_property>
-      <obj_property name="ObjectShortName">input_width</obj_property>
-   </wvobject>
-   <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/PIPELINE_INST/input_height">
-      <obj_property name="ElementShortName">input_height</obj_property>
-      <obj_property name="ObjectShortName">input_height</obj_property>
-   </wvobject>
-   <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/PIPELINE_INST/kernel_size">
-      <obj_property name="ElementShortName">kernel_size</obj_property>
-      <obj_property name="ObjectShortName">kernel_size</obj_property>
-   </wvobject>
-   <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/PIPELINE_INST/pooling_size">
-      <obj_property name="ElementShortName">pooling_size</obj_property>
-      <obj_property name="ObjectShortName">pooling_size</obj_property>
-   </wvobject>
-   <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/PIPELINE_INST/input_amount">
-      <obj_property name="ElementShortName">input_amount</obj_property>
-      <obj_property name="ObjectShortName">input_amount</obj_property>
-   </wvobject>
-   <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/PIPELINE_INST/enable_weights">
-      <obj_property name="ElementShortName">enable_weights</obj_property>
-      <obj_property name="ObjectShortName">enable_weights</obj_property>
-   </wvobject>
-   <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/PIPELINE_INST/total_input_channel">
-      <obj_property name="ElementShortName">total_input_channel</obj_property>
-      <obj_property name="ObjectShortName">total_input_channel</obj_property>
-   </wvobject>
-   <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/PIPELINE_INST/total_output_channel">
-      <obj_property name="ElementShortName">total_output_channel</obj_property>
-      <obj_property name="ObjectShortName">total_output_channel</obj_property>
-   </wvobject>
-   <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/PIPELINE_INST/current_channel">
-      <obj_property name="ElementShortName">current_channel</obj_property>
-      <obj_property name="ObjectShortName">current_channel</obj_property>
-   </wvobject>
-   <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/PIPELINE_INST/init_type">
-      <obj_property name="ElementShortName">init_type</obj_property>
-      <obj_property name="ObjectShortName">init_type</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/conv_seq_tb/conv_seq_inst/PIPELINE_INST/weight_path">
-      <obj_property name="ElementShortName">weight_path[1:0]</obj_property>
-      <obj_property name="ObjectShortName">weight_path[1:0]</obj_property>
-   </wvobject>
-   <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/PIPELINE_INST/current_scale">
-      <obj_property name="ElementShortName">current_scale</obj_property>
-      <obj_property name="ObjectShortName">current_scale</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/conv_seq_tb/conv_seq_inst/PIPELINE_INST/scale_path">
-      <obj_property name="ElementShortName">scale_path[1:25]</obj_property>
-      <obj_property name="ObjectShortName">scale_path[1:25]</obj_property>
-   </wvobject>
-   <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/PIPELINE_INST/enable_clip_adder">
-      <obj_property name="ElementShortName">enable_clip_adder</obj_property>
-      <obj_property name="ObjectShortName">enable_clip_adder</obj_property>
-   </wvobject>
-   <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/PIPELINE_INST/enable_multiplication_line">
-      <obj_property name="ElementShortName">enable_multiplication_line</obj_property>
-      <obj_property name="ObjectShortName">enable_multiplication_line</obj_property>
-   </wvobject>
-   <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/PIPELINE_INST/enable_shift">
-      <obj_property name="ElementShortName">enable_shift</obj_property>
-      <obj_property name="ObjectShortName">enable_shift</obj_property>
-   </wvobject>
-   <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/PIPELINE_INST/enable_relu">
-      <obj_property name="ElementShortName">enable_relu</obj_property>
-      <obj_property name="ObjectShortName">enable_relu</obj_property>
-   </wvobject>
-   <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/PIPELINE_INST/output_length">
-      <obj_property name="ElementShortName">output_length</obj_property>
-      <obj_property name="ObjectShortName">output_length</obj_property>
-   </wvobject>
    <wvobject type="array" fp_name="/conv_seq_tb/conv_seq_inst/PIPELINE_INST/c_scale_value">
       <obj_property name="ElementShortName">c_scale_value[23:0]</obj_property>
       <obj_property name="ObjectShortName">c_scale_value[23:0]</obj_property>
+   </wvobject>
+   <wvobject type="group" fp_name="group4887">
+      <obj_property name="label">POOL SLIDER</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="logic" fp_name="/conv_seq_tb/conv_seq_inst/PIPELINE_INST/POOL_SLIDER/clk">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/conv_seq_tb/conv_seq_inst/PIPELINE_INST/POOL_SLIDER/reset">
+         <obj_property name="ElementShortName">reset</obj_property>
+         <obj_property name="ObjectShortName">reset</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/conv_seq_tb/conv_seq_inst/PIPELINE_INST/POOL_SLIDER/pixel_stream">
+         <obj_property name="ElementShortName">pixel_stream[7:0]</obj_property>
+         <obj_property name="ObjectShortName">pixel_stream[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/conv_seq_tb/conv_seq_inst/PIPELINE_INST/POOL_SLIDER/valid_pixel">
+         <obj_property name="ElementShortName">valid_pixel</obj_property>
+         <obj_property name="ObjectShortName">valid_pixel</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/conv_seq_tb/conv_seq_inst/PIPELINE_INST/POOL_SLIDER/kernel_complete">
+         <obj_property name="ElementShortName">kernel_complete</obj_property>
+         <obj_property name="ObjectShortName">kernel_complete</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/conv_seq_tb/conv_seq_inst/PIPELINE_INST/POOL_SLIDER/kernel_en">
+         <obj_property name="ElementShortName">kernel_en</obj_property>
+         <obj_property name="ObjectShortName">kernel_en</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/conv_seq_tb/conv_seq_inst/PIPELINE_INST/POOL_SLIDER/kernel_activation_matrix">
+         <obj_property name="ElementShortName">kernel_activation_matrix[0:3][7:0]</obj_property>
+         <obj_property name="ObjectShortName">kernel_activation_matrix[0:3][7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/conv_seq_tb/conv_seq_inst/PIPELINE_INST/POOL_SLIDER/s_pixel_input_x">
+         <obj_property name="ElementShortName">s_pixel_input_x[3:0]</obj_property>
+         <obj_property name="ObjectShortName">s_pixel_input_x[3:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/conv_seq_tb/conv_seq_inst/PIPELINE_INST/POOL_SLIDER/s_pixel_input_y">
+         <obj_property name="ElementShortName">s_pixel_input_y[4:0]</obj_property>
+         <obj_property name="ObjectShortName">s_pixel_input_y[4:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/conv_seq_tb/conv_seq_inst/PIPELINE_INST/POOL_SLIDER/s_pixel_old_input_x">
+         <obj_property name="ElementShortName">s_pixel_old_input_x[3:0]</obj_property>
+         <obj_property name="ObjectShortName">s_pixel_old_input_x[3:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/conv_seq_tb/conv_seq_inst/PIPELINE_INST/POOL_SLIDER/s_pixel_output_x">
+         <obj_property name="ElementShortName">s_pixel_output_x[2:0]</obj_property>
+         <obj_property name="ObjectShortName">s_pixel_output_x[2:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/conv_seq_tb/conv_seq_inst/PIPELINE_INST/POOL_SLIDER/s_pixel_output_y">
+         <obj_property name="ElementShortName">s_pixel_output_y[3:0]</obj_property>
+         <obj_property name="ObjectShortName">s_pixel_output_y[3:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/conv_seq_tb/conv_seq_inst/PIPELINE_INST/POOL_SLIDER/s_current_pixel">
+         <obj_property name="ElementShortName">s_current_pixel[7:0]</obj_property>
+         <obj_property name="ObjectShortName">s_current_pixel[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/conv_seq_tb/conv_seq_inst/PIPELINE_INST/POOL_SLIDER/s_current_valid">
+         <obj_property name="ElementShortName">s_current_valid</obj_property>
+         <obj_property name="ObjectShortName">s_current_valid</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/conv_seq_tb/conv_seq_inst/PIPELINE_INST/POOL_SLIDER/s_init_complete">
+         <obj_property name="ElementShortName">s_init_complete</obj_property>
+         <obj_property name="ObjectShortName">s_init_complete</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/conv_seq_tb/conv_seq_inst/PIPELINE_INST/POOL_SLIDER/s_kernel_en">
+         <obj_property name="ElementShortName">s_kernel_en</obj_property>
+         <obj_property name="ObjectShortName">s_kernel_en</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/conv_seq_tb/conv_seq_inst/PIPELINE_INST/POOL_SLIDER/s_kernel_complete">
+         <obj_property name="ElementShortName">s_kernel_complete</obj_property>
+         <obj_property name="ObjectShortName">s_kernel_complete</obj_property>
+      </wvobject>
+      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/PIPELINE_INST/POOL_SLIDER/vector_length">
+         <obj_property name="ElementShortName">vector_length</obj_property>
+         <obj_property name="ObjectShortName">vector_length</obj_property>
+      </wvobject>
+      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/PIPELINE_INST/POOL_SLIDER/original_input_width">
+         <obj_property name="ElementShortName">original_input_width</obj_property>
+         <obj_property name="ObjectShortName">original_input_width</obj_property>
+      </wvobject>
+      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/PIPELINE_INST/POOL_SLIDER/original_input_height">
+         <obj_property name="ElementShortName">original_input_height</obj_property>
+         <obj_property name="ObjectShortName">original_input_height</obj_property>
+      </wvobject>
+      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/PIPELINE_INST/POOL_SLIDER/kernel_size">
+         <obj_property name="ElementShortName">kernel_size</obj_property>
+         <obj_property name="ObjectShortName">kernel_size</obj_property>
+      </wvobject>
+      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/PIPELINE_INST/POOL_SLIDER/pooling_size">
+         <obj_property name="ElementShortName">pooling_size</obj_property>
+         <obj_property name="ObjectShortName">pooling_size</obj_property>
+      </wvobject>
+      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/PIPELINE_INST/POOL_SLIDER/c_old_image_width">
+         <obj_property name="ElementShortName">c_old_image_width</obj_property>
+         <obj_property name="ObjectShortName">c_old_image_width</obj_property>
+      </wvobject>
+      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/PIPELINE_INST/POOL_SLIDER/c_old_image_height">
+         <obj_property name="ElementShortName">c_old_image_height</obj_property>
+         <obj_property name="ObjectShortName">c_old_image_height</obj_property>
+      </wvobject>
+      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/PIPELINE_INST/POOL_SLIDER/c_new_image_width">
+         <obj_property name="ElementShortName">c_new_image_width</obj_property>
+         <obj_property name="ObjectShortName">c_new_image_width</obj_property>
+      </wvobject>
+      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/PIPELINE_INST/POOL_SLIDER/c_new_image_height">
+         <obj_property name="ElementShortName">c_new_image_height</obj_property>
+         <obj_property name="ObjectShortName">c_new_image_height</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group4888">
+      <obj_property name="label">MAXPOOL UNIT</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="logic" fp_name="/conv_seq_tb/conv_seq_inst/PIPELINE_INST/MAXPOOL_UNIT/clk">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/conv_seq_tb/conv_seq_inst/PIPELINE_INST/MAXPOOL_UNIT/reset">
+         <obj_property name="ElementShortName">reset</obj_property>
+         <obj_property name="ObjectShortName">reset</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/conv_seq_tb/conv_seq_inst/PIPELINE_INST/MAXPOOL_UNIT/activation_matrix">
+         <obj_property name="ElementShortName">activation_matrix[0:3][7:0]</obj_property>
+         <obj_property name="ObjectShortName">activation_matrix[0:3][7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/conv_seq_tb/conv_seq_inst/PIPELINE_INST/MAXPOOL_UNIT/weight_matrix">
+         <obj_property name="ElementShortName">weight_matrix[0:3][7:0]</obj_property>
+         <obj_property name="ObjectShortName">weight_matrix[0:3][7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/conv_seq_tb/conv_seq_inst/PIPELINE_INST/MAXPOOL_UNIT/shamt">
+         <obj_property name="ElementShortName">shamt[7:0]</obj_property>
+         <obj_property name="ObjectShortName">shamt[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/conv_seq_tb/conv_seq_inst/PIPELINE_INST/MAXPOOL_UNIT/bias">
+         <obj_property name="ElementShortName">bias[7:0]</obj_property>
+         <obj_property name="ObjectShortName">bias[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/conv_seq_tb/conv_seq_inst/PIPELINE_INST/MAXPOOL_UNIT/kernel_en">
+         <obj_property name="ElementShortName">kernel_en</obj_property>
+         <obj_property name="ObjectShortName">kernel_en</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/conv_seq_tb/conv_seq_inst/PIPELINE_INST/MAXPOOL_UNIT/kernel_complete">
+         <obj_property name="ElementShortName">kernel_complete</obj_property>
+         <obj_property name="ObjectShortName">kernel_complete</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/conv_seq_tb/conv_seq_inst/PIPELINE_INST/MAXPOOL_UNIT/new_pixel">
+         <obj_property name="ElementShortName">new_pixel[7:0]</obj_property>
+         <obj_property name="ObjectShortName">new_pixel[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/conv_seq_tb/conv_seq_inst/PIPELINE_INST/MAXPOOL_UNIT/valid_pixel">
+         <obj_property name="ElementShortName">valid_pixel</obj_property>
+         <obj_property name="ObjectShortName">valid_pixel</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/conv_seq_tb/conv_seq_inst/PIPELINE_INST/MAXPOOL_UNIT/comp_complete">
+         <obj_property name="ElementShortName">comp_complete</obj_property>
+         <obj_property name="ObjectShortName">comp_complete</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/conv_seq_tb/conv_seq_inst/PIPELINE_INST/MAXPOOL_UNIT/s_pipeline_values">
+         <obj_property name="ElementShortName">s_pipeline_values[0:2][0:3][7:0]</obj_property>
+         <obj_property name="ObjectShortName">s_pipeline_values[0:2][0:3][7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/conv_seq_tb/conv_seq_inst/PIPELINE_INST/MAXPOOL_UNIT/s_pipeline_start">
+         <obj_property name="ElementShortName">s_pipeline_start[0:3][7:0]</obj_property>
+         <obj_property name="ObjectShortName">s_pipeline_start[0:3][7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/conv_seq_tb/conv_seq_inst/PIPELINE_INST/MAXPOOL_UNIT/s_kernel_en_line">
+         <obj_property name="ElementShortName">s_kernel_en_line[0:2]</obj_property>
+         <obj_property name="ObjectShortName">s_kernel_en_line[0:2]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/conv_seq_tb/conv_seq_inst/PIPELINE_INST/MAXPOOL_UNIT/s_kernel_complete_line">
+         <obj_property name="ElementShortName">s_kernel_complete_line[0:2]</obj_property>
+         <obj_property name="ObjectShortName">s_kernel_complete_line[0:2]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/conv_seq_tb/conv_seq_inst/PIPELINE_INST/MAXPOOL_UNIT/s_new_pixel">
+         <obj_property name="ElementShortName">s_new_pixel[7:0]</obj_property>
+         <obj_property name="ObjectShortName">s_new_pixel[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/conv_seq_tb/conv_seq_inst/PIPELINE_INST/MAXPOOL_UNIT/s_valid_pixel">
+         <obj_property name="ElementShortName">s_valid_pixel</obj_property>
+         <obj_property name="ObjectShortName">s_valid_pixel</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/conv_seq_tb/conv_seq_inst/PIPELINE_INST/MAXPOOL_UNIT/s_comp_complete">
+         <obj_property name="ElementShortName">s_comp_complete</obj_property>
+         <obj_property name="ObjectShortName">s_comp_complete</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/conv_seq_tb/conv_seq_inst/PIPELINE_INST/MAXPOOL_UNIT/s_reset_del">
+         <obj_property name="ElementShortName">s_reset_del</obj_property>
+         <obj_property name="ObjectShortName">s_reset_del</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/conv_seq_tb/conv_seq_inst/PIPELINE_INST/MAXPOOL_UNIT/s_activation_matrix">
+         <obj_property name="ElementShortName">s_activation_matrix[0:3][7:0]</obj_property>
+         <obj_property name="ObjectShortName">s_activation_matrix[0:3][7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/conv_seq_tb/conv_seq_inst/PIPELINE_INST/MAXPOOL_UNIT/s_weight_matrix">
+         <obj_property name="ElementShortName">s_weight_matrix[0:3][7:0]</obj_property>
+         <obj_property name="ObjectShortName">s_weight_matrix[0:3][7:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/conv_seq_tb/conv_seq_inst/PIPELINE_INST/MAXPOOL_UNIT/s_kernel_en">
+         <obj_property name="ElementShortName">s_kernel_en</obj_property>
+         <obj_property name="ObjectShortName">s_kernel_en</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/conv_seq_tb/conv_seq_inst/PIPELINE_INST/MAXPOOL_UNIT/s_kernel_complete">
+         <obj_property name="ElementShortName">s_kernel_complete</obj_property>
+         <obj_property name="ObjectShortName">s_kernel_complete</obj_property>
+      </wvobject>
+      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/PIPELINE_INST/MAXPOOL_UNIT/pool_or_conv">
+         <obj_property name="ElementShortName">pool_or_conv</obj_property>
+         <obj_property name="ObjectShortName">pool_or_conv</obj_property>
+      </wvobject>
+      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/PIPELINE_INST/MAXPOOL_UNIT/enable_clip_adder">
+         <obj_property name="ElementShortName">enable_clip_adder</obj_property>
+         <obj_property name="ObjectShortName">enable_clip_adder</obj_property>
+      </wvobject>
+      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/PIPELINE_INST/MAXPOOL_UNIT/enable_multiplication_line">
+         <obj_property name="ElementShortName">enable_multiplication_line</obj_property>
+         <obj_property name="ObjectShortName">enable_multiplication_line</obj_property>
+      </wvobject>
+      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/PIPELINE_INST/MAXPOOL_UNIT/enable_shift">
+         <obj_property name="ElementShortName">enable_shift</obj_property>
+         <obj_property name="ObjectShortName">enable_shift</obj_property>
+      </wvobject>
+      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/PIPELINE_INST/MAXPOOL_UNIT/enable_bias">
+         <obj_property name="ElementShortName">enable_bias</obj_property>
+         <obj_property name="ObjectShortName">enable_bias</obj_property>
+      </wvobject>
+      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/PIPELINE_INST/MAXPOOL_UNIT/enable_relu">
+         <obj_property name="ElementShortName">enable_relu</obj_property>
+         <obj_property name="ObjectShortName">enable_relu</obj_property>
+      </wvobject>
+      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/PIPELINE_INST/MAXPOOL_UNIT/input_length">
+         <obj_property name="ElementShortName">input_length</obj_property>
+         <obj_property name="ObjectShortName">input_length</obj_property>
+      </wvobject>
+      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/PIPELINE_INST/MAXPOOL_UNIT/output_length">
+         <obj_property name="ElementShortName">output_length</obj_property>
+         <obj_property name="ObjectShortName">output_length</obj_property>
+      </wvobject>
+      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/PIPELINE_INST/MAXPOOL_UNIT/input_amount">
+         <obj_property name="ElementShortName">input_amount</obj_property>
+         <obj_property name="ObjectShortName">input_amount</obj_property>
+      </wvobject>
+      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/PIPELINE_INST/MAXPOOL_UNIT/c_pipeline_vector_length">
+         <obj_property name="ElementShortName">c_pipeline_vector_length</obj_property>
+         <obj_property name="ObjectShortName">c_pipeline_vector_length</obj_property>
+      </wvobject>
+      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/PIPELINE_INST/MAXPOOL_UNIT/c_conv_step_count">
+         <obj_property name="ElementShortName">c_conv_step_count</obj_property>
+         <obj_property name="ObjectShortName">c_conv_step_count</obj_property>
+      </wvobject>
+      <wvobject fp_name="divider10361" type="divider">
+         <obj_property name="label">FIFO 1</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(0)\/STREAMING_FIFO_INST/clk">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(0)\/STREAMING_FIFO_INST/reset">
+         <obj_property name="ElementShortName">reset</obj_property>
+         <obj_property name="ObjectShortName">reset</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(0)\/STREAMING_FIFO_INST/wr_en">
+         <obj_property name="ElementShortName">wr_en</obj_property>
+         <obj_property name="ObjectShortName">wr_en</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(0)\/STREAMING_FIFO_INST/rd_en">
+         <obj_property name="ElementShortName">rd_en</obj_property>
+         <obj_property name="ObjectShortName">rd_en</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(0)\/STREAMING_FIFO_INST/full">
+         <obj_property name="ElementShortName">full</obj_property>
+         <obj_property name="ObjectShortName">full</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(0)\/STREAMING_FIFO_INST/empty">
+         <obj_property name="ElementShortName">empty</obj_property>
+         <obj_property name="ObjectShortName">empty</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(0)\/STREAMING_FIFO_INST/waiting">
+         <obj_property name="ElementShortName">waiting</obj_property>
+         <obj_property name="ObjectShortName">waiting</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(0)\/STREAMING_FIFO_INST/dout_valid">
+         <obj_property name="ElementShortName">dout_valid</obj_property>
+         <obj_property name="ObjectShortName">dout_valid</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(0)\/STREAMING_FIFO_INST/din">
+         <obj_property name="ElementShortName">din[7:0]</obj_property>
+         <obj_property name="ObjectShortName">din[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(0)\/STREAMING_FIFO_INST/dout">
+         <obj_property name="ElementShortName">dout[7:0]</obj_property>
+         <obj_property name="ObjectShortName">dout[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(0)\/STREAMING_FIFO_INST/RAM">
+         <obj_property name="ElementShortName">RAM[0:195][7:0]</obj_property>
+         <obj_property name="ObjectShortName">RAM[0:195][7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(0)\/STREAMING_FIFO_INST/s_read_pointer">
+         <obj_property name="ElementShortName">s_read_pointer[7:0]</obj_property>
+         <obj_property name="ObjectShortName">s_read_pointer[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(0)\/STREAMING_FIFO_INST/s_write_pointer">
+         <obj_property name="ElementShortName">s_write_pointer[7:0]</obj_property>
+         <obj_property name="ObjectShortName">s_write_pointer[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(0)\/STREAMING_FIFO_INST/s_empty">
+         <obj_property name="ElementShortName">s_empty</obj_property>
+         <obj_property name="ObjectShortName">s_empty</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(0)\/STREAMING_FIFO_INST/s_full">
+         <obj_property name="ElementShortName">s_full</obj_property>
+         <obj_property name="ObjectShortName">s_full</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(0)\/STREAMING_FIFO_INST/s_waiting">
+         <obj_property name="ElementShortName">s_waiting</obj_property>
+         <obj_property name="ObjectShortName">s_waiting</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(0)\/STREAMING_FIFO_INST/s_dout_valid">
+         <obj_property name="ElementShortName">s_dout_valid</obj_property>
+         <obj_property name="ObjectShortName">s_dout_valid</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(0)\/STREAMING_FIFO_INST/s_dout">
+         <obj_property name="ElementShortName">s_dout[7:0]</obj_property>
+         <obj_property name="ObjectShortName">s_dout[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(0)\/STREAMING_FIFO_INST/vector_length">
+         <obj_property name="ElementShortName">vector_length</obj_property>
+         <obj_property name="ObjectShortName">vector_length</obj_property>
+      </wvobject>
+      <wvobject type="other" fp_name="/conv_seq_tb/conv_seq_inst/\PIPELINE_GEN(0)\/STREAMING_FIFO_INST/depth">
+         <obj_property name="ElementShortName">depth</obj_property>
+         <obj_property name="ObjectShortName">depth</obj_property>
+      </wvobject>
    </wvobject>
 </wave_config>
