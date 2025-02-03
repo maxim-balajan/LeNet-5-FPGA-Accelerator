@@ -60,7 +60,7 @@
     <Option Name="IPStaticSourceDir" Val="$PIPUSERFILESDIR/ipstatic"/>
     <Option Name="EnableBDX" Val="FALSE"/>
     <Option Name="DSABoardId" Val="ultra96v2"/>
-    <Option Name="WTXSimLaunchSim" Val="384"/>
+    <Option Name="WTXSimLaunchSim" Val="393"/>
     <Option Name="WTModelSimLaunchSim" Val="0"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
     <Option Name="WTIesLaunchSim" Val="0"/>
@@ -115,13 +115,6 @@
         </FileInfo>
       </File>
       <File Path="$PPRDIR/../sources_1/bram_single_port.vhd">
-        <FileInfo SFType="VHDL2008">
-          <Attr Name="Library" Val="work"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../sources_1/bram_streaming_fifo.vhd">
         <FileInfo SFType="VHDL2008">
           <Attr Name="Library" Val="work"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -191,21 +184,30 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PPRDIR/../sources_1/conv_par.vhd">
+        <FileInfo SFType="VHDL2008">
+          <Attr Name="Library" Val="work"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../sources_1/bram_streaming_fifo.vhd">
+        <FileInfo SFType="VHDL2008">
+          <Attr Name="Library" Val="work"/>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PPRDIR/../sources_1/conv_pipeline.vhd">
         <FileInfo SFType="VHDL2008">
           <Attr Name="Library" Val="work"/>
+          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
       <File Path="$PPRDIR/../sources_1/conv_seq.vhd">
-        <FileInfo SFType="VHDL2008">
-          <Attr Name="Library" Val="work"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../sources_1/conv_par.vhd">
         <FileInfo SFType="VHDL2008">
           <Attr Name="Library" Val="work"/>
           <Attr Name="AutoDisabled" Val="1"/>
@@ -315,7 +317,7 @@
       </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
-        <Option Name="TopModule" Val="conv_seq"/>
+        <Option Name="TopModule" Val="conv_par"/>
       </Config>
     </FileSet>
     <FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
@@ -329,6 +331,7 @@
       <File Path="$PPRDIR/../sources_1/conv_seq.vhd">
         <FileInfo SFType="VHDL2008">
           <Attr Name="Library" Val="work"/>
+          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
@@ -336,6 +339,7 @@
       <File Path="$PPRDIR/../sim_1/conv_seq_tb.vhd">
         <FileInfo SFType="VHDL2008">
           <Attr Name="Library" Val="work"/>
+          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
@@ -411,7 +415,7 @@
       </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
-        <Option Name="TopModule" Val="conv_seq_tb"/>
+        <Option Name="TopModule" Val="conv_par_tb"/>
         <Option Name="TransportPathDelay" Val="0"/>
         <Option Name="TransportIntDelay" Val="0"/>
         <Option Name="SelectedSimModel" Val="rtl"/>
