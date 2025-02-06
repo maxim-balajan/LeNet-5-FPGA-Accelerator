@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="combined_conv_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="combined_conv_tb" />
+            <top_module name="libmatrix" />
+            <top_module name="libmemory" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="13.425000 us"></ZoomStartTime>
+      <ZoomEndTime time="43.775001 us"></ZoomEndTime>
+      <Cursor1Time time="74.175000 us"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="204"></NameColumnWidth>
+      <ValueColumnWidth column_width="214"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="32" />
+   <wvobject type="logic" fp_name="/combined_conv_tb/clk">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/combined_conv_tb/reset">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/combined_conv_tb/pixel_stream">
+      <obj_property name="ElementShortName">pixel_stream[7:0]</obj_property>
+      <obj_property name="ObjectShortName">pixel_stream[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/combined_conv_tb/valid_pixel">
+      <obj_property name="ElementShortName">valid_pixel</obj_property>
+      <obj_property name="ObjectShortName">valid_pixel</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/combined_conv_tb/new_pixels_stream">
+      <obj_property name="ElementShortName">new_pixels_stream[0:5][7:0]</obj_property>
+      <obj_property name="ObjectShortName">new_pixels_stream[0:5][7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/combined_conv_tb/s_input_stream">
+      <obj_property name="ElementShortName">s_input_stream[0:1023][7:0]</obj_property>
+      <obj_property name="ObjectShortName">s_input_stream[0:1023][7:0]</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/combined_conv_tb/s_read_pointer">
+      <obj_property name="ElementShortName">s_read_pointer</obj_property>
+      <obj_property name="ObjectShortName">s_read_pointer</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/combined_conv_tb/s_write_pointer">
+      <obj_property name="ElementShortName">s_write_pointer</obj_property>
+      <obj_property name="ObjectShortName">s_write_pointer</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/combined_conv_tb/s_output_values">
+      <obj_property name="ElementShortName">s_output_values[0:15][0:24][7:0]</obj_property>
+      <obj_property name="ObjectShortName">s_output_values[0:15][0:24][7:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/combined_conv_tb/s_new_pixel_complete">
+      <obj_property name="ElementShortName">s_new_pixel_complete</obj_property>
+      <obj_property name="ObjectShortName">s_new_pixel_complete</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/combined_conv_tb/s_new_valid_pixel">
+      <obj_property name="ElementShortName">s_new_valid_pixel</obj_property>
+      <obj_property name="ObjectShortName">s_new_valid_pixel</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/combined_conv_tb/s_actual_pixel_output">
+      <obj_property name="ElementShortName">s_actual_pixel_output[7:0]</obj_property>
+      <obj_property name="ObjectShortName">s_actual_pixel_output[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/combined_conv_tb/s_actual_valid_pixel">
+      <obj_property name="ElementShortName">s_actual_valid_pixel</obj_property>
+      <obj_property name="ObjectShortName">s_actual_valid_pixel</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/combined_conv_tb/s_actual_pixel_complete">
+      <obj_property name="ElementShortName">s_actual_pixel_complete</obj_property>
+      <obj_property name="ObjectShortName">s_actual_pixel_complete</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/combined_conv_tb/s_actual_pixel_output_channel">
+      <obj_property name="ElementShortName">s_actual_pixel_output_channel[3:0]</obj_property>
+      <obj_property name="ObjectShortName">s_actual_pixel_output_channel[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/combined_conv_tb/s_invalid_delay">
+      <obj_property name="ElementShortName">s_invalid_delay</obj_property>
+      <obj_property name="ObjectShortName">s_invalid_delay</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/combined_conv_tb/clk_period">
+      <obj_property name="ElementShortName">clk_period</obj_property>
+      <obj_property name="ObjectShortName">clk_period</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/combined_conv_tb/vector_length">
+      <obj_property name="ElementShortName">vector_length</obj_property>
+      <obj_property name="ObjectShortName">vector_length</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/combined_conv_tb/input_width">
+      <obj_property name="ElementShortName">input_width</obj_property>
+      <obj_property name="ObjectShortName">input_width</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/combined_conv_tb/input_height">
+      <obj_property name="ElementShortName">input_height</obj_property>
+      <obj_property name="ObjectShortName">input_height</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/combined_conv_tb/kernel_size">
+      <obj_property name="ElementShortName">kernel_size</obj_property>
+      <obj_property name="ObjectShortName">kernel_size</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/combined_conv_tb/pooling_size">
+      <obj_property name="ElementShortName">pooling_size</obj_property>
+      <obj_property name="ObjectShortName">pooling_size</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/combined_conv_tb/enable_clip_adder">
+      <obj_property name="ElementShortName">enable_clip_adder</obj_property>
+      <obj_property name="ObjectShortName">enable_clip_adder</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/combined_conv_tb/total_input_channel">
+      <obj_property name="ElementShortName">total_input_channel</obj_property>
+      <obj_property name="ObjectShortName">total_input_channel</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/combined_conv_tb/total_output_channel">
+      <obj_property name="ElementShortName">total_output_channel</obj_property>
+      <obj_property name="ObjectShortName">total_output_channel</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/combined_conv_tb/weight_path_1">
+      <obj_property name="ElementShortName">weight_path_1[1:27]</obj_property>
+      <obj_property name="ObjectShortName">weight_path_1[1:27]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/combined_conv_tb/weight_path_2">
+      <obj_property name="ElementShortName">weight_path_2[1:27]</obj_property>
+      <obj_property name="ObjectShortName">weight_path_2[1:27]</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/combined_conv_tb/current_scale">
+      <obj_property name="ElementShortName">current_scale</obj_property>
+      <obj_property name="ObjectShortName">current_scale</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/combined_conv_tb/scale_path">
+      <obj_property name="ElementShortName">scale_path[1:25]</obj_property>
+      <obj_property name="ObjectShortName">scale_path[1:25]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/combined_conv_tb/input_path">
+      <obj_property name="ElementShortName">input_path[1:20]</obj_property>
+      <obj_property name="ObjectShortName">input_path[1:20]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/combined_conv_tb/expected_result_path">
+      <obj_property name="ElementShortName">expected_result_path[1:44]</obj_property>
+      <obj_property name="ObjectShortName">expected_result_path[1:44]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/combined_conv_tb/expected_output">
+      <obj_property name="ElementShortName">expected_output[0:399][7:0]</obj_property>
+      <obj_property name="ObjectShortName">expected_output[0:399][7:0]</obj_property>
+   </wvobject>
+</wave_config>
