@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.1.2 (lin64) Build 5164865 Thu Sep  5 14:36:28 MDT 2024
-| Date         : Tue Jan 14 12:32:51 2025
+| Date         : Tue Feb 11 20:51:42 2025
 | Host         : hpenvy running 64-bit unknown
 | Command      : report_utilization -file main_design_wrapper_utilization_synth.rpt -pb main_design_wrapper_utilization_synth.pb
 | Design       : main_design_wrapper
@@ -154,17 +154,17 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 9. Black Boxes
 --------------
 
-+---------------------------------+------+
-|             Ref Name            | Used |
-+---------------------------------+------+
-| main_design_zynq_ultra_ps_e_0_0 |    1 |
-| main_design_system_ila_0_0      |    1 |
-| main_design_rst_ps8_0_100M_0    |    1 |
-| main_design_axis_data_fifo_0_0  |    1 |
-| main_design_axi_smc_0           |    1 |
-| main_design_axi_dma_0_0         |    1 |
-| main_design_auto_pc_0           |    1 |
-+---------------------------------+------+
++--------------------------------------+------+
+|               Ref Name               | Used |
++--------------------------------------+------+
+| main_design_zynq_ultra_ps_e_0_0      |    1 |
+| main_design_system_ila_0_0           |    1 |
+| main_design_rst_ps8_0_100M_0         |    1 |
+| main_design_axi_smc_0                |    1 |
+| main_design_axi_dma_0_0              |    1 |
+| main_design_axi_accumulator_wrap_0_0 |    1 |
+| main_design_auto_pc_0                |    1 |
++--------------------------------------+------+
 
 
 10. Instantiated Netlists
