@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="matrix_vector_mem_interconnect_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="libmatrix" />
+            <top_module name="libmemory" />
+            <top_module name="libutil" />
+            <top_module name="matrix_vector_mem_interconnect_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="256.251 ns"></ZoomEndTime>
+      <Cursor1Time time="200.000 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="192"></NameColumnWidth>
+      <ValueColumnWidth column_width="94"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="15" />
+   <wvobject type="logic" fp_name="/matrix_vector_mem_interconnect_tb/clk">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/matrix_vector_mem_interconnect_tb/reset">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/matrix_vector_mem_interconnect_tb/bram_enable_line">
+      <obj_property name="ElementShortName">bram_enable_line[0:119]</obj_property>
+      <obj_property name="ObjectShortName">bram_enable_line[0:119]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/matrix_vector_mem_interconnect_tb/base_addr">
+      <obj_property name="ElementShortName">base_addr[9:0]</obj_property>
+      <obj_property name="ObjectShortName">base_addr[9:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/matrix_vector_mem_interconnect_tb/weights">
+      <obj_property name="ElementShortName">weights[0:119][7:0]</obj_property>
+      <obj_property name="ObjectShortName">weights[0:119][7:0]</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/matrix_vector_mem_interconnect_tb/clk_period">
+      <obj_property name="ElementShortName">clk_period</obj_property>
+      <obj_property name="ObjectShortName">clk_period</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/matrix_vector_mem_interconnect_tb/vector_length">
+      <obj_property name="ElementShortName">vector_length</obj_property>
+      <obj_property name="ObjectShortName">vector_length</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/matrix_vector_mem_interconnect_tb/max_weight_width">
+      <obj_property name="ElementShortName">max_weight_width</obj_property>
+      <obj_property name="ObjectShortName">max_weight_width</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/matrix_vector_mem_interconnect_tb/max_weight_height">
+      <obj_property name="ElementShortName">max_weight_height</obj_property>
+      <obj_property name="ObjectShortName">max_weight_height</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/matrix_vector_mem_interconnect_tb/weight_widths">
+      <obj_property name="ElementShortName">weight_widths[0:2]</obj_property>
+      <obj_property name="ObjectShortName">weight_widths[0:2]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/matrix_vector_mem_interconnect_tb/weight_heights">
+      <obj_property name="ElementShortName">weight_heights[0:2]</obj_property>
+      <obj_property name="ObjectShortName">weight_heights[0:2]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/matrix_vector_mem_interconnect_tb/weight_paths">
+      <obj_property name="ElementShortName">weight_paths[0:2][1:27]</obj_property>
+      <obj_property name="ObjectShortName">weight_paths[0:2][1:27]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/matrix_vector_mem_interconnect_tb/matrix_vector_mem_interconnect_inst/\BRAM_GEN(0)\/BRAM_INST/data">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">data[0:603][7:0]</obj_property>
+      <obj_property name="ObjectShortName">data[0:603][7:0]</obj_property>
+      <obj_property name="label">BRAM_1_DATA</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/matrix_vector_mem_interconnect_tb/matrix_vector_mem_interconnect_inst/\BRAM_GEN(11)\/BRAM_INST/data">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">data[0:603][7:0]</obj_property>
+      <obj_property name="ObjectShortName">data[0:603][7:0]</obj_property>
+      <obj_property name="label">BRAM_11_DATA</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/matrix_vector_mem_interconnect_tb/matrix_vector_mem_interconnect_inst/\BRAM_GEN(85)\/BRAM_INST/data">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">data[0:603][7:0]</obj_property>
+      <obj_property name="ObjectShortName">data[0:603][7:0]</obj_property>
+      <obj_property name="label">BRAM_85_DATA</obj_property>
+   </wvobject>
+</wave_config>
