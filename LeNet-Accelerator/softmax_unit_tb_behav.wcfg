@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
-      <ZoomEndTime time="1,085.344 ns"></ZoomEndTime>
+      <ZoomStartTime time="11.645 ns"></ZoomStartTime>
+      <ZoomEndTime time="1,197.671 ns"></ZoomEndTime>
       <Cursor1Time time="1,000.000 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="204"></NameColumnWidth>
-      <ValueColumnWidth column_width="210"></ValueColumnWidth>
+      <ValueColumnWidth column_width="206"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="9" />
+   <WVObjectSize size="27" />
    <wvobject type="logic" fp_name="/softmax_unit_tb/clk">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
@@ -39,6 +39,7 @@
    <wvobject type="array" fp_name="/softmax_unit_tb/max_index">
       <obj_property name="ElementShortName">max_index[3:0]</obj_property>
       <obj_property name="ObjectShortName">max_index[3:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
    </wvobject>
    <wvobject type="logic" fp_name="/softmax_unit_tb/comp_complete">
       <obj_property name="ElementShortName">comp_complete</obj_property>
@@ -55,5 +56,290 @@
    <wvobject type="other" fp_name="/softmax_unit_tb/input_amount">
       <obj_property name="ElementShortName">input_amount</obj_property>
       <obj_property name="ObjectShortName">input_amount</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider1199" type="divider">
+      <obj_property name="label">Softmax Unit</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/softmax_unit_tb/softmax_unit_inst/input">
+      <obj_property name="ElementShortName">input[0:9][7:0]</obj_property>
+      <obj_property name="ObjectShortName">input[0:9][7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/softmax_unit_tb/softmax_unit_inst/max_index">
+      <obj_property name="ElementShortName">max_index[3:0]</obj_property>
+      <obj_property name="ObjectShortName">max_index[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/softmax_unit_tb/softmax_unit_inst/comp_complete">
+      <obj_property name="ElementShortName">comp_complete</obj_property>
+      <obj_property name="ObjectShortName">comp_complete</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/softmax_unit_tb/softmax_unit_inst/s_pipeline_values">
+      <obj_property name="ElementShortName">s_pipeline_values[0:4][0:15][7:0]</obj_property>
+      <obj_property name="ObjectShortName">s_pipeline_values[0:4][0:15][7:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/softmax_unit_tb/softmax_unit_inst/s_pipeline_indices">
+      <obj_property name="ElementShortName">s_pipeline_indices[0:4][0:15][3:0]</obj_property>
+      <obj_property name="ObjectShortName">s_pipeline_indices[0:4][0:15][3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/softmax_unit_tb/softmax_unit_inst/s_pipeline_en">
+      <obj_property name="ElementShortName">s_pipeline_en[0:4]</obj_property>
+      <obj_property name="ObjectShortName">s_pipeline_en[0:4]</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/softmax_unit_tb/softmax_unit_inst/input_length">
+      <obj_property name="ElementShortName">input_length</obj_property>
+      <obj_property name="ObjectShortName">input_length</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/softmax_unit_tb/softmax_unit_inst/input_amount">
+      <obj_property name="ElementShortName">input_amount</obj_property>
+      <obj_property name="ObjectShortName">input_amount</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/softmax_unit_tb/softmax_unit_inst/c_conv_step_count">
+      <obj_property name="ElementShortName">c_conv_step_count</obj_property>
+      <obj_property name="ObjectShortName">c_conv_step_count</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/softmax_unit_tb/softmax_unit_inst/c_index_length">
+      <obj_property name="ElementShortName">c_index_length</obj_property>
+      <obj_property name="ObjectShortName">c_index_length</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/softmax_unit_tb/softmax_unit_inst/c_total_inputs">
+      <obj_property name="ElementShortName">c_total_inputs</obj_property>
+      <obj_property name="ObjectShortName">c_total_inputs</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/softmax_unit_tb/softmax_unit_inst/c_unused_inputs">
+      <obj_property name="ElementShortName">c_unused_inputs</obj_property>
+      <obj_property name="ObjectShortName">c_unused_inputs</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider1216" type="divider">
+      <obj_property name="label">Softmax Layers</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="group" fp_name="group1215">
+      <obj_property name="label">Layer 0</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="array" fp_name="/softmax_unit_tb/softmax_unit_inst/\SOFTMAX_LAYER_GEN(0)\/SOFTMAX_LAYER_INST/input_values">
+         <obj_property name="ElementShortName">input_values[0:15][7:0]</obj_property>
+         <obj_property name="ObjectShortName">input_values[0:15][7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/softmax_unit_tb/softmax_unit_inst/\SOFTMAX_LAYER_GEN(0)\/SOFTMAX_LAYER_INST/input_indices">
+         <obj_property name="ElementShortName">input_indices[0:15][3:0]</obj_property>
+         <obj_property name="ObjectShortName">input_indices[0:15][3:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/softmax_unit_tb/softmax_unit_inst/\SOFTMAX_LAYER_GEN(0)\/SOFTMAX_LAYER_INST/max_values">
+         <obj_property name="ElementShortName">max_values[0:7][7:0]</obj_property>
+         <obj_property name="ObjectShortName">max_values[0:7][7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/softmax_unit_tb/softmax_unit_inst/\SOFTMAX_LAYER_GEN(0)\/SOFTMAX_LAYER_INST/max_indices">
+         <obj_property name="ElementShortName">max_indices[0:7][3:0]</obj_property>
+         <obj_property name="ObjectShortName">max_indices[0:7][3:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/softmax_unit_tb/softmax_unit_inst/\SOFTMAX_LAYER_GEN(0)\/SOFTMAX_LAYER_INST/comp_complete">
+         <obj_property name="ElementShortName">comp_complete</obj_property>
+         <obj_property name="ObjectShortName">comp_complete</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/softmax_unit_tb/softmax_unit_inst/\SOFTMAX_LAYER_GEN(0)\/SOFTMAX_LAYER_INST/s_input_values">
+         <obj_property name="ElementShortName">s_input_values[0:16][7:0]</obj_property>
+         <obj_property name="ObjectShortName">s_input_values[0:16][7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/softmax_unit_tb/softmax_unit_inst/\SOFTMAX_LAYER_GEN(0)\/SOFTMAX_LAYER_INST/s_input_indices">
+         <obj_property name="ElementShortName">s_input_indices[0:16][3:0]</obj_property>
+         <obj_property name="ObjectShortName">s_input_indices[0:16][3:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/softmax_unit_tb/softmax_unit_inst/\SOFTMAX_LAYER_GEN(0)\/SOFTMAX_LAYER_INST/s_max_values">
+         <obj_property name="ElementShortName">s_max_values[0:7][7:0]</obj_property>
+         <obj_property name="ObjectShortName">s_max_values[0:7][7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/softmax_unit_tb/softmax_unit_inst/\SOFTMAX_LAYER_GEN(0)\/SOFTMAX_LAYER_INST/s_max_indices">
+         <obj_property name="ElementShortName">s_max_indices[0:7][3:0]</obj_property>
+         <obj_property name="ObjectShortName">s_max_indices[0:7][3:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/softmax_unit_tb/softmax_unit_inst/\SOFTMAX_LAYER_GEN(0)\/SOFTMAX_LAYER_INST/s_comp_complete">
+         <obj_property name="ElementShortName">s_comp_complete</obj_property>
+         <obj_property name="ObjectShortName">s_comp_complete</obj_property>
+      </wvobject>
+      <wvobject type="other" fp_name="/softmax_unit_tb/softmax_unit_inst/\SOFTMAX_LAYER_GEN(0)\/SOFTMAX_LAYER_INST/vector_length">
+         <obj_property name="ElementShortName">vector_length</obj_property>
+         <obj_property name="ObjectShortName">vector_length</obj_property>
+      </wvobject>
+      <wvobject type="other" fp_name="/softmax_unit_tb/softmax_unit_inst/\SOFTMAX_LAYER_GEN(0)\/SOFTMAX_LAYER_INST/input_amount">
+         <obj_property name="ElementShortName">input_amount</obj_property>
+         <obj_property name="ObjectShortName">input_amount</obj_property>
+      </wvobject>
+      <wvobject type="other" fp_name="/softmax_unit_tb/softmax_unit_inst/\SOFTMAX_LAYER_GEN(0)\/SOFTMAX_LAYER_INST/index_length">
+         <obj_property name="ElementShortName">index_length</obj_property>
+         <obj_property name="ObjectShortName">index_length</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group1239">
+      <obj_property name="label">Layer 1</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="array" fp_name="/softmax_unit_tb/softmax_unit_inst/\SOFTMAX_LAYER_GEN(1)\/SOFTMAX_LAYER_INST/input_values">
+         <obj_property name="ElementShortName">input_values[0:7][7:0]</obj_property>
+         <obj_property name="ObjectShortName">input_values[0:7][7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/softmax_unit_tb/softmax_unit_inst/\SOFTMAX_LAYER_GEN(1)\/SOFTMAX_LAYER_INST/input_indices">
+         <obj_property name="ElementShortName">input_indices[0:7][3:0]</obj_property>
+         <obj_property name="ObjectShortName">input_indices[0:7][3:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/softmax_unit_tb/softmax_unit_inst/\SOFTMAX_LAYER_GEN(1)\/SOFTMAX_LAYER_INST/max_values">
+         <obj_property name="ElementShortName">max_values[0:3][7:0]</obj_property>
+         <obj_property name="ObjectShortName">max_values[0:3][7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/softmax_unit_tb/softmax_unit_inst/\SOFTMAX_LAYER_GEN(1)\/SOFTMAX_LAYER_INST/max_indices">
+         <obj_property name="ElementShortName">max_indices[0:3][3:0]</obj_property>
+         <obj_property name="ObjectShortName">max_indices[0:3][3:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/softmax_unit_tb/softmax_unit_inst/\SOFTMAX_LAYER_GEN(1)\/SOFTMAX_LAYER_INST/comp_complete">
+         <obj_property name="ElementShortName">comp_complete</obj_property>
+         <obj_property name="ObjectShortName">comp_complete</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/softmax_unit_tb/softmax_unit_inst/\SOFTMAX_LAYER_GEN(1)\/SOFTMAX_LAYER_INST/s_input_values">
+         <obj_property name="ElementShortName">s_input_values[0:8][7:0]</obj_property>
+         <obj_property name="ObjectShortName">s_input_values[0:8][7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/softmax_unit_tb/softmax_unit_inst/\SOFTMAX_LAYER_GEN(1)\/SOFTMAX_LAYER_INST/s_input_indices">
+         <obj_property name="ElementShortName">s_input_indices[0:8][3:0]</obj_property>
+         <obj_property name="ObjectShortName">s_input_indices[0:8][3:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/softmax_unit_tb/softmax_unit_inst/\SOFTMAX_LAYER_GEN(1)\/SOFTMAX_LAYER_INST/s_max_values">
+         <obj_property name="ElementShortName">s_max_values[0:3][7:0]</obj_property>
+         <obj_property name="ObjectShortName">s_max_values[0:3][7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/softmax_unit_tb/softmax_unit_inst/\SOFTMAX_LAYER_GEN(1)\/SOFTMAX_LAYER_INST/s_max_indices">
+         <obj_property name="ElementShortName">s_max_indices[0:3][3:0]</obj_property>
+         <obj_property name="ObjectShortName">s_max_indices[0:3][3:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/softmax_unit_tb/softmax_unit_inst/\SOFTMAX_LAYER_GEN(1)\/SOFTMAX_LAYER_INST/s_comp_complete">
+         <obj_property name="ElementShortName">s_comp_complete</obj_property>
+         <obj_property name="ObjectShortName">s_comp_complete</obj_property>
+      </wvobject>
+      <wvobject type="other" fp_name="/softmax_unit_tb/softmax_unit_inst/\SOFTMAX_LAYER_GEN(1)\/SOFTMAX_LAYER_INST/vector_length">
+         <obj_property name="ElementShortName">vector_length</obj_property>
+         <obj_property name="ObjectShortName">vector_length</obj_property>
+      </wvobject>
+      <wvobject type="other" fp_name="/softmax_unit_tb/softmax_unit_inst/\SOFTMAX_LAYER_GEN(1)\/SOFTMAX_LAYER_INST/input_amount">
+         <obj_property name="ElementShortName">input_amount</obj_property>
+         <obj_property name="ObjectShortName">input_amount</obj_property>
+      </wvobject>
+      <wvobject type="other" fp_name="/softmax_unit_tb/softmax_unit_inst/\SOFTMAX_LAYER_GEN(1)\/SOFTMAX_LAYER_INST/index_length">
+         <obj_property name="ElementShortName">index_length</obj_property>
+         <obj_property name="ObjectShortName">index_length</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group1256">
+      <obj_property name="label">Layer 2</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="array" fp_name="/softmax_unit_tb/softmax_unit_inst/\SOFTMAX_LAYER_GEN(2)\/SOFTMAX_LAYER_INST/input_values">
+         <obj_property name="ElementShortName">input_values[0:3][7:0]</obj_property>
+         <obj_property name="ObjectShortName">input_values[0:3][7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/softmax_unit_tb/softmax_unit_inst/\SOFTMAX_LAYER_GEN(2)\/SOFTMAX_LAYER_INST/input_indices">
+         <obj_property name="ElementShortName">input_indices[0:3][3:0]</obj_property>
+         <obj_property name="ObjectShortName">input_indices[0:3][3:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/softmax_unit_tb/softmax_unit_inst/\SOFTMAX_LAYER_GEN(2)\/SOFTMAX_LAYER_INST/max_values">
+         <obj_property name="ElementShortName">max_values[0:1][7:0]</obj_property>
+         <obj_property name="ObjectShortName">max_values[0:1][7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/softmax_unit_tb/softmax_unit_inst/\SOFTMAX_LAYER_GEN(2)\/SOFTMAX_LAYER_INST/max_indices">
+         <obj_property name="ElementShortName">max_indices[0:1][3:0]</obj_property>
+         <obj_property name="ObjectShortName">max_indices[0:1][3:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/softmax_unit_tb/softmax_unit_inst/\SOFTMAX_LAYER_GEN(2)\/SOFTMAX_LAYER_INST/comp_complete">
+         <obj_property name="ElementShortName">comp_complete</obj_property>
+         <obj_property name="ObjectShortName">comp_complete</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/softmax_unit_tb/softmax_unit_inst/\SOFTMAX_LAYER_GEN(2)\/SOFTMAX_LAYER_INST/s_input_values">
+         <obj_property name="ElementShortName">s_input_values[0:4][7:0]</obj_property>
+         <obj_property name="ObjectShortName">s_input_values[0:4][7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/softmax_unit_tb/softmax_unit_inst/\SOFTMAX_LAYER_GEN(2)\/SOFTMAX_LAYER_INST/s_input_indices">
+         <obj_property name="ElementShortName">s_input_indices[0:4][3:0]</obj_property>
+         <obj_property name="ObjectShortName">s_input_indices[0:4][3:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/softmax_unit_tb/softmax_unit_inst/\SOFTMAX_LAYER_GEN(2)\/SOFTMAX_LAYER_INST/s_max_values">
+         <obj_property name="ElementShortName">s_max_values[0:1][7:0]</obj_property>
+         <obj_property name="ObjectShortName">s_max_values[0:1][7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/softmax_unit_tb/softmax_unit_inst/\SOFTMAX_LAYER_GEN(2)\/SOFTMAX_LAYER_INST/s_max_indices">
+         <obj_property name="ElementShortName">s_max_indices[0:1][3:0]</obj_property>
+         <obj_property name="ObjectShortName">s_max_indices[0:1][3:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/softmax_unit_tb/softmax_unit_inst/\SOFTMAX_LAYER_GEN(2)\/SOFTMAX_LAYER_INST/s_comp_complete">
+         <obj_property name="ElementShortName">s_comp_complete</obj_property>
+         <obj_property name="ObjectShortName">s_comp_complete</obj_property>
+      </wvobject>
+      <wvobject type="other" fp_name="/softmax_unit_tb/softmax_unit_inst/\SOFTMAX_LAYER_GEN(2)\/SOFTMAX_LAYER_INST/vector_length">
+         <obj_property name="ElementShortName">vector_length</obj_property>
+         <obj_property name="ObjectShortName">vector_length</obj_property>
+      </wvobject>
+      <wvobject type="other" fp_name="/softmax_unit_tb/softmax_unit_inst/\SOFTMAX_LAYER_GEN(2)\/SOFTMAX_LAYER_INST/input_amount">
+         <obj_property name="ElementShortName">input_amount</obj_property>
+         <obj_property name="ObjectShortName">input_amount</obj_property>
+      </wvobject>
+      <wvobject type="other" fp_name="/softmax_unit_tb/softmax_unit_inst/\SOFTMAX_LAYER_GEN(2)\/SOFTMAX_LAYER_INST/index_length">
+         <obj_property name="ElementShortName">index_length</obj_property>
+         <obj_property name="ObjectShortName">index_length</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group1273">
+      <obj_property name="label">Layer 3</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="array" fp_name="/softmax_unit_tb/softmax_unit_inst/\SOFTMAX_LAYER_GEN(3)\/SOFTMAX_LAYER_INST/input_values">
+         <obj_property name="ElementShortName">input_values[0:1][7:0]</obj_property>
+         <obj_property name="ObjectShortName">input_values[0:1][7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/softmax_unit_tb/softmax_unit_inst/\SOFTMAX_LAYER_GEN(3)\/SOFTMAX_LAYER_INST/input_indices">
+         <obj_property name="ElementShortName">input_indices[0:1][3:0]</obj_property>
+         <obj_property name="ObjectShortName">input_indices[0:1][3:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/softmax_unit_tb/softmax_unit_inst/\SOFTMAX_LAYER_GEN(3)\/SOFTMAX_LAYER_INST/max_values">
+         <obj_property name="ElementShortName">max_values[0:0][7:0]</obj_property>
+         <obj_property name="ObjectShortName">max_values[0:0][7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/softmax_unit_tb/softmax_unit_inst/\SOFTMAX_LAYER_GEN(3)\/SOFTMAX_LAYER_INST/max_indices">
+         <obj_property name="ElementShortName">max_indices[0:0][3:0]</obj_property>
+         <obj_property name="ObjectShortName">max_indices[0:0][3:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/softmax_unit_tb/softmax_unit_inst/\SOFTMAX_LAYER_GEN(3)\/SOFTMAX_LAYER_INST/comp_complete">
+         <obj_property name="ElementShortName">comp_complete</obj_property>
+         <obj_property name="ObjectShortName">comp_complete</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/softmax_unit_tb/softmax_unit_inst/\SOFTMAX_LAYER_GEN(3)\/SOFTMAX_LAYER_INST/s_input_values">
+         <obj_property name="ElementShortName">s_input_values[0:2][7:0]</obj_property>
+         <obj_property name="ObjectShortName">s_input_values[0:2][7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/softmax_unit_tb/softmax_unit_inst/\SOFTMAX_LAYER_GEN(3)\/SOFTMAX_LAYER_INST/s_input_indices">
+         <obj_property name="ElementShortName">s_input_indices[0:2][3:0]</obj_property>
+         <obj_property name="ObjectShortName">s_input_indices[0:2][3:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/softmax_unit_tb/softmax_unit_inst/\SOFTMAX_LAYER_GEN(3)\/SOFTMAX_LAYER_INST/s_max_values">
+         <obj_property name="ElementShortName">s_max_values[0:0][7:0]</obj_property>
+         <obj_property name="ObjectShortName">s_max_values[0:0][7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/softmax_unit_tb/softmax_unit_inst/\SOFTMAX_LAYER_GEN(3)\/SOFTMAX_LAYER_INST/s_max_indices">
+         <obj_property name="ElementShortName">s_max_indices[0:0][3:0]</obj_property>
+         <obj_property name="ObjectShortName">s_max_indices[0:0][3:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/softmax_unit_tb/softmax_unit_inst/\SOFTMAX_LAYER_GEN(3)\/SOFTMAX_LAYER_INST/s_comp_complete">
+         <obj_property name="ElementShortName">s_comp_complete</obj_property>
+         <obj_property name="ObjectShortName">s_comp_complete</obj_property>
+      </wvobject>
+      <wvobject type="other" fp_name="/softmax_unit_tb/softmax_unit_inst/\SOFTMAX_LAYER_GEN(3)\/SOFTMAX_LAYER_INST/vector_length">
+         <obj_property name="ElementShortName">vector_length</obj_property>
+         <obj_property name="ObjectShortName">vector_length</obj_property>
+      </wvobject>
+      <wvobject type="other" fp_name="/softmax_unit_tb/softmax_unit_inst/\SOFTMAX_LAYER_GEN(3)\/SOFTMAX_LAYER_INST/input_amount">
+         <obj_property name="ElementShortName">input_amount</obj_property>
+         <obj_property name="ObjectShortName">input_amount</obj_property>
+      </wvobject>
+      <wvobject type="other" fp_name="/softmax_unit_tb/softmax_unit_inst/\SOFTMAX_LAYER_GEN(3)\/SOFTMAX_LAYER_INST/index_length">
+         <obj_property name="ElementShortName">index_length</obj_property>
+         <obj_property name="ObjectShortName">index_length</obj_property>
+      </wvobject>
    </wvobject>
 </wave_config>
