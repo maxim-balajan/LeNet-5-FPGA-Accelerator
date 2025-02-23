@@ -14,13 +14,13 @@ architecture bench of axi_accumulator_tb is
   -- Ports
   signal clk : std_logic := '0';
   signal reset : std_logic;
-  signal s_axis_tdata : std_logic_vector(31 downto 0) := (others => '0');
-  signal s_axis_tkeep : std_logic_vector(3 downto 0);
+  signal s_axis_tdata : std_logic_vector(7 downto 0) := (others => '0');
+  signal s_axis_tkeep : std_logic_vector(0 downto 0);
   signal s_axis_tlast : std_logic;
   signal s_axis_tready : std_logic;
   signal s_axis_tvalid : std_logic;
-  signal m_axis_tdata : std_logic_vector(31 downto 0);
-  signal m_axis_tkeep : std_logic_vector(3 downto 0);
+  signal m_axis_tdata : std_logic_vector(7 downto 0);
+  signal m_axis_tkeep : std_logic_vector(0 downto 0);
   signal m_axis_tlast : std_logic;
   signal m_axis_tready : std_logic;
   signal m_axis_tvalid : std_logic;
@@ -44,7 +44,7 @@ begin
     clk <= not clk after clk_period/2;
     reset <= '1' after 0 ns, '0' after 10 ns;
 
-    s_axis_tkeep <= "1111";
+    s_axis_tkeep <= "1";
     s_axis_tlast <= '0' after 0 ns, '1' after 55 ns, '0' after 60 ns;
     s_axis_tvalid <= '0' after 0 ns, '1'  after 30 ns, '0' after 60 ns;
     m_axis_tready <= '1';

@@ -2,7 +2,7 @@
 --Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2024.1.2 (lin64) Build 5164865 Thu Sep  5 14:36:28 MDT 2024
---Date        : Tue Feb 11 19:13:28 2025
+--Date        : Wed Feb 19 22:11:15 2025
 --Host        : hpenvy running 64-bit unknown
 --Command     : generate_target main_design.bd
 --Design      : main_design
@@ -697,8 +697,8 @@ architecture STRUCTURE of main_design is
     m_axi_mm2s_rvalid : in STD_LOGIC;
     m_axi_mm2s_rready : out STD_LOGIC;
     mm2s_prmry_reset_out_n : out STD_LOGIC;
-    m_axis_mm2s_tdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    m_axis_mm2s_tkeep : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    m_axis_mm2s_tdata : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    m_axis_mm2s_tkeep : out STD_LOGIC_VECTOR ( 0 to 0 );
     m_axis_mm2s_tvalid : out STD_LOGIC;
     m_axis_mm2s_tready : in STD_LOGIC;
     m_axis_mm2s_tlast : out STD_LOGIC;
@@ -719,8 +719,8 @@ architecture STRUCTURE of main_design is
     m_axi_s2mm_bvalid : in STD_LOGIC;
     m_axi_s2mm_bready : out STD_LOGIC;
     s2mm_prmry_reset_out_n : out STD_LOGIC;
-    s_axis_s2mm_tdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    s_axis_s2mm_tkeep : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    s_axis_s2mm_tdata : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    s_axis_s2mm_tkeep : in STD_LOGIC_VECTOR ( 0 to 0 );
     s_axis_s2mm_tvalid : in STD_LOGIC;
     s_axis_s2mm_tready : out STD_LOGIC;
     s_axis_s2mm_tlast : in STD_LOGIC;
@@ -827,9 +827,6 @@ architecture STRUCTURE of main_design is
     probe0 : in STD_LOGIC_VECTOR ( 0 to 0 );
     probe1 : in STD_LOGIC_VECTOR ( 0 to 0 );
     probe2 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    probe3 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    probe4 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    probe5 : in STD_LOGIC_VECTOR ( 0 to 0 );
     SLOT_0_AXI_awaddr : in STD_LOGIC_VECTOR ( 31 downto 0 );
     SLOT_0_AXI_awlen : in STD_LOGIC_VECTOR ( 7 downto 0 );
     SLOT_0_AXI_awsize : in STD_LOGIC_VECTOR ( 2 downto 0 );
@@ -881,14 +878,6 @@ architecture STRUCTURE of main_design is
     SLOT_1_AXI_rlast : in STD_LOGIC;
     SLOT_1_AXI_rvalid : in STD_LOGIC;
     SLOT_1_AXI_rready : in STD_LOGIC;
-    SLOT_2_AXIS_tdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    SLOT_2_AXIS_tlast : in STD_LOGIC;
-    SLOT_2_AXIS_tvalid : in STD_LOGIC;
-    SLOT_2_AXIS_tready : in STD_LOGIC;
-    SLOT_3_AXIS_tdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    SLOT_3_AXIS_tlast : in STD_LOGIC;
-    SLOT_3_AXIS_tvalid : in STD_LOGIC;
-    SLOT_3_AXIS_tready : in STD_LOGIC;
     resetn : in STD_LOGIC
   );
   end component main_design_system_ila_0_0;
@@ -896,13 +885,13 @@ architecture STRUCTURE of main_design is
   port (
     clk : in STD_LOGIC;
     reset : in STD_LOGIC;
-    s_axis_tdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    s_axis_tkeep : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    s_axis_tdata : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    s_axis_tkeep : in STD_LOGIC_VECTOR ( 0 to 0 );
     s_axis_tlast : in STD_LOGIC;
     s_axis_tready : out STD_LOGIC;
     s_axis_tvalid : in STD_LOGIC;
-    m_axis_tdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    m_axis_tkeep : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    m_axis_tdata : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    m_axis_tkeep : out STD_LOGIC_VECTOR ( 0 to 0 );
     m_axis_tlast : out STD_LOGIC;
     m_axis_tready : in STD_LOGIC;
     m_axis_tvalid : out STD_LOGIC;
@@ -910,20 +899,18 @@ architecture STRUCTURE of main_design is
   );
   end component main_design_axi_accumulator_wrap_0_0;
   signal axi_accumulator_wrap_0_calculating : STD_LOGIC;
-  signal axi_accumulator_wrap_0_m_axis_tdata : STD_LOGIC_VECTOR ( 31 downto 0 );
-  attribute CONN_BUS_INFO : string;
-  attribute CONN_BUS_INFO of axi_accumulator_wrap_0_m_axis_tdata : signal is "axi_accumulator_wrap_0_m_axis xilinx.com:interface:axis:1.0 None TDATA";
-  attribute DONT_TOUCH : boolean;
-  attribute DONT_TOUCH of axi_accumulator_wrap_0_m_axis_tdata : signal is std.standard.true;
-  signal axi_accumulator_wrap_0_m_axis_tkeep : STD_LOGIC_VECTOR ( 3 downto 0 );
-  signal axi_accumulator_wrap_0_m_axis_tlast : STD_LOGIC;
-  attribute CONN_BUS_INFO of axi_accumulator_wrap_0_m_axis_tlast : signal is "axi_accumulator_wrap_0_m_axis xilinx.com:interface:axis:1.0 None TLAST";
-  attribute DONT_TOUCH of axi_accumulator_wrap_0_m_axis_tlast : signal is std.standard.true;
-  signal axi_accumulator_wrap_0_m_axis_tvalid : STD_LOGIC;
-  attribute CONN_BUS_INFO of axi_accumulator_wrap_0_m_axis_tvalid : signal is "axi_accumulator_wrap_0_m_axis xilinx.com:interface:axis:1.0 None TVALID";
-  attribute DONT_TOUCH of axi_accumulator_wrap_0_m_axis_tvalid : signal is std.standard.true;
-  signal axi_accumulator_wrap_0_s_axis_tready : STD_LOGIC;
+  signal axi_accumulator_wrap_0_m_axis_TDATA : STD_LOGIC_VECTOR ( 7 downto 0 );
+  signal axi_accumulator_wrap_0_m_axis_TKEEP : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal axi_accumulator_wrap_0_m_axis_TLAST : STD_LOGIC;
+  signal axi_accumulator_wrap_0_m_axis_TREADY : STD_LOGIC;
+  signal axi_accumulator_wrap_0_m_axis_TVALID : STD_LOGIC;
+  signal axi_dma_0_M_AXIS_MM2S_TDATA : STD_LOGIC_VECTOR ( 7 downto 0 );
+  signal axi_dma_0_M_AXIS_MM2S_TKEEP : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal axi_dma_0_M_AXIS_MM2S_TLAST : STD_LOGIC;
+  signal axi_dma_0_M_AXIS_MM2S_TREADY : STD_LOGIC;
+  signal axi_dma_0_M_AXIS_MM2S_TVALID : STD_LOGIC;
   signal axi_dma_0_M_AXI_MM2S_ARADDR : STD_LOGIC_VECTOR ( 31 downto 0 );
+  attribute CONN_BUS_INFO : string;
   attribute CONN_BUS_INFO of axi_dma_0_M_AXI_MM2S_ARADDR : signal is "axi_dma_0_M_AXI_MM2S xilinx.com:interface:aximm:1.0 AXI4 ARADDR";
   attribute DEBUG : string;
   attribute DEBUG of axi_dma_0_M_AXI_MM2S_ARADDR : signal is "true";
@@ -1039,19 +1026,12 @@ architecture STRUCTURE of main_design is
   attribute CONN_BUS_INFO of axi_dma_0_M_AXI_S2MM_WVALID : signal is "axi_dma_0_M_AXI_S2MM xilinx.com:interface:aximm:1.0 AXI4 WVALID";
   attribute DEBUG of axi_dma_0_M_AXI_S2MM_WVALID : signal is "true";
   attribute MARK_DEBUG of axi_dma_0_M_AXI_S2MM_WVALID : signal is std.standard.true;
-  signal axi_dma_0_m_axis_mm2s_tdata : STD_LOGIC_VECTOR ( 31 downto 0 );
-  signal axi_dma_0_m_axis_mm2s_tkeep : STD_LOGIC_VECTOR ( 3 downto 0 );
-  signal axi_dma_0_m_axis_mm2s_tlast : STD_LOGIC;
-  signal axi_dma_0_m_axis_mm2s_tvalid : STD_LOGIC;
   signal axi_dma_0_mm2s_introut : STD_LOGIC;
   attribute DEBUG of axi_dma_0_mm2s_introut : signal is "true";
   attribute MARK_DEBUG of axi_dma_0_mm2s_introut : signal is std.standard.true;
   signal axi_dma_0_s2mm_introut : STD_LOGIC;
   attribute DEBUG of axi_dma_0_s2mm_introut : signal is "true";
   attribute MARK_DEBUG of axi_dma_0_s2mm_introut : signal is std.standard.true;
-  signal axi_dma_0_s_axis_s2mm_tready : STD_LOGIC;
-  attribute CONN_BUS_INFO of axi_dma_0_s_axis_s2mm_tready : signal is "axi_accumulator_wrap_0_m_axis xilinx.com:interface:axis:1.0 None TREADY";
-  attribute DONT_TOUCH of axi_dma_0_s_axis_s2mm_tready : signal is std.standard.true;
   signal axi_smc_M00_AXI_ARADDR : STD_LOGIC_VECTOR ( 48 downto 0 );
   signal axi_smc_M00_AXI_ARBURST : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal axi_smc_M00_AXI_ARCACHE : STD_LOGIC_VECTOR ( 3 downto 0 );
@@ -1157,17 +1137,17 @@ axi_accumulator_wrap_0: component main_design_axi_accumulator_wrap_0_0
      port map (
       calculating => axi_accumulator_wrap_0_calculating,
       clk => zynq_ultra_ps_e_0_pl_clk0,
-      m_axis_tdata(31 downto 0) => axi_accumulator_wrap_0_m_axis_tdata(31 downto 0),
-      m_axis_tkeep(3 downto 0) => axi_accumulator_wrap_0_m_axis_tkeep(3 downto 0),
-      m_axis_tlast => axi_accumulator_wrap_0_m_axis_tlast,
-      m_axis_tready => axi_dma_0_s_axis_s2mm_tready,
-      m_axis_tvalid => axi_accumulator_wrap_0_m_axis_tvalid,
+      m_axis_tdata(7 downto 0) => axi_accumulator_wrap_0_m_axis_TDATA(7 downto 0),
+      m_axis_tkeep(0) => axi_accumulator_wrap_0_m_axis_TKEEP(0),
+      m_axis_tlast => axi_accumulator_wrap_0_m_axis_TLAST,
+      m_axis_tready => axi_accumulator_wrap_0_m_axis_TREADY,
+      m_axis_tvalid => axi_accumulator_wrap_0_m_axis_TVALID,
       reset => rst_ps8_0_100M_peripheral_reset(0),
-      s_axis_tdata(31 downto 0) => axi_dma_0_m_axis_mm2s_tdata(31 downto 0),
-      s_axis_tkeep(3 downto 0) => axi_dma_0_m_axis_mm2s_tkeep(3 downto 0),
-      s_axis_tlast => axi_dma_0_m_axis_mm2s_tlast,
-      s_axis_tready => axi_accumulator_wrap_0_s_axis_tready,
-      s_axis_tvalid => axi_dma_0_m_axis_mm2s_tvalid
+      s_axis_tdata(7 downto 0) => axi_dma_0_M_AXIS_MM2S_TDATA(7 downto 0),
+      s_axis_tkeep(0) => axi_dma_0_M_AXIS_MM2S_TKEEP(0),
+      s_axis_tlast => axi_dma_0_M_AXIS_MM2S_TLAST,
+      s_axis_tready => axi_dma_0_M_AXIS_MM2S_TREADY,
+      s_axis_tvalid => axi_dma_0_M_AXIS_MM2S_TVALID
     );
 axi_dma_0: component main_design_axi_dma_0_0
      port map (
@@ -1203,11 +1183,11 @@ axi_dma_0: component main_design_axi_dma_0_0
       m_axi_s2mm_wready => axi_dma_0_M_AXI_S2MM_WREADY,
       m_axi_s2mm_wstrb(3 downto 0) => axi_dma_0_M_AXI_S2MM_WSTRB(3 downto 0),
       m_axi_s2mm_wvalid => axi_dma_0_M_AXI_S2MM_WVALID,
-      m_axis_mm2s_tdata(31 downto 0) => axi_dma_0_m_axis_mm2s_tdata(31 downto 0),
-      m_axis_mm2s_tkeep(3 downto 0) => axi_dma_0_m_axis_mm2s_tkeep(3 downto 0),
-      m_axis_mm2s_tlast => axi_dma_0_m_axis_mm2s_tlast,
-      m_axis_mm2s_tready => axi_accumulator_wrap_0_s_axis_tready,
-      m_axis_mm2s_tvalid => axi_dma_0_m_axis_mm2s_tvalid,
+      m_axis_mm2s_tdata(7 downto 0) => axi_dma_0_M_AXIS_MM2S_TDATA(7 downto 0),
+      m_axis_mm2s_tkeep(0) => axi_dma_0_M_AXIS_MM2S_TKEEP(0),
+      m_axis_mm2s_tlast => axi_dma_0_M_AXIS_MM2S_TLAST,
+      m_axis_mm2s_tready => axi_dma_0_M_AXIS_MM2S_TREADY,
+      m_axis_mm2s_tvalid => axi_dma_0_M_AXIS_MM2S_TVALID,
       mm2s_introut => axi_dma_0_mm2s_introut,
       mm2s_prmry_reset_out_n => NLW_axi_dma_0_mm2s_prmry_reset_out_n_UNCONNECTED,
       s2mm_introut => axi_dma_0_s2mm_introut,
@@ -1229,11 +1209,11 @@ axi_dma_0: component main_design_axi_dma_0_0
       s_axi_lite_wdata(31 downto 0) => ps8_0_axi_periph_M00_AXI_WDATA(31 downto 0),
       s_axi_lite_wready => ps8_0_axi_periph_M00_AXI_WREADY,
       s_axi_lite_wvalid => ps8_0_axi_periph_M00_AXI_WVALID,
-      s_axis_s2mm_tdata(31 downto 0) => axi_accumulator_wrap_0_m_axis_tdata(31 downto 0),
-      s_axis_s2mm_tkeep(3 downto 0) => axi_accumulator_wrap_0_m_axis_tkeep(3 downto 0),
-      s_axis_s2mm_tlast => axi_accumulator_wrap_0_m_axis_tlast,
-      s_axis_s2mm_tready => axi_dma_0_s_axis_s2mm_tready,
-      s_axis_s2mm_tvalid => axi_accumulator_wrap_0_m_axis_tvalid
+      s_axis_s2mm_tdata(7 downto 0) => axi_accumulator_wrap_0_m_axis_TDATA(7 downto 0),
+      s_axis_s2mm_tkeep(0) => axi_accumulator_wrap_0_m_axis_TKEEP(0),
+      s_axis_s2mm_tlast => axi_accumulator_wrap_0_m_axis_TLAST,
+      s_axis_s2mm_tready => axi_accumulator_wrap_0_m_axis_TREADY,
+      s_axis_s2mm_tvalid => axi_accumulator_wrap_0_m_axis_TVALID
     );
 axi_smc: component main_design_axi_smc_0
      port map (
@@ -1434,21 +1414,10 @@ system_ila_0: component main_design_system_ila_0_0
       SLOT_1_AXI_wready => axi_dma_0_M_AXI_S2MM_WREADY,
       SLOT_1_AXI_wstrb(3 downto 0) => axi_dma_0_M_AXI_S2MM_WSTRB(3 downto 0),
       SLOT_1_AXI_wvalid => axi_dma_0_M_AXI_S2MM_WVALID,
-      SLOT_2_AXIS_tdata(31 downto 0) => axi_dma_0_m_axis_mm2s_tdata(31 downto 0),
-      SLOT_2_AXIS_tlast => axi_dma_0_m_axis_mm2s_tlast,
-      SLOT_2_AXIS_tready => axi_accumulator_wrap_0_s_axis_tready,
-      SLOT_2_AXIS_tvalid => axi_dma_0_m_axis_mm2s_tvalid,
-      SLOT_3_AXIS_tdata(31 downto 0) => axi_accumulator_wrap_0_m_axis_tdata(31 downto 0),
-      SLOT_3_AXIS_tlast => axi_accumulator_wrap_0_m_axis_tlast,
-      SLOT_3_AXIS_tready => axi_dma_0_s_axis_s2mm_tready,
-      SLOT_3_AXIS_tvalid => axi_accumulator_wrap_0_m_axis_tvalid,
       clk => zynq_ultra_ps_e_0_pl_clk0,
       probe0(0) => axi_dma_0_mm2s_introut,
       probe1(0) => axi_dma_0_s2mm_introut,
       probe2(0) => axi_accumulator_wrap_0_calculating,
-      probe3(0) => '0',
-      probe4(0) => '0',
-      probe5(0) => '0',
       resetn => rst_ps8_0_100M_peripheral_aresetn(0)
     );
 xlconcat_0: component main_design_xlconcat_0_1

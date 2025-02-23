@@ -1517,6 +1517,12 @@
         "parameters": {
           "c_include_sg": {
             "value": "0"
+          },
+          "c_m_axis_mm2s_tdata_width": {
+            "value": "8"
+          },
+          "c_s_axis_s2mm_tdata_width": {
+            "value": "8"
           }
         },
         "interface_ports": {
@@ -1886,13 +1892,13 @@
             "value": "MIX"
           },
           "C_NUM_MONITOR_SLOTS": {
-            "value": "4"
+            "value": "2"
           },
           "C_NUM_OF_PROBES": {
-            "value": "6"
+            "value": "3"
           },
           "C_SLOT": {
-            "value": "3"
+            "value": "0"
           },
           "C_SLOT_0_APC_EN": {
             "value": "0"
@@ -1992,16 +1998,6 @@
             "mode": "Monitor",
             "vlnv_bus_definition": "xilinx.com:interface:aximm:1.0",
             "vlnv": "xilinx.com:interface:aximm_rtl:1.0"
-          },
-          "SLOT_2_AXIS": {
-            "mode": "Monitor",
-            "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
-            "vlnv": "xilinx.com:interface:axis_rtl:1.0"
-          },
-          "SLOT_3_AXIS": {
-            "mode": "Monitor",
-            "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
-            "vlnv": "xilinx.com:interface:axis_rtl:1.0"
           }
         }
       },
@@ -2023,7 +2019,7 @@
             "vlnv": "xilinx.com:interface:axis_rtl:1.0",
             "parameters": {
               "TDATA_NUM_BYTES": {
-                "value": "4",
+                "value": "1",
                 "value_src": "constant"
               },
               "TDEST_WIDTH": {
@@ -2067,13 +2063,13 @@
               "TDATA": {
                 "physical_name": "m_axis_tdata",
                 "direction": "O",
-                "left": "31",
+                "left": "7",
                 "right": "0"
               },
               "TKEEP": {
                 "physical_name": "m_axis_tkeep",
                 "direction": "O",
-                "left": "3",
+                "left": "0",
                 "right": "0"
               },
               "TLAST": {
@@ -2096,7 +2092,7 @@
             "vlnv": "xilinx.com:interface:axis_rtl:1.0",
             "parameters": {
               "TDATA_NUM_BYTES": {
-                "value": "4",
+                "value": "1",
                 "value_src": "constant"
               },
               "TDEST_WIDTH": {
@@ -2140,13 +2136,13 @@
               "TDATA": {
                 "physical_name": "s_axis_tdata",
                 "direction": "I",
-                "left": "31",
+                "left": "7",
                 "right": "0"
               },
               "TKEEP": {
                 "physical_name": "s_axis_tkeep",
                 "direction": "I",
-                "left": "3",
+                "left": "0",
                 "right": "0"
               },
               "TLAST": {
@@ -2210,6 +2206,12 @@
           "axi_dma_0/S_AXIS_S2MM"
         ]
       },
+      "axi_dma_0_M_AXIS_MM2S": {
+        "interface_ports": [
+          "axi_accumulator_wrap_0/s_axis",
+          "axi_dma_0/M_AXIS_MM2S"
+        ]
+      },
       "axi_dma_0_M_AXI_MM2S": {
         "interface_ports": [
           "axi_dma_0/M_AXI_MM2S",
@@ -2266,67 +2268,6 @@
           "system_ila_0/probe2"
         ]
       },
-      "axi_accumulator_wrap_0_m_axis_tdata": {
-        "ports": [
-          "axi_accumulator_wrap_0/m_axis_tdata",
-          "axi_dma_0/s_axis_s2mm_tdata",
-          "system_ila_0/SLOT_3_AXIS_tdata"
-        ]
-      },
-      "axi_accumulator_wrap_0_m_axis_tkeep": {
-        "ports": [
-          "axi_accumulator_wrap_0/m_axis_tkeep",
-          "axi_dma_0/s_axis_s2mm_tkeep"
-        ]
-      },
-      "axi_accumulator_wrap_0_m_axis_tlast": {
-        "ports": [
-          "axi_accumulator_wrap_0/m_axis_tlast",
-          "axi_dma_0/s_axis_s2mm_tlast",
-          "system_ila_0/SLOT_3_AXIS_tlast"
-        ]
-      },
-      "axi_accumulator_wrap_0_m_axis_tvalid": {
-        "ports": [
-          "axi_accumulator_wrap_0/m_axis_tvalid",
-          "axi_dma_0/s_axis_s2mm_tvalid",
-          "system_ila_0/SLOT_3_AXIS_tvalid"
-        ]
-      },
-      "axi_accumulator_wrap_0_s_axis_tready": {
-        "ports": [
-          "axi_accumulator_wrap_0/s_axis_tready",
-          "axi_dma_0/m_axis_mm2s_tready",
-          "system_ila_0/SLOT_2_AXIS_tready"
-        ]
-      },
-      "axi_dma_0_m_axis_mm2s_tdata": {
-        "ports": [
-          "axi_dma_0/m_axis_mm2s_tdata",
-          "system_ila_0/SLOT_2_AXIS_tdata",
-          "axi_accumulator_wrap_0/s_axis_tdata"
-        ]
-      },
-      "axi_dma_0_m_axis_mm2s_tkeep": {
-        "ports": [
-          "axi_dma_0/m_axis_mm2s_tkeep",
-          "axi_accumulator_wrap_0/s_axis_tkeep"
-        ]
-      },
-      "axi_dma_0_m_axis_mm2s_tlast": {
-        "ports": [
-          "axi_dma_0/m_axis_mm2s_tlast",
-          "system_ila_0/SLOT_2_AXIS_tlast",
-          "axi_accumulator_wrap_0/s_axis_tlast"
-        ]
-      },
-      "axi_dma_0_m_axis_mm2s_tvalid": {
-        "ports": [
-          "axi_dma_0/m_axis_mm2s_tvalid",
-          "system_ila_0/SLOT_2_AXIS_tvalid",
-          "axi_accumulator_wrap_0/s_axis_tvalid"
-        ]
-      },
       "axi_dma_0_mm2s_introut": {
         "ports": [
           "axi_dma_0/mm2s_introut",
@@ -2356,13 +2297,6 @@
             "value": "true"
           }
         }
-      },
-      "axi_dma_0_s_axis_s2mm_tready": {
-        "ports": [
-          "axi_dma_0/s_axis_s2mm_tready",
-          "system_ila_0/SLOT_3_AXIS_tready",
-          "axi_accumulator_wrap_0/m_axis_tready"
-        ]
       },
       "rst_ps8_0_100M_peripheral_aresetn": {
         "ports": [

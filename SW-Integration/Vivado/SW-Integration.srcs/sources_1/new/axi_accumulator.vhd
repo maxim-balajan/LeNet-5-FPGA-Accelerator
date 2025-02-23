@@ -8,14 +8,14 @@ entity axi_accumulator is
 		clk   : in std_logic;
 		reset : in std_logic;
 
-		s_axis_tdata  : in std_logic_vector(31 downto 0);
-		s_axis_tkeep  : in std_logic_vector(3 downto 0);
+		s_axis_tdata  : in std_logic_vector(7 downto 0);
+		s_axis_tkeep  : in std_logic_vector(0 downto 0);
 		s_axis_tlast  : in std_logic;
 		s_axis_tready : out std_logic;
 		s_axis_tvalid : in std_logic;
 
-		m_axis_tdata  : out std_logic_vector(31 downto 0);
-		m_axis_tkeep  : out std_logic_vector(3 downto 0);
+		m_axis_tdata  : out std_logic_vector(7 downto 0);
+		m_axis_tkeep  : out std_logic_vector(0 downto 0);
 		m_axis_tlast  : out std_logic;
 		m_axis_tready : in std_logic;
 		m_axis_tvalid : out std_logic;
@@ -31,29 +31,18 @@ architecture Behavioral of axi_accumulator is
 	signal s_calculating   : std_logic;
 	signal s_m_axis_tvalid : std_logic;
 
--- signal s_s_axis_tdata : matrix_1d(0 to 3)(7 downto 0);
-
 begin
-
-	-- GEN_SPLIT_SIGNALS: for i in 0 to 3 generate
-	--   GEN_SPLIT_SIGNALS_INNER: for j in 0 to 7 generate
-	--       s_s_axis_tdata(i)(j) <= s_axis_tdata(i * 8 + j);
-	--   end generate GEN_SPLIT_SIGNALS_INNER;
-	-- end generate GEN_SPLIT_SIGNALS;
 
 	m_axis_tvalid <= s_m_axis_tvalid;
 	calculating   <= s_calculating;
 
 	process (clk, reset) is
-
-		variable tmp : unsigned(7 downto 0);
-
 	begin
 
 		if rising_edge(clk) then
 			if reset = '1' then
 				m_axis_tdata    <= (others => '0');
-				m_axis_tkeep    <= (others => '0');
+				m_axis_tkeep    <= "1";
 				m_axis_tlast    <= '0';
 				s_m_axis_tvalid <= '0';
 				s_axis_tready   <= '0';
@@ -63,25 +52,17 @@ begin
 			else
 				-- we are ready to receive data
 				s_axis_tready <= '1';
-				m_axis_tkeep  <= (0 => '1', others => '0');
 
 				if s_axis_tvalid = '1' then
 					s_calculating <= '1';
 
-					tmp := (others => '0');
+					if s_axis_tkeep(0) = '1' then
+						s_accumulator <= s_accumulator + unsigned(s_axis_tdata(7 downto 0));
+					end if;
 
-					for x in 0 to 3 loop
-
-						if s_axis_tkeep(x) = '1' then
-							tmp := tmp + unsigned(s_axis_tdata(8 * x + 7 downto 8 * x));
-						end if;
-
-					end loop;
-
-					s_accumulator <= s_accumulator + tmp;
 				else
 					if s_calculating = '1' and s_m_axis_tvalid = '0' and m_axis_tready = '1' then
-						m_axis_tdata    <= (23 downto 0 => '0') & std_logic_vector(s_accumulator);
+						m_axis_tdata    <= std_logic_vector(s_accumulator);
 						m_axis_tlast    <= '1';
 						s_m_axis_tvalid <= '1';
 					end if;
