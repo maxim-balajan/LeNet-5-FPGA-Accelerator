@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="lenet_accel_wrapper_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="lenet_accel_wrapper_tb" />
+            <top_module name="libmatrix" />
+            <top_module name="libmemory" />
+            <top_module name="libutil" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="3.667500 us"></ZoomStartTime>
+      <ZoomEndTime time="125.467501 us"></ZoomEndTime>
+      <Cursor1Time time="23.967500 us"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="204"></NameColumnWidth>
+      <ValueColumnWidth column_width="186"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="27" />
+   <wvobject type="logic" fp_name="/lenet_accel_wrapper_tb/clk">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/lenet_accel_wrapper_tb/reset">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/lenet_accel_wrapper_tb/s_axis_tdata">
+      <obj_property name="ElementShortName">s_axis_tdata[7:0]</obj_property>
+      <obj_property name="ObjectShortName">s_axis_tdata[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/lenet_accel_wrapper_tb/s_axis_tkeep">
+      <obj_property name="ElementShortName">s_axis_tkeep[0:0]</obj_property>
+      <obj_property name="ObjectShortName">s_axis_tkeep[0:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/lenet_accel_wrapper_tb/s_axis_tlast">
+      <obj_property name="ElementShortName">s_axis_tlast</obj_property>
+      <obj_property name="ObjectShortName">s_axis_tlast</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/lenet_accel_wrapper_tb/s_axis_tready">
+      <obj_property name="ElementShortName">s_axis_tready</obj_property>
+      <obj_property name="ObjectShortName">s_axis_tready</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/lenet_accel_wrapper_tb/s_axis_tvalid">
+      <obj_property name="ElementShortName">s_axis_tvalid</obj_property>
+      <obj_property name="ObjectShortName">s_axis_tvalid</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/lenet_accel_wrapper_tb/m_axis_tdata">
+      <obj_property name="ElementShortName">m_axis_tdata[7:0]</obj_property>
+      <obj_property name="ObjectShortName">m_axis_tdata[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/lenet_accel_wrapper_tb/m_axis_tkeep">
+      <obj_property name="ElementShortName">m_axis_tkeep[0:0]</obj_property>
+      <obj_property name="ObjectShortName">m_axis_tkeep[0:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/lenet_accel_wrapper_tb/m_axis_tlast">
+      <obj_property name="ElementShortName">m_axis_tlast</obj_property>
+      <obj_property name="ObjectShortName">m_axis_tlast</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/lenet_accel_wrapper_tb/m_axis_tready">
+      <obj_property name="ElementShortName">m_axis_tready</obj_property>
+      <obj_property name="ObjectShortName">m_axis_tready</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/lenet_accel_wrapper_tb/m_axis_tvalid">
+      <obj_property name="ElementShortName">m_axis_tvalid</obj_property>
+      <obj_property name="ObjectShortName">m_axis_tvalid</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/lenet_accel_wrapper_tb/s_input_stream_2">
+      <obj_property name="ElementShortName">s_input_stream_2[0:1023][7:0]</obj_property>
+      <obj_property name="ObjectShortName">s_input_stream_2[0:1023][7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/lenet_accel_wrapper_tb/s_input_stream_7">
+      <obj_property name="ElementShortName">s_input_stream_7[0:1023][7:0]</obj_property>
+      <obj_property name="ObjectShortName">s_input_stream_7[0:1023][7:0]</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/lenet_accel_wrapper_tb/s_read_pointer">
+      <obj_property name="ElementShortName">s_read_pointer</obj_property>
+      <obj_property name="ObjectShortName">s_read_pointer</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/lenet_accel_wrapper_tb/s_actual_input_stream">
+      <obj_property name="ElementShortName">s_actual_input_stream[0:1023][7:0]</obj_property>
+      <obj_property name="ObjectShortName">s_actual_input_stream[0:1023][7:0]</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/lenet_accel_wrapper_tb/s_invalid_delay">
+      <obj_property name="ElementShortName">s_invalid_delay</obj_property>
+      <obj_property name="ObjectShortName">s_invalid_delay</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/lenet_accel_wrapper_tb/s_iteration">
+      <obj_property name="ElementShortName">s_iteration</obj_property>
+      <obj_property name="ObjectShortName">s_iteration</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/lenet_accel_wrapper_tb/clk_period">
+      <obj_property name="ElementShortName">clk_period</obj_property>
+      <obj_property name="ObjectShortName">clk_period</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/lenet_accel_wrapper_tb/input_path_2">
+      <obj_property name="ElementShortName">input_path_2[1:20]</obj_property>
+      <obj_property name="ObjectShortName">input_path_2[1:20]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/lenet_accel_wrapper_tb/input_path_7">
+      <obj_property name="ElementShortName">input_path_7[1:20]</obj_property>
+      <obj_property name="ObjectShortName">input_path_7[1:20]</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider1338" type="divider">
+      <obj_property name="label">LENET ACCEL</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/lenet_accel_wrapper_tb/lenet_accel_wrapper_inst/s_data_cnt">
+      <obj_property name="ElementShortName">s_data_cnt[10:0]</obj_property>
+      <obj_property name="ObjectShortName">s_data_cnt[10:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/lenet_accel_wrapper_tb/lenet_accel_wrapper_inst/s_accel_reset">
+      <obj_property name="ElementShortName">s_accel_reset</obj_property>
+      <obj_property name="ObjectShortName">s_accel_reset</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/lenet_accel_wrapper_tb/lenet_accel_wrapper_inst/s_accel_reset_manual">
+      <obj_property name="ElementShortName">s_accel_reset_manual</obj_property>
+      <obj_property name="ObjectShortName">s_accel_reset_manual</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/lenet_accel_wrapper_tb/lenet_accel_wrapper_inst/s_comp_complete">
+      <obj_property name="ElementShortName">s_comp_complete</obj_property>
+      <obj_property name="ObjectShortName">s_comp_complete</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/lenet_accel_wrapper_tb/lenet_accel_wrapper_inst/s_data_cnt">
+      <obj_property name="ElementShortName">s_data_cnt[10:0]</obj_property>
+      <obj_property name="ObjectShortName">s_data_cnt[10:0]</obj_property>
+   </wvobject>
+</wave_config>
