@@ -5,6 +5,7 @@
       "device": "xczu3eg-sbva484-1-i",
       "gen_directory": "../../../../LeNet-Accelerator.gen/sources_1/bd/lenet_accel_main",
       "name": "lenet_accel_main",
+      "pfm_name": "xilinx:ultra96v2:name:0.0",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "Hierarchical",
       "tool_version": "2024.1.2",
@@ -22,7 +23,6 @@
       "rst_ps8_0_100M": "",
       "axi_smc": "",
       "xlconcat_0": "",
-      "clk_wiz_0": "",
       "lenet_accel_wrapper_0": ""
     },
     "components": {
@@ -1905,30 +1905,6 @@
         "xci_path": "ip/lenet_accel_main_xlconcat_0_0/lenet_accel_main_xlconcat_0_0.xci",
         "inst_hier_path": "xlconcat_0"
       },
-      "clk_wiz_0": {
-        "vlnv": "xilinx.com:ip:clk_wiz:6.0",
-        "ip_revision": "14",
-        "xci_name": "lenet_accel_main_clk_wiz_0_0",
-        "xci_path": "ip/lenet_accel_main_clk_wiz_0_0/lenet_accel_main_clk_wiz_0_0.xci",
-        "inst_hier_path": "clk_wiz_0",
-        "parameters": {
-          "CLKOUT1_JITTER": {
-            "value": "139.033"
-          },
-          "CLKOUT1_REQUESTED_OUT_FREQ": {
-            "value": "40.000"
-          },
-          "MMCM_CLKOUT0_DIVIDE_F": {
-            "value": "30.000"
-          },
-          "RESET_PORT": {
-            "value": "resetn"
-          },
-          "RESET_TYPE": {
-            "value": "ACTIVE_LOW"
-          }
-        }
-      },
       "lenet_accel_wrapper_0": {
         "vlnv": "xilinx.com:module_ref:lenet_accel_wrapper:1.0",
         "ip_revision": "1",
@@ -1979,15 +1955,11 @@
                 "value_src": "constant"
               },
               "FREQ_HZ": {
-                "value": "40000000",
-                "value_src": "ip_prop"
-              },
-              "PHASE": {
-                "value": "0.0",
-                "value_src": "ip_prop"
+                "value": "100000000",
+                "value_src": "user_prop"
               },
               "CLK_DOMAIN": {
-                "value": "lenet_accel_main_clk_wiz_0_0_clk_out1",
+                "value": "lenet_accel_main_zynq_ultra_ps_e_0_0_pl_clk0",
                 "value_src": "default_prop"
               }
             },
@@ -2056,15 +2028,11 @@
                 "value_src": "constant"
               },
               "FREQ_HZ": {
-                "value": "40000000",
-                "value_src": "ip_prop"
-              },
-              "PHASE": {
-                "value": "0.0",
-                "value_src": "ip_prop"
+                "value": "100000000",
+                "value_src": "user_prop"
               },
               "CLK_DOMAIN": {
-                "value": "lenet_accel_main_clk_wiz_0_0_clk_out1",
+                "value": "lenet_accel_main_zynq_ultra_ps_e_0_0_pl_clk0",
                 "value_src": "default_prop"
               }
             },
@@ -2110,15 +2078,11 @@
                 "value_src": "constant"
               },
               "FREQ_HZ": {
-                "value": "40000000",
-                "value_src": "ip_prop"
-              },
-              "PHASE": {
-                "value": "0.0",
-                "value_src": "ip_prop"
+                "value": "100000000",
+                "value_src": "user_prop"
               },
               "CLK_DOMAIN": {
-                "value": "lenet_accel_main_clk_wiz_0_0_clk_out1",
+                "value": "lenet_accel_main_zynq_ultra_ps_e_0_0_pl_clk0",
                 "value_src": "default_prop"
               }
             }
@@ -2128,7 +2092,7 @@
             "direction": "I",
             "parameters": {
               "POLARITY": {
-                "value": "ACTIVE_LOW",
+                "value": "ACTIVE_HIGH",
                 "value_src": "const_prop"
               }
             }
@@ -2193,22 +2157,6 @@
           "xlconcat_0/In1"
         ]
       },
-      "clk_wiz_0_clk_out1": {
-        "ports": [
-          "clk_wiz_0/clk_out1",
-          "axi_smc/aclk",
-          "ps8_0_axi_periph/ACLK",
-          "ps8_0_axi_periph/S00_ACLK",
-          "ps8_0_axi_periph/M00_ACLK",
-          "axi_dma_0/s_axi_lite_aclk",
-          "axi_dma_0/m_axi_mm2s_aclk",
-          "axi_dma_0/m_axi_s2mm_aclk",
-          "zynq_ultra_ps_e_0/saxihpc0_fpd_aclk",
-          "zynq_ultra_ps_e_0/maxihpm0_fpd_aclk",
-          "rst_ps8_0_100M/slowest_sync_clk",
-          "lenet_accel_wrapper_0/clk"
-        ]
-      },
       "rst_ps8_0_100M_peripheral_aresetn": {
         "ports": [
           "rst_ps8_0_100M/peripheral_aresetn",
@@ -2216,7 +2164,12 @@
           "axi_dma_0/axi_resetn",
           "ps8_0_axi_periph/M00_ARESETN",
           "ps8_0_axi_periph/ARESETN",
-          "axi_smc/aresetn",
+          "axi_smc/aresetn"
+        ]
+      },
+      "rst_ps8_0_100M_peripheral_reset": {
+        "ports": [
+          "rst_ps8_0_100M/peripheral_reset",
           "lenet_accel_wrapper_0/reset"
         ]
       },
@@ -2229,14 +2182,23 @@
       "zynq_ultra_ps_e_0_pl_clk0": {
         "ports": [
           "zynq_ultra_ps_e_0/pl_clk0",
-          "clk_wiz_0/clk_in1"
+          "zynq_ultra_ps_e_0/maxihpm0_fpd_aclk",
+          "axi_dma_0/s_axi_lite_aclk",
+          "ps8_0_axi_periph/M00_ACLK",
+          "ps8_0_axi_periph/ACLK",
+          "ps8_0_axi_periph/S00_ACLK",
+          "rst_ps8_0_100M/slowest_sync_clk",
+          "zynq_ultra_ps_e_0/saxihpc0_fpd_aclk",
+          "axi_smc/aclk",
+          "lenet_accel_wrapper_0/clk",
+          "axi_dma_0/m_axi_mm2s_aclk",
+          "axi_dma_0/m_axi_s2mm_aclk"
         ]
       },
       "zynq_ultra_ps_e_0_pl_resetn0": {
         "ports": [
           "zynq_ultra_ps_e_0/pl_resetn0",
-          "rst_ps8_0_100M/ext_reset_in",
-          "clk_wiz_0/resetn"
+          "rst_ps8_0_100M/ext_reset_in"
         ]
       }
     },

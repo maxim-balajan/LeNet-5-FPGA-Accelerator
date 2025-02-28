@@ -1,0 +1,361 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version      : Vivado v.2024.1.2 (lin64) Build 5164865 Thu Sep  5 14:36:28 MDT 2024
+| Date              : Fri Feb 28 22:43:01 2025
+| Host              : hpenvy running 64-bit unknown
+| Command           : report_clock_utilization -file lenet_accel_main_wrapper_clock_utilization_routed.rpt
+| Design            : lenet_accel_main_wrapper
+| Device            : xczu3eg-sbva484
+| Speed File        : -1  PRODUCTION 1.30 05-15-2022
+| Temperature Grade : I
+| Design State      : Routed
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+Clock Utilization Report
+
+Table of Contents
+-----------------
+1. Clock Primitive Utilization
+2. Global Clock Resources
+3. Global Clock Source Details
+4. Clock Regions : Clock Primitives
+5. Clock Regions : Load Primitives
+6. Clock Regions : Global Clock Summary
+7. Clock Regions : Routing Resource Utilization
+8. Device Cell Placement Summary for Global Clock g0
+9. Device Cell Placement Summary for Global Clock g1
+10. Device Cell Placement Summary for Global Clock g2
+11. Device Cell Placement Summary for Global Clock g3
+12. Device Cell Placement Summary for Global Clock g4
+13. Clock Region Cell Placement per Global Clock: Region X0Y0
+14. Clock Region Cell Placement per Global Clock: Region X1Y0
+15. Clock Region Cell Placement per Global Clock: Region X0Y1
+16. Clock Region Cell Placement per Global Clock: Region X1Y1
+17. Clock Region Cell Placement per Global Clock: Region X0Y2
+18. Clock Region Cell Placement per Global Clock: Region X1Y2
+
+1. Clock Primitive Utilization
+------------------------------
+
++------------+------+-----------+-----+--------------+--------+
+| Type       | Used | Available | LOC | Clock Region | Pblock |
++------------+------+-----------+-----+--------------+--------+
+| BUFGCE     |    4 |        88 |   0 |            0 |      0 |
+| BUFGCE_DIV |    0 |        12 |   0 |            0 |      0 |
+| BUFGCTRL   |    0 |        24 |   0 |            0 |      0 |
+| BUFG_PS    |    1 |        72 |   0 |            0 |      0 |
+| MMCM       |    0 |         3 |   0 |            0 |      0 |
+| PLL        |    0 |         6 |   0 |            0 |      0 |
++------------+------+-----------+-----+--------------+--------+
+
+
+2. Global Clock Resources
+-------------------------
+
++-----------+-----------+-----------------+------------+---------------+--------------+------+-------------------+------------------+-------------------+-------------+-----------------+--------------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Global Id | Source Id | Driver Type/Pin | Constraint | Site          | Clock Region | Root | Clock Delay Group | Clock Low Fanout | Load Clock Region | Clock Loads | Non-Clock Loads | Clock Period | Clock    | Driver Pin                                                                                                                                                                                                        | Net                                                                                                                                                                                |
++-----------+-----------+-----------------+------------+---------------+--------------+------+-------------------+------------------+-------------------+-------------+-----------------+--------------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| g0        | src0      | BUFG_PS/O       | None       | BUFG_PS_X0Y62 | X0Y2         | X0Y1 |                   |                  |                 6 |       34573 |               0 |       10.000 | clk_pl_0 | lenet_accel_main_i/zynq_ultra_ps_e_0/U0/buffer_pl_clk_0.PL_CLK_0_BUFG/O                                                                                                                                           | lenet_accel_main_i/zynq_ultra_ps_e_0/U0/pl_clk0                                                                                                                                    |
+| g1        | src1      | BUFGCE/O        | None       | BUFGCE_X0Y1   | X1Y0         | X1Y0 |                   |                  |                 4 |        2040 |               8 |              |          | lenet_accel_main_i/lenet_accel_wrapper_0/U0/lenet_accel_inst/DENSE_LAYER_COMB_INST/DENSE_LAYER_INST/MV_UNIT_INST/s_inputs_finished_reg[1]_0_BUFG_inst/O                                                           | lenet_accel_main_i/lenet_accel_wrapper_0/U0/lenet_accel_inst/DENSE_LAYER_COMB_INST/DENSE_LAYER_INST/MV_UNIT_INST/s_inputs_finished_reg[1]_0_BUFGCE                                 |
+| g2        | src2      | BUFGCE/O        | None       | BUFGCE_X0Y56  | X1Y2         | X1Y2 | n/a               |                  |                 6 |           0 |            9746 |          n/a | n/a      | lenet_accel_main_i/lenet_accel_wrapper_0/U0/lenet_accel_inst/CONV_COMB_INST/CONV_PAR_INST/PIPELINE_GEN[0].PIPELINE_INST/CONV_COMP_UNIT/KERNEL_STEP_GEN[0].KERNEL_STEP_INST/s_input_matrix[1][23]_i_1_bufg_place/O | lenet_accel_main_i/lenet_accel_wrapper_0/U0/lenet_accel_inst/CONV_COMB_INST/CONV_PAR_INST/PIPELINE_GEN[0].PIPELINE_INST/CONV_COMP_UNIT/KERNEL_STEP_GEN[0].KERNEL_STEP_INST/reset_0 |
+| g3        | src3      | BUFGCE/O        | None       | BUFGCE_X0Y26  | X1Y1         | X1Y1 | n/a               |                  |                 4 |           0 |           10109 |          n/a | n/a      | lenet_accel_main_i/lenet_accel_wrapper_0/U0/lenet_accel_inst/CONV_COMB_INST/CONV_SEQ_INST/s_channel_reset_reg_bufg_place/O                                                                                        | lenet_accel_main_i/lenet_accel_wrapper_0/U0/lenet_accel_inst/CONV_COMB_INST/CONV_SEQ_INST/s_channel_reset_reg_n_0                                                                  |
+| g4        | src4      | BUFGCE/O        | None       | BUFGCE_X0Y44  | X1Y1         | X1Y1 | n/a               |                  |                 4 |           0 |            5194 |          n/a | n/a      | lenet_accel_main_i/lenet_accel_wrapper_0/U0/lenet_accel_inst/DENSE_LAYER_COMB_INST/s_iteration_reset_reg_bufg_place/O                                                                                             | lenet_accel_main_i/lenet_accel_wrapper_0/U0/lenet_accel_inst/DENSE_LAYER_COMB_INST/s_iteration_reset_reg_n_0                                                                       |
++-----------+-----------+-----------------+------------+---------------+--------------+------+-------------------+------------------+-------------------+-------------+-----------------+--------------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+* Clock Loads column represents cell count of net connects that connect to a clock pin. Internal cell leaf pins are not considered
+** Non-Clock Loads column represents cell count of non-clock pin loads
+
+
+3. Global Clock Source Details
+------------------------------
+
++-----------+-----------+-----------------+------------+---------------+--------------+-------------+-----------------+---------------------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Source Id | Global Id | Driver Type/Pin | Constraint | Site          | Clock Region | Clock Loads | Non-Clock Loads | Source Clock Period | Source Clock | Driver Pin                                                                                                                                                                                             | Net                                                                                                                                                                                           |
++-----------+-----------+-----------------+------------+---------------+--------------+-------------+-----------------+---------------------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| src0      | g0        | PS8/PLCLK[0]    | None       | PS8_X0Y0      | X0Y0         |           1 |               0 |              10.000 | clk_pl_0     | lenet_accel_main_i/zynq_ultra_ps_e_0/U0/PS8_i/PLCLK[0]                                                                                                                                                 | lenet_accel_main_i/zynq_ultra_ps_e_0/U0/pl_clk_unbuffered[0]                                                                                                                                  |
+| src1      | g1        | LUT6/O          | None       | SLICE_X38Y36  | X1Y0         |           1 |               0 |                     |              | lenet_accel_main_i/lenet_accel_wrapper_0/U0/lenet_accel_inst/DENSE_LAYER_COMB_INST/DENSE_LAYER_INST/MV_UNIT_INST/s_tmp_results[0][23]_i_2/O                                                            | lenet_accel_main_i/lenet_accel_wrapper_0/U0/lenet_accel_inst/DENSE_LAYER_COMB_INST/DENSE_LAYER_INST/MV_UNIT_INST/s_inputs_finished_reg[1]_0                                                   |
+| src2      | g2        | LUT2/O          | None       | SLICE_X46Y135 | X1Y2         |           1 |             111 |                     |              | lenet_accel_main_i/lenet_accel_wrapper_0/U0/lenet_accel_inst/CONV_COMB_INST/CONV_PAR_INST/PIPELINE_GEN[0].PIPELINE_INST/CONV_COMP_UNIT/KERNEL_STEP_GEN[0].KERNEL_STEP_INST/s_input_matrix[1][23]_i_1/O | lenet_accel_main_i/lenet_accel_wrapper_0/U0/lenet_accel_inst/CONV_COMB_INST/CONV_PAR_INST/PIPELINE_GEN[0].PIPELINE_INST/CONV_COMP_UNIT/KERNEL_STEP_GEN[0].KERNEL_STEP_INST/reset_0_bufg_place |
+| src3      | g3        | FDSE/Q          | None       | SLICE_X35Y77  | X1Y1         |           1 |               0 |                     |              | lenet_accel_main_i/lenet_accel_wrapper_0/U0/lenet_accel_inst/CONV_COMB_INST/CONV_SEQ_INST/s_channel_reset_reg/Q                                                                                        | lenet_accel_main_i/lenet_accel_wrapper_0/U0/lenet_accel_inst/CONV_COMB_INST/CONV_SEQ_INST/s_channel_reset_reg_n_0_bufg_place                                                                  |
+| src4      | g4        | FDSE/Q          | None       | SLICE_X14Y50  | X0Y0         |           1 |               0 |                     |              | lenet_accel_main_i/lenet_accel_wrapper_0/U0/lenet_accel_inst/DENSE_LAYER_COMB_INST/s_iteration_reset_reg/Q                                                                                             | lenet_accel_main_i/lenet_accel_wrapper_0/U0/lenet_accel_inst/DENSE_LAYER_COMB_INST/s_iteration_reset_reg_n_0_bufg_place                                                                       |
++-----------+-----------+-----------------+------------+---------------+--------------+-------------+-----------------+---------------------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+* Clock Loads column represents cell count of net connects that connect to a clock pin. Internal cell leaf pins are not considered
+** Non-Clock Loads column represents cell count of non-clock pin loads
+
+
+4. Clock Regions : Clock Primitives
+-----------------------------------
+
++-------------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+
+|                   |  Global Clock |     BUFGCE    |   BUFGCE_DIV  |    BUFGCTRL   |    BUFG_GT    |    BUFG_PS    |      MMCM     |      PLL      |
++-------------------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+| Clock Region Name | Used  | Avail | Used  | Avail | Used  | Avail | Used  | Avail | Used  | Avail | Used  | Avail | Used  | Avail | Used  | Avail |
++-------------------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+| X0Y0              |     4 |    24 |     0 |     4 |     0 |     0 |     0 |     0 |     0 |     0 |     0 |    24 |     0 |     0 |     0 |     0 |
+| X1Y0              |     4 |    24 |     1 |    28 |     0 |     4 |     0 |     8 |     0 |     0 |     0 |     0 |     0 |     1 |     0 |     2 |
+| X0Y1              |     5 |    24 |     0 |     4 |     0 |     0 |     0 |     0 |     0 |     0 |     0 |    24 |     0 |     0 |     0 |     0 |
+| X1Y1              |     5 |    24 |     2 |    24 |     0 |     4 |     0 |     8 |     0 |     0 |     0 |     0 |     0 |     1 |     0 |     2 |
+| X0Y2              |     3 |    24 |     0 |     4 |     0 |     0 |     0 |     0 |     0 |     0 |     1 |    24 |     0 |     0 |     0 |     0 |
+| X1Y2              |     3 |    24 |     1 |    24 |     0 |     4 |     0 |     8 |     0 |     0 |     0 |     0 |     0 |     1 |     0 |     2 |
++-------------------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+* Global Clock column represents track count; while other columns represents cell counts
+
+
+5. Clock Regions : Load Primitives
+----------------------------------
+
++-------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+
+|                   |   Global Clock   |        FF        |      LUTRAM      |  Block RAM (18K) |        DSP       |        GT        |      HARD IP     |
++-------------------+--------+---------+--------+---------+--------+---------+--------+---------+--------+---------+--------+---------+--------+---------+
+| Clock Region Name | Used   | Avail   | Used   | Avail   | Used   | Avail   | Used   | Avail   | Used   | Avail   | Used   | Avail   | Used   | Avail   |
++-------------------+--------+---------+--------+---------+--------+---------+--------+---------+--------+---------+--------+---------+--------+---------+
+| X0Y0              |      4 |      24 |   8915 |   27840 |    303 |    4800 |     40 |      72 |      0 |      72 |      0 |       0 |      0 |       0 |
+| X1Y0              |      4 |      24 |   3571 |   19200 |      4 |    4800 |     57 |      72 |      0 |      48 |      0 |       0 |      0 |       0 |
+| X0Y1              |      5 |      24 |   7141 |   27840 |    194 |    4800 |     25 |      72 |      0 |      72 |      0 |       0 |      0 |       0 |
+| X1Y1              |      5 |      24 |   5175 |   19200 |     60 |    4800 |     28 |      72 |      0 |      48 |      0 |       0 |      0 |       0 |
+| X0Y2              |      3 |      24 |   6104 |   27840 |     83 |    4800 |      5 |      72 |      0 |      72 |      0 |       0 |      0 |       0 |
+| X1Y2              |      3 |      24 |   4777 |   19200 |    122 |    4800 |     10 |      72 |      0 |      48 |      0 |       0 |      0 |       0 |
++-------------------+--------+---------+--------+---------+--------+---------+--------+---------+--------+---------+--------+---------+--------+---------+
+* Global Clock column represents track count; while other columns represents cell counts
+
+
+6. Clock Regions : Global Clock Summary
+---------------------------------------
+
+All Modules
++----+----+----+
+|    | X0 | X1 |
++----+----+----+
+| Y2 |  3 |  3 |
+| Y1 |  5 |  5 |
+| Y0 |  4 |  4 |
++----+----+----+
+
+
+7. Clock Regions : Routing Resource Utilization
+-----------------------------------------------
+
+All Modules
++-------------------+----------------------+----------------------+----------------------+----------------------+
+|                   |        HROUTES       |        HDISTRS       |        VROUTES       |        VDISTRS       |
++-------------------+------+-------+-------+------+-------+-------+------+-------+-------+------+-------+-------+
+| Clock Region Name | Used | Avail | Util% | Used | Avail | Util% | Used | Avail | Util% | Used | Avail | Util% |
++-------------------+------+-------+-------+------+-------+-------+------+-------+-------+------+-------+-------+
+| X0Y0              |    0 |    24 |  0.00 |    4 |    24 | 16.67 |    0 |    24 |  0.00 |    1 |    24 |  4.17 |
+| X1Y0              |    0 |    24 |  0.00 |    4 |    24 | 16.67 |    0 |    24 |  0.00 |    3 |    24 | 12.50 |
+| X0Y1              |    0 |    24 |  0.00 |    5 |    24 | 20.83 |    1 |    24 |  4.17 |    1 |    24 |  4.17 |
+| X1Y1              |    0 |    24 |  0.00 |    5 |    24 | 20.83 |    0 |    24 |  0.00 |    3 |    24 | 12.50 |
+| X0Y2              |    2 |    24 |  8.33 |    3 |    24 | 12.50 |    1 |    24 |  4.17 |    0 |    24 |  0.00 |
+| X1Y2              |    0 |    24 |  0.00 |    3 |    24 | 12.50 |    0 |    24 |  0.00 |    1 |    24 |  4.17 |
++-------------------+------+-------+-------+------+-------+-------+------+-------+-------+------+-------+-------+
+
+
+8. Device Cell Placement Summary for Global Clock g0
+----------------------------------------------------
+
++-----------+-----------------+-------------------+----------+-------------+---------------+----------+-------------+----------+----------------+----------+-------------------------------------------------+
+| Global Id | Driver Type/Pin | Driver Region (D) | Clock    | Period (ns) | Waveform (ns) | Root (R) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                             |
++-----------+-----------------+-------------------+----------+-------------+---------------+----------+-------------+----------+----------------+----------+-------------------------------------------------+
+| g0        | BUFG_PS/O       | X0Y2              | clk_pl_0 |      10.000 | {0.000 5.000} | X0Y1     |       34573 |        0 |              0 |        0 | lenet_accel_main_i/zynq_ultra_ps_e_0/U0/pl_clk0 |
++-----------+-----------------+-------------------+----------+-------------+---------------+----------+-------------+----------+----------------+----------+-------------------------------------------------+
+* Slice Loads column represents load cell count of all cell types other than IO, GT and clock resources
+** IO Loads column represents load cell count of IO types
+*** Clocking Loads column represents load cell count that are clock resources (global clock buffer, MMCM, PLL, etc)
+**** GT Loads column represents load cell count of GT types
+
+
++----+-----------+-------+-----------------------+
+|    | X0        | X1    | HORIZONTAL PROG DELAY |
++----+-----------+-------+-----------------------+
+| Y2 |  (D) 6192 |  4909 |                     1 |
+| Y1 |  (R) 7092 |  5082 |                     1 |
+| Y0 |      8600 |  2698 |                     0 |
++----+-----------+-------+-----------------------+
+
+
+9. Device Cell Placement Summary for Global Clock g1
+----------------------------------------------------
+
++-----------+-----------------+-------------------+-------+-------------+---------------+----------+-------------+----------+----------------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------+
+| Global Id | Driver Type/Pin | Driver Region (D) | Clock | Period (ns) | Waveform (ns) | Root (R) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                                                                                                                                |
++-----------+-----------------+-------------------+-------+-------------+---------------+----------+-------------+----------+----------------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------+
+| g1        | BUFGCE/O        | X1Y0              |       |             |               | X1Y0     |        2048 |        0 |              0 |        0 | lenet_accel_main_i/lenet_accel_wrapper_0/U0/lenet_accel_inst/DENSE_LAYER_COMB_INST/DENSE_LAYER_INST/MV_UNIT_INST/s_inputs_finished_reg[1]_0_BUFGCE |
++-----------+-----------------+-------------------+-------+-------------+---------------+----------+-------------+----------+----------------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------+
+* Slice Loads column represents load cell count of all cell types other than IO, GT and clock resources
+** IO Loads column represents load cell count of IO types
+*** Clocking Loads column represents load cell count that are clock resources (global clock buffer, MMCM, PLL, etc)
+**** GT Loads column represents load cell count of GT types
+
+
++----+------+-------------+-----------------------+
+|    | X0   | X1          | HORIZONTAL PROG DELAY |
++----+------+-------------+-----------------------+
+| Y2 |    0 |           0 |                     - |
+| Y1 |  268 |         181 |                     0 |
+| Y0 |  660 | (R) (D) 939 |                     0 |
++----+------+-------------+-----------------------+
+
+
+10. Device Cell Placement Summary for Global Clock g2
+-----------------------------------------------------
+
++-----------+-----------------+-------------------+-------+-------------+---------------+----------+-------------+----------+----------------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Global Id | Driver Type/Pin | Driver Region (D) | Clock | Period (ns) | Waveform (ns) | Root (R) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                                                                                                                                                                |
++-----------+-----------------+-------------------+-------+-------------+---------------+----------+-------------+----------+----------------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| g2        | BUFGCE/O        | X1Y2              |       |             |               | X1Y2     |        9746 |        0 |              0 |        0 | lenet_accel_main_i/lenet_accel_wrapper_0/U0/lenet_accel_inst/CONV_COMB_INST/CONV_PAR_INST/PIPELINE_GEN[0].PIPELINE_INST/CONV_COMP_UNIT/KERNEL_STEP_GEN[0].KERNEL_STEP_INST/reset_0 |
++-----------+-----------------+-------------------+-------+-------------+---------------+----------+-------------+----------+----------------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+* Slice Loads column represents load cell count of all cell types other than IO, GT and clock resources
+** IO Loads column represents load cell count of IO types
+*** Clocking Loads column represents load cell count that are clock resources (global clock buffer, MMCM, PLL, etc)
+**** GT Loads column represents load cell count of GT types
+
+
++----+-------+--------------+-----------------------+
+|    | X0    | X1           | HORIZONTAL PROG DELAY |
++----+-------+--------------+-----------------------+
+| Y2 |  5206 | (R) (D) 4032 |                     0 |
+| Y1 |    44 |            4 |                     0 |
+| Y0 |   426 |           34 |                     0 |
++----+-------+--------------+-----------------------+
+
+
+11. Device Cell Placement Summary for Global Clock g3
+-----------------------------------------------------
+
++-----------+-----------------+-------------------+-------+-------------+---------------+----------+-------------+----------+----------------+----------+-------------------------------------------------------------------------------------------------------------------+
+| Global Id | Driver Type/Pin | Driver Region (D) | Clock | Period (ns) | Waveform (ns) | Root (R) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                                                                                               |
++-----------+-----------------+-------------------+-------+-------------+---------------+----------+-------------+----------+----------------+----------+-------------------------------------------------------------------------------------------------------------------+
+| g3        | BUFGCE/O        | X1Y1              |       |             |               | X1Y1     |       10109 |        0 |              0 |        0 | lenet_accel_main_i/lenet_accel_wrapper_0/U0/lenet_accel_inst/CONV_COMB_INST/CONV_SEQ_INST/s_channel_reset_reg_n_0 |
++-----------+-----------------+-------------------+-------+-------------+---------------+----------+-------------+----------+----------------+----------+-------------------------------------------------------------------------------------------------------------------+
+* Slice Loads column represents load cell count of all cell types other than IO, GT and clock resources
+** IO Loads column represents load cell count of IO types
+*** Clocking Loads column represents load cell count that are clock resources (global clock buffer, MMCM, PLL, etc)
+**** GT Loads column represents load cell count of GT types
+
+
++----+-------+--------------+-----------------------+
+|    | X0    | X1           | HORIZONTAL PROG DELAY |
++----+-------+--------------+-----------------------+
+| Y2 |   542 |          303 |                     0 |
+| Y1 |  5403 | (R) (D) 3861 |                     0 |
+| Y0 |     0 |            0 |                     - |
++----+-------+--------------+-----------------------+
+
+
+12. Device Cell Placement Summary for Global Clock g4
+-----------------------------------------------------
+
++-----------+-----------------+-------------------+-------+-------------+---------------+----------+-------------+----------+----------------+----------+--------------------------------------------------------------------------------------------------------------+
+| Global Id | Driver Type/Pin | Driver Region (D) | Clock | Period (ns) | Waveform (ns) | Root (R) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                                                                                          |
++-----------+-----------------+-------------------+-------+-------------+---------------+----------+-------------+----------+----------------+----------+--------------------------------------------------------------------------------------------------------------+
+| g4        | BUFGCE/O        | X1Y1              |       |             |               | X1Y1     |        5194 |        0 |              0 |        0 | lenet_accel_main_i/lenet_accel_wrapper_0/U0/lenet_accel_inst/DENSE_LAYER_COMB_INST/s_iteration_reset_reg_n_0 |
++-----------+-----------------+-------------------+-------+-------------+---------------+----------+-------------+----------+----------------+----------+--------------------------------------------------------------------------------------------------------------+
+* Slice Loads column represents load cell count of all cell types other than IO, GT and clock resources
+** IO Loads column represents load cell count of IO types
+*** Clocking Loads column represents load cell count that are clock resources (global clock buffer, MMCM, PLL, etc)
+**** GT Loads column represents load cell count of GT types
+
+
++----+-------+-------------+-----------------------+
+|    | X0    | X1          | HORIZONTAL PROG DELAY |
++----+-------+-------------+-----------------------+
+| Y2 |     0 |           0 |                     - |
+| Y1 |   570 | (R) (D) 517 |                     0 |
+| Y0 |  1682 |        2425 |                     0 |
++----+-------+-------------+-----------------------+
+
+
+13. Clock Region Cell Placement per Global Clock: Region X0Y0
+-------------------------------------------------------------
+
++-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | Memory LUTs | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                                                                                                                                |
++-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| g0        | 14    | BUFG_PS/O       | None       |        8600 |               0 | 8258 |         303 |   38 |   0 |  0 |    0 |   0 |       0 | lenet_accel_main_i/zynq_ultra_ps_e_0/U0/pl_clk0                                                                                                                                    |
+| g1        | 1     | BUFGCE/O        | None       |         657 |               3 |  657 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | lenet_accel_main_i/lenet_accel_wrapper_0/U0/lenet_accel_inst/DENSE_LAYER_COMB_INST/DENSE_LAYER_INST/MV_UNIT_INST/s_inputs_finished_reg[1]_0_BUFGCE                                 |
+| g2        | 8     | BUFGCE/O        | None       |           0 |             426 |  426 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | lenet_accel_main_i/lenet_accel_wrapper_0/U0/lenet_accel_inst/CONV_COMB_INST/CONV_PAR_INST/PIPELINE_GEN[0].PIPELINE_INST/CONV_COMP_UNIT/KERNEL_STEP_GEN[0].KERNEL_STEP_INST/reset_0 |
+| g4        | 20    | BUFGCE/O        | None       |           0 |            1682 | 1682 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | lenet_accel_main_i/lenet_accel_wrapper_0/U0/lenet_accel_inst/DENSE_LAYER_COMB_INST/s_iteration_reset_reg_n_0                                                                       |
++-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+* Clock Loads column represents cell count of net connects that connect to a clock pin. Internal cell leaf pins are not considered
+** Non-Clock Loads column represents cell count of non-clock pin loads
+*** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts
+
+
+14. Clock Region Cell Placement per Global Clock: Region X1Y0
+-------------------------------------------------------------
+
++-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | Memory LUTs | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                                                                                                                                |
++-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| g0        | 14    | BUFG_PS/O       | None       |        2698 |               0 | 2637 |           4 |   57 |   0 |  0 |    0 |   0 |       0 | lenet_accel_main_i/zynq_ultra_ps_e_0/U0/pl_clk0                                                                                                                                    |
+| g1        | 1     | BUFGCE/O        | None       |         934 |               5 |  934 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | lenet_accel_main_i/lenet_accel_wrapper_0/U0/lenet_accel_inst/DENSE_LAYER_COMB_INST/DENSE_LAYER_INST/MV_UNIT_INST/s_inputs_finished_reg[1]_0_BUFGCE                                 |
+| g2        | 8     | BUFGCE/O        | None       |           0 |              34 |   34 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | lenet_accel_main_i/lenet_accel_wrapper_0/U0/lenet_accel_inst/CONV_COMB_INST/CONV_PAR_INST/PIPELINE_GEN[0].PIPELINE_INST/CONV_COMP_UNIT/KERNEL_STEP_GEN[0].KERNEL_STEP_INST/reset_0 |
+| g4        | 20    | BUFGCE/O        | None       |           0 |            2425 | 2425 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | lenet_accel_main_i/lenet_accel_wrapper_0/U0/lenet_accel_inst/DENSE_LAYER_COMB_INST/s_iteration_reset_reg_n_0                                                                       |
++-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+* Clock Loads column represents cell count of net connects that connect to a clock pin. Internal cell leaf pins are not considered
+** Non-Clock Loads column represents cell count of non-clock pin loads
+*** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts
+
+
+15. Clock Region Cell Placement per Global Clock: Region X0Y1
+-------------------------------------------------------------
+
++-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | Memory LUTs | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                                                                                                                                |
++-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| g0        | 14    | BUFG_PS/O       | None       |        7092 |               0 | 6873 |         194 |   25 |   0 |  0 |    0 |   0 |       0 | lenet_accel_main_i/zynq_ultra_ps_e_0/U0/pl_clk0                                                                                                                                    |
+| g1        | 1     | BUFGCE/O        | None       |         268 |               0 |  268 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | lenet_accel_main_i/lenet_accel_wrapper_0/U0/lenet_accel_inst/DENSE_LAYER_COMB_INST/DENSE_LAYER_INST/MV_UNIT_INST/s_inputs_finished_reg[1]_0_BUFGCE                                 |
+| g2        | 8     | BUFGCE/O        | None       |           0 |              44 |   44 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | lenet_accel_main_i/lenet_accel_wrapper_0/U0/lenet_accel_inst/CONV_COMB_INST/CONV_PAR_INST/PIPELINE_GEN[0].PIPELINE_INST/CONV_COMP_UNIT/KERNEL_STEP_GEN[0].KERNEL_STEP_INST/reset_0 |
+| g3        | 2     | BUFGCE/O        | None       |           0 |            5403 | 5403 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | lenet_accel_main_i/lenet_accel_wrapper_0/U0/lenet_accel_inst/CONV_COMB_INST/CONV_SEQ_INST/s_channel_reset_reg_n_0                                                                  |
+| g4        | 20    | BUFGCE/O        | None       |           0 |             570 |  570 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | lenet_accel_main_i/lenet_accel_wrapper_0/U0/lenet_accel_inst/DENSE_LAYER_COMB_INST/s_iteration_reset_reg_n_0                                                                       |
++-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+* Clock Loads column represents cell count of net connects that connect to a clock pin. Internal cell leaf pins are not considered
+** Non-Clock Loads column represents cell count of non-clock pin loads
+*** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts
+
+
+16. Clock Region Cell Placement per Global Clock: Region X1Y1
+-------------------------------------------------------------
+
++-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | Memory LUTs | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                                                                                                                                |
++-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| g0        | 14    | BUFG_PS/O       | None       |        5082 |               0 | 4994 |          60 |   28 |   0 |  0 |    0 |   0 |       0 | lenet_accel_main_i/zynq_ultra_ps_e_0/U0/pl_clk0                                                                                                                                    |
+| g1        | 1     | BUFGCE/O        | None       |         181 |               0 |  181 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | lenet_accel_main_i/lenet_accel_wrapper_0/U0/lenet_accel_inst/DENSE_LAYER_COMB_INST/DENSE_LAYER_INST/MV_UNIT_INST/s_inputs_finished_reg[1]_0_BUFGCE                                 |
+| g2        | 8     | BUFGCE/O        | None       |           0 |               4 |    4 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | lenet_accel_main_i/lenet_accel_wrapper_0/U0/lenet_accel_inst/CONV_COMB_INST/CONV_PAR_INST/PIPELINE_GEN[0].PIPELINE_INST/CONV_COMP_UNIT/KERNEL_STEP_GEN[0].KERNEL_STEP_INST/reset_0 |
+| g3        | 2     | BUFGCE/O        | None       |           0 |            3861 | 3861 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | lenet_accel_main_i/lenet_accel_wrapper_0/U0/lenet_accel_inst/CONV_COMB_INST/CONV_SEQ_INST/s_channel_reset_reg_n_0                                                                  |
+| g4        | 20    | BUFGCE/O        | None       |           0 |             517 |  517 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | lenet_accel_main_i/lenet_accel_wrapper_0/U0/lenet_accel_inst/DENSE_LAYER_COMB_INST/s_iteration_reset_reg_n_0                                                                       |
++-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+* Clock Loads column represents cell count of net connects that connect to a clock pin. Internal cell leaf pins are not considered
+** Non-Clock Loads column represents cell count of non-clock pin loads
+*** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts
+
+
+17. Clock Region Cell Placement per Global Clock: Region X0Y2
+-------------------------------------------------------------
+
++-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | Memory LUTs | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                                                                                                                                |
++-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| g0        | 14    | BUFG_PS/O       | None       |        6192 |               0 | 6104 |          83 |    5 |   0 |  0 |    0 |   0 |       0 | lenet_accel_main_i/zynq_ultra_ps_e_0/U0/pl_clk0                                                                                                                                    |
+| g2        | 8     | BUFGCE/O        | None       |           0 |            5206 | 5206 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | lenet_accel_main_i/lenet_accel_wrapper_0/U0/lenet_accel_inst/CONV_COMB_INST/CONV_PAR_INST/PIPELINE_GEN[0].PIPELINE_INST/CONV_COMP_UNIT/KERNEL_STEP_GEN[0].KERNEL_STEP_INST/reset_0 |
+| g3        | 2     | BUFGCE/O        | None       |           0 |             542 |  542 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | lenet_accel_main_i/lenet_accel_wrapper_0/U0/lenet_accel_inst/CONV_COMB_INST/CONV_SEQ_INST/s_channel_reset_reg_n_0                                                                  |
++-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+* Clock Loads column represents cell count of net connects that connect to a clock pin. Internal cell leaf pins are not considered
+** Non-Clock Loads column represents cell count of non-clock pin loads
+*** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts
+
+
+18. Clock Region Cell Placement per Global Clock: Region X1Y2
+-------------------------------------------------------------
+
++-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | Memory LUTs | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                                                                                                                                |
++-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| g0        | 14    | BUFG_PS/O       | None       |        4909 |               0 | 4777 |         122 |   10 |   0 |  0 |    0 |   0 |       0 | lenet_accel_main_i/zynq_ultra_ps_e_0/U0/pl_clk0                                                                                                                                    |
+| g2        | 8     | BUFGCE/O        | None       |           0 |            4032 | 4032 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | lenet_accel_main_i/lenet_accel_wrapper_0/U0/lenet_accel_inst/CONV_COMB_INST/CONV_PAR_INST/PIPELINE_GEN[0].PIPELINE_INST/CONV_COMP_UNIT/KERNEL_STEP_GEN[0].KERNEL_STEP_INST/reset_0 |
+| g3        | 2     | BUFGCE/O        | None       |           0 |             303 |  303 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | lenet_accel_main_i/lenet_accel_wrapper_0/U0/lenet_accel_inst/CONV_COMB_INST/CONV_SEQ_INST/s_channel_reset_reg_n_0                                                                  |
++-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+* Clock Loads column represents cell count of net connects that connect to a clock pin. Internal cell leaf pins are not considered
+** Non-Clock Loads column represents cell count of non-clock pin loads
+*** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts
+
+
