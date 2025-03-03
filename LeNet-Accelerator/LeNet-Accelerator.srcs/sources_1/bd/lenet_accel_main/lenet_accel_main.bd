@@ -545,10 +545,10 @@
             "value": "IOPLL"
           },
           "PSU__CRL_APB__PL0_REF_CTRL__ACT_FREQMHZ": {
-            "value": "100.000000"
+            "value": "250.000000"
           },
           "PSU__CRL_APB__PL0_REF_CTRL__DIVISOR0": {
-            "value": "15"
+            "value": "6"
           },
           "PSU__CRL_APB__PL0_REF_CTRL__DIVISOR1": {
             "value": "1"
@@ -1955,7 +1955,7 @@
                 "value_src": "constant"
               },
               "FREQ_HZ": {
-                "value": "100000000",
+                "value": "250000000",
                 "value_src": "user_prop"
               },
               "CLK_DOMAIN": {
@@ -2028,7 +2028,7 @@
                 "value_src": "constant"
               },
               "FREQ_HZ": {
-                "value": "100000000",
+                "value": "250000000",
                 "value_src": "user_prop"
               },
               "CLK_DOMAIN": {
@@ -2078,7 +2078,7 @@
                 "value_src": "constant"
               },
               "FREQ_HZ": {
-                "value": "100000000",
+                "value": "250000000",
                 "value_src": "user_prop"
               },
               "CLK_DOMAIN": {

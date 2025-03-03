@@ -2,10 +2,10 @@
 -- Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2024.1.2 (lin64) Build 5164865 Thu Sep  5 14:36:28 MDT 2024
--- Date        : Fri Feb 28 22:25:49 2025
+-- Date        : Sun Mar  2 20:56:54 2025
 -- Host        : hpenvy running 64-bit unknown
--- Command     : write_vhdl -force -mode funcsim
---               /home/markus/Documents/RADL/LeNet-Accelerator/LeNet-Accelerator.gen/sources_1/bd/lenet_accel_main/ip/lenet_accel_main_rst_ps8_0_100M_0/lenet_accel_main_rst_ps8_0_100M_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top lenet_accel_main_rst_ps8_0_100M_0 -prefix
+--               lenet_accel_main_rst_ps8_0_100M_0_ lenet_accel_main_rst_ps8_0_100M_0_sim_netlist.vhdl
 -- Design      : lenet_accel_main_rst_ps8_0_100M_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -26,8 +26,6 @@ entity lenet_accel_main_rst_ps8_0_100M_0_cdc_sync is
     aux_reset_in : in STD_LOGIC;
     slowest_sync_clk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of lenet_accel_main_rst_ps8_0_100M_0_cdc_sync : entity is "cdc_sync";
 end lenet_accel_main_rst_ps8_0_100M_0_cdc_sync;
 
 architecture STRUCTURE of lenet_accel_main_rst_ps8_0_100M_0_cdc_sync is
@@ -248,8 +246,6 @@ entity lenet_accel_main_rst_ps8_0_100M_0_upcnt_n is
     seq_cnt_en : in STD_LOGIC;
     slowest_sync_clk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of lenet_accel_main_rst_ps8_0_100M_0_upcnt_n : entity is "upcnt_n";
 end lenet_accel_main_rst_ps8_0_100M_0_upcnt_n;
 
 architecture STRUCTURE of lenet_accel_main_rst_ps8_0_100M_0_upcnt_n is
@@ -414,8 +410,6 @@ entity lenet_accel_main_rst_ps8_0_100M_0_lpf is
     ext_reset_in : in STD_LOGIC;
     aux_reset_in : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of lenet_accel_main_rst_ps8_0_100M_0_lpf : entity is "lpf";
 end lenet_accel_main_rst_ps8_0_100M_0_lpf;
 
 architecture STRUCTURE of lenet_accel_main_rst_ps8_0_100M_0_lpf is
@@ -604,8 +598,6 @@ entity lenet_accel_main_rst_ps8_0_100M_0_sequence_psr is
     lpf_int : in STD_LOGIC;
     slowest_sync_clk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of lenet_accel_main_rst_ps8_0_100M_0_sequence_psr : entity is "sequence_psr";
 end lenet_accel_main_rst_ps8_0_100M_0_sequence_psr;
 
 architecture STRUCTURE of lenet_accel_main_rst_ps8_0_100M_0_sequence_psr is
@@ -944,8 +936,6 @@ entity lenet_accel_main_rst_ps8_0_100M_0_proc_sys_reset is
   attribute C_NUM_PERP_ARESETN of lenet_accel_main_rst_ps8_0_100M_0_proc_sys_reset : entity is 1;
   attribute C_NUM_PERP_RST : integer;
   attribute C_NUM_PERP_RST of lenet_accel_main_rst_ps8_0_100M_0_proc_sys_reset : entity is 1;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of lenet_accel_main_rst_ps8_0_100M_0_proc_sys_reset : entity is "proc_sys_reset";
 end lenet_accel_main_rst_ps8_0_100M_0_proc_sys_reset;
 
 architecture STRUCTURE of lenet_accel_main_rst_ps8_0_100M_0_proc_sys_reset is
@@ -1109,7 +1099,7 @@ architecture STRUCTURE of lenet_accel_main_rst_ps8_0_100M_0 is
   attribute x_interface_info of mb_reset : signal is "xilinx.com:signal:reset:1.0 mb_rst RST";
   attribute x_interface_parameter of mb_reset : signal is "XIL_INTERFACENAME mb_rst, POLARITY ACTIVE_HIGH, TYPE PROCESSOR, INSERT_VIP 0";
   attribute x_interface_info of slowest_sync_clk : signal is "xilinx.com:signal:clock:1.0 clock CLK";
-  attribute x_interface_parameter of slowest_sync_clk : signal is "XIL_INTERFACENAME clock, ASSOCIATED_RESET mb_reset:bus_struct_reset:interconnect_aresetn:peripheral_aresetn:peripheral_reset, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN lenet_accel_main_zynq_ultra_ps_e_0_0_pl_clk0, INSERT_VIP 0";
+  attribute x_interface_parameter of slowest_sync_clk : signal is "XIL_INTERFACENAME clock, ASSOCIATED_RESET mb_reset:bus_struct_reset:interconnect_aresetn:peripheral_aresetn:peripheral_reset, FREQ_HZ 250000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN lenet_accel_main_zynq_ultra_ps_e_0_0_pl_clk0, INSERT_VIP 0";
   attribute x_interface_info of bus_struct_reset : signal is "xilinx.com:signal:reset:1.0 bus_struct_reset RST";
   attribute x_interface_parameter of bus_struct_reset : signal is "XIL_INTERFACENAME bus_struct_reset, POLARITY ACTIVE_HIGH, TYPE INTERCONNECT, INSERT_VIP 0";
   attribute x_interface_info of interconnect_aresetn : signal is "xilinx.com:signal:reset:1.0 interconnect_low_rst RST";

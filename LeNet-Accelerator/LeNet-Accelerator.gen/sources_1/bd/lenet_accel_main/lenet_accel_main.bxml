@@ -2,10 +2,10 @@
 <Root MajorVersion="0" MinorVersion="43">
   <CompositeFile CompositeFileTopName="lenet_accel_main" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1740777499"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1740777499"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1740777499"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1740777499"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1740948253"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1740948253"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1740948253"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1740948253"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="synth/lenet_accel_main.vhd" Type="VHDL">
         <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>

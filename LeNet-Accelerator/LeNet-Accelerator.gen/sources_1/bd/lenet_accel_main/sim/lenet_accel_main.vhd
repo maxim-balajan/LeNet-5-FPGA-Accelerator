@@ -2,7 +2,7 @@
 --Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2024.1.2 (lin64) Build 5164865 Thu Sep  5 14:36:28 MDT 2024
---Date        : Fri Feb 28 22:17:45 2025
+--Date        : Sun Mar  2 21:43:48 2025
 --Host        : hpenvy running 64-bit unknown
 --Command     : generate_target lenet_accel_main.bd
 --Design      : lenet_accel_main
