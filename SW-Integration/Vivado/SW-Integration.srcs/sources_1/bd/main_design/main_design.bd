@@ -544,10 +544,10 @@
             "value": "IOPLL"
           },
           "PSU__CRL_APB__PL0_REF_CTRL__ACT_FREQMHZ": {
-            "value": "100.000000"
+            "value": "250.000000"
           },
           "PSU__CRL_APB__PL0_REF_CTRL__DIVISOR0": {
-            "value": "15"
+            "value": "6"
           },
           "PSU__CRL_APB__PL0_REF_CTRL__DIVISOR1": {
             "value": "1"
@@ -2051,7 +2051,7 @@
                 "value_src": "constant"
               },
               "FREQ_HZ": {
-                "value": "100000000",
+                "value": "250000000",
                 "value_src": "user_prop"
               },
               "CLK_DOMAIN": {
@@ -2124,7 +2124,7 @@
                 "value_src": "constant"
               },
               "FREQ_HZ": {
-                "value": "100000000",
+                "value": "250000000",
                 "value_src": "user_prop"
               },
               "CLK_DOMAIN": {
@@ -2174,7 +2174,7 @@
                 "value_src": "constant"
               },
               "FREQ_HZ": {
-                "value": "100000000",
+                "value": "250000000",
                 "value_src": "user_prop"
               },
               "CLK_DOMAIN": {
@@ -2327,15 +2327,15 @@
           "zynq_ultra_ps_e_0/maxihpm0_fpd_aclk",
           "ps8_0_axi_periph/S00_ACLK",
           "rst_ps8_0_100M/slowest_sync_clk",
-          "axi_dma_0/s_axi_lite_aclk",
           "ps8_0_axi_periph/M00_ACLK",
           "ps8_0_axi_periph/ACLK",
           "axi_smc/aclk",
-          "axi_dma_0/m_axi_mm2s_aclk",
-          "axi_dma_0/m_axi_s2mm_aclk",
           "zynq_ultra_ps_e_0/saxihpc0_fpd_aclk",
           "system_ila_0/clk",
-          "axi_accumulator_wrap_0/clk"
+          "axi_accumulator_wrap_0/clk",
+          "axi_dma_0/s_axi_lite_aclk",
+          "axi_dma_0/m_axi_mm2s_aclk",
+          "axi_dma_0/m_axi_s2mm_aclk"
         ]
       },
       "zynq_ultra_ps_e_0_pl_resetn0": {

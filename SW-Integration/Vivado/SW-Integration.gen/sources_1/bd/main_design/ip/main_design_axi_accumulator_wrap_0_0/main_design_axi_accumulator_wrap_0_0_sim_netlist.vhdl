@@ -2,7 +2,7 @@
 -- Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2024.1.2 (lin64) Build 5164865 Thu Sep  5 14:36:28 MDT 2024
--- Date        : Wed Feb 19 22:13:24 2025
+-- Date        : Fri Feb 28 21:54:58 2025
 -- Host        : hpenvy running 64-bit unknown
 -- Command     : write_vhdl -force -mode funcsim
 --               /home/markus/Documents/RADL/SW-Integration/Vivado/SW-Integration.gen/sources_1/bd/main_design/ip/main_design_axi_accumulator_wrap_0_0/main_design_axi_accumulator_wrap_0_0_sim_netlist.vhdl
