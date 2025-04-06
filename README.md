@@ -33,8 +33,8 @@ This repository is structured as follows:
 
 ## Authors
 
-* Maxim Balajan
-* Markus Gerber
+* Maxim Balajan ([Github Profile](https://github.com/Deko29))
+* Markus Gerber ([Github Profile](https://github.com/markus-gerber))
 
 ## LeNet-5 Accelerator implementation
 
