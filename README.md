@@ -121,3 +121,7 @@ The executable binary targets are:
 * `test_serialize`: Test that serializing the layers works as excepted.
 
 For running the programs you might need to input the trained model (located in `reference/training/Lenet_qonnx.onnx`) and test images and/or labels (located in `reference/training/export/mnist/`).
+
+## License
+
+Distributed under the GNU GPL v3 License. See LICENSE for more information.
