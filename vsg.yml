@@ -8,18 +8,42 @@ rule:
   global:
     indent_style: smart_tabs
   group:
+    # all reserved words (entity, architecture, type, if, case, process, ...) upper case
+    case::keyword:
+      case: 'upper'
     case::label:
       disable: True
     case::name:
       disable: True
     naming:
       disable: True
+  # data types upper case (STD_LOGIC_VECTOR, NATURAL, STRING, UNSIGNED, ...).
+  # disable has to be set explicitly because this rule sits in the case::name group,
+  # which is switched off above. User defined types keep the case of their declaration.
+  type_mark_500:
+    case: 'upper'
+    disable: False
   conditional_waveforms_001:
     allow_single_line: yes
+  # test benches legitimately initialise their signals
+  signal_007:
+    disable: True
+  # function and process variables are initialised on purpose
+  variable_007:
+    disable: True
+  # the reusable IP relies on default port values (i_en, i_shamt, i_vec1, i_depth)
+  port_012:
+    disable: True
+  # long generic maps and port declarations are more readable on one line
+  length_001:
+    disable: True
   if_002:
     parenthesis: remove
   instantiation_034:
     method: "entity"
+  # direct entity instantiation on purpose, without pinning an architecture name
+  instantiation_036:
+    disable: True
   port_007:
     spaces_after: 1
     spaces_before: 1
