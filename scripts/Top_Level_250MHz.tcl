@@ -243,7 +243,14 @@ proc create_root_design { parentCell } {
      catch {common::send_gid_msg -ssname BD::TCL -id 2096 -severity "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
      return 1
    }
-  
+    set_property -dict [list \
+    CONFIG.G_CONV_WEIGHT_PREFIX_0 "${PRJ_DATA_PAT}/output/conv_1_weights_ch" \
+    CONFIG.G_CONV_WEIGHT_PREFIX_1 "${PRJ_DATA_PATH}/output/conv_2_weights_ch" \
+    CONFIG.G_DENSE_WEIGHT_PREFIX "${PRJ_DATA_PATH}/output/dense_weights_row" \
+    CONFIG.G_SCALE_FILE_PATH "${PRJ_DATA_PATH}/scale_values.data" \
+  ] $lenet_accel_wrapper_0
+
+
   # Create instance: zynq_ultra_ps_e_0, and set properties
   set zynq_ultra_ps_e_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:zynq_ultra_ps_e:3.5 zynq_ultra_ps_e_0 ]
   set_property -dict [list \

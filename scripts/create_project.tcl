@@ -143,6 +143,6 @@ update_compile_order -fileset sources_1
 
 puts "Project $PROJECT_NAME created successfully at $PROJECT_DIR"
 
-#puts "Starting Synthesis and Implementation Runs for $PROJECT_NAME"
+puts "Starting Synthesis and Implementation Runs for $PROJECT_NAME"
 
-#source "$PRJ_SCRIPTS/synth.tcl"
+source "$PRJ_SCRIPTS/synth.tcl"
