@@ -32,7 +32,6 @@ proc prj_env {name default} {
 set PRJ_SCRIPTS          [prj_env PRJ_SCRIPTS          "$PRJ_ROOT_PATH/scripts"]
 set PRJ_HW_SOURCES_PATH  [prj_env PRJ_HW_SOURCES_PATH  "$PRJ_ROOT_PATH/sources_1"]
 set PRJ_DATA_PATH        [prj_env PRJ_DATA_PATH        "$PRJ_ROOT_PATH/data"]
-set PRJ_BUILD_PATH       [prj_env PRJ_BUILD_PATH       "$PRJ_ROOT_PATH/build"]
 
 # Prefer the interpreter of the virtual environment that INIT.sh creates
 set PRJ_PYTHON "$PRJ_ROOT_PATH/.venv/bin/python"
@@ -40,9 +39,15 @@ if {![file exists $PRJ_PYTHON]} {
     set PRJ_PYTHON "python3"
 }
 
+# Check if the build directory exists, and create it if not.
+if {![file exists "${PRJ_ROOT_PATH}/build/"]} {
+    puts "Creating build directory ${PRJ_ROOT_PATH}/build/"
+    file mkdir "${PRJ_ROOT_PATH}/build/"
+}
+
 set PROJECT_NAME "LeNet-Accelerator"
-set PROJECT_DIR "${PRJ_BUILD_PATH}/${PROJECT_NAME}"
-set BD_NAME "lenet_accel_main"
+set PROJECT_DIR "${PRJ_ROOT_PATH}/build/${PROJECT_NAME}"
+set BD_NAME "Top_Level_250MHz"
 
 create_project $PROJECT_NAME $PROJECT_DIR -part xczu3eg-sbva484-1-i -force
 
@@ -103,39 +108,21 @@ foreach dir [lsort [glob -nocomplain -directory $PRJ_HW_SOURCES_PATH -types d *]
 add_vhdl_dir "$PRJ_HW_SOURCES_PATH/memory"
 
 # ============================================================
-# Constraints
-# ============================================================
-set XDC "$PRJ_CONSTRAINTS_PATH/Ultra96_V2_constraints_190430.xdc"
-if {[file exists $XDC]} {
-    add_files -fileset constrs_1 -norecurse $XDC
-} else {
-    puts "WARNING: $XDC does not exist."
-}
-
-# ============================================================
-# Simulation
-# ============================================================
-# The test benches are VUnit test benches under <module>/sim and are run with
-#   prj_simulate_lenet_accel
-# rather than from Vivado, so they are deliberately not added to the project here.
-
-# ============================================================
 # The BRAM files are opened with paths relative to "../data/...", which is what the GHDL
 # flow uses. Vivado runs synthesis and simulation from their own directories, so put a
 # copy of the data next to each of them.
 # ============================================================
-proc install_data {src dst} {
-    file mkdir $dst
-    file delete -force "$dst/data"
-    file copy -force $src "$dst/data"
-}
-install_data "$PRJ_DATA_PATH" "$PROJECT_DIR/${PROJECT_NAME}.runs"
-install_data "$PRJ_DATA_PATH" "$PROJECT_DIR/${PROJECT_NAME}.sim/sim_1/behav"
+#proc install_data {src dst} {
+#    file mkdir $dst
+#    file delete -force "$dst/data"
+#    file copy -force $src "$dst/data"
+#}
+#install_data "$PRJ_DATA_PATH" "$PROJECT_DIR/${PROJECT_NAME}.runs"
 
-# ============================================================
-# Include the Block Design TCL script
-# ============================================================
-source "$PRJ_SCRIPTS/${BD_NAME}_bd.tcl"
+## ============================================================
+## Include the Block Design TCL script
+## ============================================================
+source "$PRJ_SCRIPTS/${BD_NAME}.tcl"
 
 # Validate and Save the block design
 validate_bd_design
