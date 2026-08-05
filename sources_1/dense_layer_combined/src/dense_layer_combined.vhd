@@ -129,7 +129,7 @@ ARCHITECTURE rtl OF dense_layer_combined IS
 
 		FOR i IN tmp'RANGE LOOP
 
-			tmp(i) := read_scale_value(G_SCALE_FILE_PATH, G_BIT_WIDTH, G_BIT_WIDTH, v_shift_id(i));
+			tmp(i) := read_scale_value(G_SCALE_FILE_PATH, G_BIT_WIDTH, G_BIT_WIDTH, v_shift_id(i), G_BIT_WIDTH);
 
 		END LOOP;
 

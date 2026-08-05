@@ -58,7 +58,8 @@ PACKAGE libmemory IS
 	IMPURE FUNCTION init_from_file (
 		file_name     : IN string;
 		vector_length : IN natural;
-		depth         : IN natural
+		depth         : IN natural;
+		bit_width	  : IN natural
 	) RETURN std_logic_vector;
 
 	--! Reads the scale value stored in line G_SCALE_ID (1 based) and zero extends it.
@@ -67,7 +68,8 @@ PACKAGE libmemory IS
 		file_name     : IN string;
 		vector_length : IN natural;
 		scale_length  : IN natural;
-		current_scale : IN natural
+		current_scale : IN natural;
+		bit_width	  : IN natural
 	) RETURN std_logic_vector;
 
 END PACKAGE libmemory;
@@ -140,11 +142,13 @@ PACKAGE BODY libmemory IS
 	IMPURE FUNCTION init_from_file (
 		file_name     : IN string;
 		vector_length : IN natural;
-		depth         : IN natural
+		depth         : IN natural;
+		bit_width	  : IN natural
 	) RETURN std_logic_vector IS
 
 		FILE     mem_file    : TEXT OPEN READ_MODE IS file_name;
 		VARIABLE v_file_line : LINE;
+		VARIABLE v_str_line  : STRING(1 to bit_width / 4);
 		VARIABLE v_tmp_ram   : STD_LOGIC_VECTOR(depth * vector_length - 1 DOWNTO 0) := (OTHERS => '0');
 
 	BEGIN
@@ -153,7 +157,10 @@ PACKAGE BODY libmemory IS
 
 			EXIT WHEN endfile(mem_file);
 			readline(mem_file, v_file_line);
-			v_tmp_ram((i + 1) * vector_length - 1 downto i * vector_length) := hex_line_to_slv(v_file_line.all, vector_length);
+
+			v_str_line := (OTHERS => ' ');
+			read(v_file_line, v_str_line(1 to v_file_line'length));
+			v_tmp_ram((i + 1) * vector_length - 1 downto i * vector_length) := hex_line_to_slv(v_str_line, vector_length);
 
 		END LOOP;
 
@@ -165,11 +172,13 @@ PACKAGE BODY libmemory IS
 		file_name     : IN string;
 		vector_length : IN natural;
 		scale_length  : IN natural;
-		current_scale : IN natural
+		current_scale : IN natural;
+		bit_width	 : IN natural
 	) RETURN std_logic_vector IS
 
 		FILE     mem_file    : TEXT OPEN READ_MODE IS file_name;
 		VARIABLE v_file_line : LINE;
+		VARIABLE v_str_line  : STRING(1 to bit_width / 4);
 		VARIABLE v_value     : STD_LOGIC_VECTOR(vector_length - 1 DOWNTO 0) := (OTHERS => '0');
 
 	BEGIN
@@ -182,7 +191,10 @@ PACKAGE BODY libmemory IS
 
 		END LOOP;
 
-		v_value(scale_length - 1 downto 0) := hex_line_to_slv(v_file_line.all, scale_length);
+		v_str_line := (OTHERS => ' ');
+		read(v_file_line, v_str_line(1 to v_file_line'length));
+
+		v_value(scale_length - 1 downto 0) := hex_line_to_slv(v_str_line, scale_length);
 
 		RETURN v_value;
 

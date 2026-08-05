@@ -70,9 +70,9 @@ ARCHITECTURE bench OF lenet_accel_wrapper_tb IS
 
 	CONSTANT input_path_2 : STRING := "../data/input_2.data";
 
-	CONSTANT s_input_stream_2 : t_image := f_unpack_image(init_from_file(input_path_2, 8, 32 * 32));
+	CONSTANT s_input_stream_2 : t_image := f_unpack_image(init_from_file(input_path_2, 8, 32 * 32, 8));
 	CONSTANT input_path_7     : STRING  := "../data/input_7.data";
-	CONSTANT s_input_stream_7 : t_image := f_unpack_image(init_from_file(input_path_7, 8, 32 * 32));
+	CONSTANT s_input_stream_7 : t_image := f_unpack_image(init_from_file(input_path_7, 8, 32 * 32, 8));
 	SIGNAL   s_read_pointer   : INTEGER RANGE 0 TO (32 * 32);
 
 	SIGNAL s_actual_input_stream : t_image;

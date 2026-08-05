@@ -82,7 +82,7 @@ ARCHITECTURE bench OF conv_combined_tb IS
 
 	END FUNCTION f_unpack_image;
 
-	CONSTANT s_input_stream : t_image := f_unpack_image(init_from_file(input_path, vector_length, input_width * input_height));
+	CONSTANT s_input_stream : t_image := f_unpack_image(init_from_file(input_path, vector_length, input_width * input_height, vector_length));
 	SIGNAL   s_read_pointer : INTEGER RANGE 0 TO (input_width * input_height);
 
 	SIGNAL s_write_pointer : INTEGER;

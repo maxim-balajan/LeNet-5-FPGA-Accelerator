@@ -77,7 +77,7 @@ ARCHITECTURE bench OF conv_seq_tb IS
 
 	END FUNCTION f_unpack_stream;
 
-	CONSTANT s_input_stream : t_stream                                        := f_unpack_stream(init_from_file(input_path, vector_length, total_input_channel * input_width * input_height));
+	CONSTANT s_input_stream : t_stream                                        := f_unpack_stream(init_from_file(input_path, vector_length, total_input_channel * input_width * input_height, vector_length));
 	SIGNAL   s_read_pointer : INTEGER RANGE 0 TO (input_width * input_height) := 0;
 
 	SIGNAL s_write_pointer : INTEGER RANGE 0 TO (5 ** 2 - 1) := 0;

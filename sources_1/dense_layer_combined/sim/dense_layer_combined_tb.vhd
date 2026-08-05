@@ -78,7 +78,7 @@ ARCHITECTURE bench OF dense_layer_combined_tb IS
 
 	END FUNCTION f_unpack_input;
 
-	CONSTANT input_stream  : t_input := f_unpack_input(init_from_file(c_input_data_file_name, vector_length, max_weight_width));
+	CONSTANT input_stream  : t_input := f_unpack_input(init_from_file(c_input_data_file_name, vector_length, max_weight_width, vector_length));
 	SIGNAL   read_pointer  : INTEGER;
 	SIGNAL   invalid_delay : INTEGER RANGE 0 TO 3;
 

@@ -102,7 +102,7 @@ ARCHITECTURE bench OF conv_par_tb IS
 
 	END FUNCTION f_unpack_expected;
 
-	CONSTANT s_input_stream : t_image                                         := f_unpack_image(init_from_file(input_path, vector_length, input_width * input_height));
+	CONSTANT s_input_stream : t_image                                         := f_unpack_image(init_from_file(input_path, vector_length, input_width * input_height, vector_length));
 	SIGNAL   s_read_pointer : INTEGER RANGE 0 TO (input_width * input_height) := 0;
 
 	SIGNAL s_write_pointer : INTEGER RANGE 0 TO (c_out_size - 1) := 0;
@@ -112,7 +112,7 @@ ARCHITECTURE bench OF conv_par_tb IS
 
 	-- expected output of the first convolution
 	CONSTANT expected_result_path : STRING     := "../data/expected_output_first_conv_pool_7.data";
-	CONSTANT expected_output      : t_expected := f_unpack_expected(init_from_file(expected_result_path, vector_length, total_output_channel * c_out_size));
+	CONSTANT expected_output      : t_expected := f_unpack_expected(init_from_file(expected_result_path, vector_length, total_output_channel * c_out_size, vector_length));
 
 	SIGNAL s_invalid_delay : INTEGER RANGE 0 TO 3;
 	SIGNAL s_sim_done      : STD_LOGIC := '0';

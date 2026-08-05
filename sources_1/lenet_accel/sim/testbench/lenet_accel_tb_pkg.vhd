@@ -143,7 +143,7 @@ PACKAGE BODY lenet_accel_tb_pkg IS
 	) RETURN t_image IS
 
 		CONSTANT C_PACKED : STD_LOGIC_VECTOR(C_IMAGE_SIZE * G_BIT_WIDTH - 1 DOWNTO 0) :=
-	                                                                                 init_from_file(file_name, G_BIT_WIDTH, C_IMAGE_SIZE);
+	                                                                                 init_from_file(file_name, G_BIT_WIDTH, C_IMAGE_SIZE, G_BIT_WIDTH);
 
 		VARIABLE v_image : T_IMAGE;
 

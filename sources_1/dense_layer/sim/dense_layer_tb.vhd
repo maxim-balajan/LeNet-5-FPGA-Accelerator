@@ -87,7 +87,7 @@ ARCHITECTURE bench OF dense_layer_tb IS
 	SIGNAL comp_complete          : STD_LOGIC;
 
 	CONSTANT c_input_data_file_name : STRING  := "../data/example_layer_data/6_dense_1.data";
-	CONSTANT input_stream           : t_input := f_unpack_input(init_from_file(c_input_data_file_name, vector_length, weight_width_1));
+	CONSTANT input_stream           : t_input := f_unpack_input(init_from_file(c_input_data_file_name, vector_length, weight_width_1, vector_length, scale_row, vector_length));
 	SIGNAL   read_pointer           : INTEGER;
 	SIGNAL   invalid_delay          : INTEGER RANGE 0 TO 3;
 
