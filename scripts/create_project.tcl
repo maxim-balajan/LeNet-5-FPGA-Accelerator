@@ -47,7 +47,7 @@ if {![file exists "${PRJ_ROOT_PATH}/build/"]} {
 
 set PROJECT_NAME "LeNet-Accelerator"
 set PROJECT_DIR "${PRJ_ROOT_PATH}/build/${PROJECT_NAME}"
-set BD_NAME "Top_Level_250MHz"
+set BD_NAME "Top_Level"
 
 create_project $PROJECT_NAME $PROJECT_DIR -part xczu3eg-sbva484-1-i -force
 
@@ -122,7 +122,7 @@ add_vhdl_dir "$PRJ_HW_SOURCES_PATH/memory"
 ## ============================================================
 ## Include the Block Design TCL script
 ## ============================================================
-source "$PRJ_SCRIPTS/${BD_NAME}.tcl"
+source "$PRJ_SCRIPTS/${BD_NAME}_250MHz.tcl"
 
 # Validate and Save the block design
 validate_bd_design
@@ -143,6 +143,6 @@ update_compile_order -fileset sources_1
 
 puts "Project $PROJECT_NAME created successfully at $PROJECT_DIR"
 
-puts "Starting Synthesis and Implementation Runs for $PROJECT_NAME"
+#puts "Starting Synthesis and Implementation Runs for $PROJECT_NAME"
 
-source "$PRJ_SCRIPTS/synth.tcl"
+#source "$PRJ_SCRIPTS/synth.tcl"
