@@ -13,7 +13,9 @@ This repository is structured as follows:
 ```bash
 ├── _generated                      # Logging of various utilities
 ├── bdf                             # Bord definition files for the Ultra96-v2 board
-├── doc                             # Images for this ReadMe
+├── doc                             
+│   ├── assets                      # Images for this ReadMe
+│   └── report                      # Report and Presentation Slides for the project
 ├── measurements                    # Evaluation data and helper scripts
 ├── reference
 │   ├── simulation                  # The reference implementation of the AlexNet architecture
