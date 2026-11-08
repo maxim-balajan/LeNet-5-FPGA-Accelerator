@@ -14,10 +14,8 @@ export PRJ_ROOT_PATH="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 export PRJ_GENERATED_PATH="$PRJ_ROOT_PATH/_generated"
 export PRJ_TRAIN_PATH="$PRJ_ROOT_PATH/reference/training"
 export PRJ_SIM_PATH="$PRJ_ROOT_PATH/reference/simulation"
-export PRJ_WAVE_CFG="$PRJ_ROOT_PATH/wave_config"
 export PRJ_SCRIPTS="$PRJ_ROOT_PATH/scripts"
 export PRJ_HW_SOURCES_PATH="$PRJ_ROOT_PATH/sources_1"
-export PRJ_HW_SIMS_PATH="$PRJ_ROOT_PATH/sim_1"
 export PRJ_VUNIT_PATH="${PRJ_ROOT_PATH}/${ENV_NAME}/lib/python3.10/site-packages/vunit"
 
 # Paths that are specific to this project
@@ -34,7 +32,6 @@ alias cd_train="cd $PRJ_TRAIN_PATH"
 alias cd_sim="cd $PRJ_SIM_PATH"
 alias cd_scripts="cd $PRJ_SCRIPTS"
 alias cd_hw_sources="cd $PRJ_HW_SOURCES_PATH"
-alias cd_hw_sims="cd $PRJ_HW_SIMS_PATH"
 alias cd_data="cd $PRJ_DATA_PATH"
 
 # Simulate functions
@@ -153,11 +150,6 @@ else
     echo "" | tee -a "$PRJ_GENERATED_PATH/init_debug.log"
 fi
 
-# Check if wave config folder exists and creates it if necessary
-if [ ! -d "$PRJ_WAVE_CFG" ]; then
-    mkdir "$PRJ_WAVE_CFG"
-fi
-
 # Start logging manually
 exec 3>&1 4>&2
 exec > >(tee -a "$PRJ_GENERATED_PATH/init_debug.log") 2>&1
@@ -243,10 +235,8 @@ echo "# PRJ_ROOT_PATH.......: $PRJ_ROOT_PATH"
 echo "# PRJ_GENERATED_PATH..: $PRJ_GENERATED_PATH"
 echo "# PRJ_TRAIN_PATH......: $PRJ_TRAIN_PATH"
 echo "# PRJ_SIM_PATH........: $PRJ_SIM_PATH"
-echo "# PRJ_WAVE_CFG........: $PRJ_WAVE_CFG"
 echo "# PRJ_SCRIPTS.........: $PRJ_SCRIPTS"
 echo "# PRJ_HW_SOURCES_PATH.: $PRJ_HW_SOURCES_PATH"
-echo "# PRJ_HW_SIMS_PATH....: $PRJ_HW_SIMS_PATH"
 echo "# PRJ_DATA_PATH.......: $PRJ_DATA_PATH"
 echo "# PRJ_BRAM_DATA_PATH..: $PRJ_BRAM_DATA_PATH"
 echo "# PRJ_CONSTRAINTS_PATH: $PRJ_CONSTRAINTS_PATH"
@@ -280,8 +270,6 @@ echo "# cd_scripts............: Change CWD to path of scripts folder:"
 echo "#                         [$PRJ_SCRIPTS]"
 echo "# cd_hw_sources.........: Change CWD to path containing VHDL sources:"
 echo "#                         [$PRJ_HW_SOURCES_PATH]"
-echo "# cd_hw_sims............: Change CWD to path containing test benches:"
-echo "#                         [$PRJ_HW_SIMS_PATH]"
 echo "# cd_data...............: Change CWD to path containing the weights:"
 echo "#                         [$PRJ_DATA_PATH]"
 echo "###########################################################################"
